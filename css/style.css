@@ -5,6 +5,13 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+/* PROJECTO_360 */
+@import url("https://fonts.googleapis.com/css?family=Asap+Condensed|Libre+Baskerville|Varela+Round");
+* {
+  box-sizing: border-box;
+}
+
+/* PROJECTO_360 */
 html {
   line-height: 1.15;
   /* 1 */
@@ -335,18 +342,6 @@ template {
  */
 [hidden] {
   display: none;
-}
-
-.teste {
-  font-family: "Varela Round";
-}
-
-/*@import url('https://fonts.googleapis.com/css?family=Asap+Condensed|Libre+Baskerville|Varela+Round');*/
-@font-face {
-  font-family: "Varela Round", sans-serif;
-  font-family: "Libre Baskerville", serif;
-  font-family: "Asap Condensed", sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Asap+Condensed|Libre+Baskerville|Varela+Round");
 }
 
 /*# sourceMappingURL=style.css.map */
