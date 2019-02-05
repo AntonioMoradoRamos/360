@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+  padding: 3rem;
+}
+
+.header {
+  position: relative;
+  /* border: 1px solid salmon;*/
+  /*height: 95vh;*/
+  height: 700px;
+  background-image: url("../img/hero-small.jpg");
+  /*transform:  skew(170deg,170deg);*/
+  /*width: 100%;
+  height: 50%;*/
+  /*background-color: rgba(126,213,111,0.8);*/
+  /*background-color: #7ed56f;*/
+}
+
+.header__logoBox {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+  /*border: 1px dotted blue;*/
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__textBox {
+  /* posicionar */
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  /*border: 1px dotted black;*/
+  /*width: 50%;
+  height: 50%;*/
+  /* dimensionar */
+  /*width: 50%;
+  height: 50%;*/
+  /*text-align: center;
+  color: white;
+  text-transform: uppercase;
+  width: 50%;
+  height: 50%;
+  border: 1px dotted black;*/
+}
+
+.headding_h1 {
+  /*display: flex;
+  flex-direction: column;*/
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  /*text-align: center;*/
+}
+
+.headding_h1__main {
+  /*
+      Posicionamento
+      block para que o elmento seja apresentado um a seguir a outro
+  */
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+}
+
+.headding_h1__secondary {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1.75rem;
+}
+
+/* ============================================ */
+/*  sectionDescrition                           */
+.sectionDescrition {
+  display: flex;
+  flex-direction: column;
+}
+
+.subSectionDescrition {
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+.subSectionDescrition__img1{
+    width: 60%;
+    padding: 2%;
+    border: 10px solid rgb(126,213,111);
+    transform: scale(1.1, 1.1);
+}*/
+.subSectionDescrition__img1Box {
+  z-index: 100;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  transition: width 0.5s, border 0.5s, padding 0.5s, transform 0.5s;
+}
+
+.subSectionDescrition__img1 {
+  width: 150%;
+}
+
+.subSectionDescrition__img1:hover {
+  width: 60%;
+  padding: 2%;
+  border: 10px solid #7ed56f;
+  transform: scale(1.1, 1.1);
+  z-index: 130;
+}
+
+.subSectionDescrition__img2 {
+  width: 150%;
+  /*position: relative;
+  top: -7rem;
+  left: 10rem;
+  display: inline-block;*/
+}
+
+.subSectionDescrition__img3 {
+  width: 150%;
+  /*position: relative;
+  top: -11rem;
+  left: 6rem;*/
+}
+
+/*  sectionDescrition                           */
+/* ============================================ */
+/* ============================================ */
+/*  sectionWhatToDo                           */
+.sectionWhatToDo {
+  background-image: url(../img/MS.png);
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}
+
+.subSectionWhatToDo {
+  display: flex;
+  flex-direction: row;
+  height: 22rem;
+}
+
+.subSectionWhatToDo_1,
+.subSectionWhatToDo_2,
+.subSectionWhatToDo_3,
+.subSectionWhatToDo_4 {
+  /*border: 1px solid gray;*/
+  /*box-shadow: 1px 2px 8px rgb(199, 197, 197);*/
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  /* Justificar as divs no centro*/
+  justify-content: center;
+  /* Alinhar no centro o conteúdo do img e texto*/
+  text-align: center;
+  margin: 25px;
+  border-radius: 2px;
+}
+
+.subSectionWhatToD__img {
+  width: 30%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /*margin-top: 2rem;*/
+}
+
+.subSectionWhatToDo__paragraph {
+  text-transform: uppercase;
+}
+
+.subSectionWhatToDo__desc {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+/*  sectionWhatToDo                             */
+/* ============================================ */
+/* ============================================ */
+/*  sectionPopularTours */
+.subSectionPopularTours {
+  display: flex;
+  flex-direction: row;
+  height: 35rem;
+}
+
+.tour_1,
+.tour_2,
+.tour_3 {
+  /*border: 1px solid gray;*/
+  /*box-shadow: 1px 2px 8px rgb(199, 197, 197);*/
+  background-color: rgba(255, 255, 255, 0.8);
+  /* display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin: 15px;
+   width: 200px;
+   height: 300px;
+   border-radius: 5px;*/
+  display: flex;
+  flex-direction: column;
+  /* Justificar as divs no centro*/
+  /*justify-content: center;*/
+  /* Alinhar no centro o conteúdo do img e texto*/
+  text-align: center;
+  margin: 25px;
+  border-radius: 2px;
+}
+
+.subSectionPopularTours__img {
+  width: 100%;
+  /*margin-top: 1rem;
+  margin-bottom: 1rem;*/
+}
+
+.subSectionPopularTours__main {
+  border-bottom: 1px solid #ccc;
+}
+
+.subSectionPopularTours__main {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.subSectionPopularTours__desc {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+/*  sectionPopularTours */
+/* ============================================ */
+/* ============================================ */
+/*  sectionPeopleExperience */
+.exp_1,
+.exp_2 {
+  /*border: 1px solid gray;*/
+  /*box-shadow: 1px 2px 8px rgb(199, 197, 197);*/
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  /*flex-direction: column;*/
+  text-align: center;
+  margin: 15px;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+/*  sectionPeopleExperience */
+/* ============================================ */
+/* ============================================ */
+/*  sectionBooking */
+/*  sectionBooking */
+/* ============================================ */
+
+/*# sourceMappingURL=style.css.map */
