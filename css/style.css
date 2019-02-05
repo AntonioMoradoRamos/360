@@ -6,7 +6,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 /* PROJECTO_360 */
-@import url("https://fonts.googleapis.com/css?family=Asap+Condensed|Libre+Baskerville|Varela+Round");
 * {
   box-sizing: border-box;
 }
@@ -25,6 +24,11 @@ html {
  * Remove the margin in all browsers.
  */
 body {
+  font-family: "Metrocity-Book", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #333;
   margin: 0;
 }
 
@@ -344,10 +348,79 @@ template {
   display: none;
 }
 
-.teste {
-  font-family: "Varela Round";
+/*@import url('https://fonts.googleapis.com/css?family=Asap+Condensed|Libre+Baskerville|Varela+Round');*/
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/RobotoBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensedRegular";
+  src: url("../fonts/RobotoCondensedRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto_condensedbold";
+  src: url("../fonts/robotocondensed-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatoLight";
+  src: url("../fonts/LatoLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/LatoBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("../fonts/PoppinsBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Metrocity-Light";
+  src: url("../fonts/Metrocity-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Metrocity-Book";
+  src: url("../fonts/Metrocity-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Metrocity-Medium";
+  src: url("../fonts/Metrocity-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Metrocity-Bold";
+  src: url("../fonts/Metrocity-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Textitle";
+  src: url("../fonts/Textitle.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .row {
   display: flex;
   flex-direction: column;
@@ -370,6 +443,21 @@ template {
 }
 .info {
   text-align: center;
+}
+
+.infoText {
+  font-size: 13px;
+  margin: 2px;
+}
+
+.infoMais {
+  font-size: 10px;
+}
+
+.market-info-footer {
+  padding: 21px 0 24px;
+  border-top: 2px solid #f2f2f2;
+  background: rgba(242, 242, 242, 0.4);
 }
 
 /*# sourceMappingURL=style.css.map */
