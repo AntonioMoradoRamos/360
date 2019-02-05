@@ -1,0 +1,8 @@
+@include mx-row($gridwidthmobile);
+@include mx-row($gridwidthtablet);
+@include mx-row($gridwidthtabletbig);
+
+.info{
+    text-align: center;
+
+}

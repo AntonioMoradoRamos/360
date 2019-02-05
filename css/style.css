@@ -344,4 +344,32 @@ template {
   display: none;
 }
 
+.teste {
+  font-family: "Varela Round";
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 720px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.info {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
