@@ -1,0 +1,32 @@
+@mixin mx-col-grid-bene($gridwidth) {
+    @if($gridwidth==$gridwidthmobile) {
+        .col-4-m {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+
+    @if($gridwidth==$gridwidthtablet) {
+        @media only screen and (min-width: $gridwidth) {
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+    }
+
+    @if($gridwidth==$gridwidthtabletbig) {
+        @media only screen and (min-width: $gridwidth) {
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+        }
+    }
+
+
+}

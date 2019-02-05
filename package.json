@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass ./scss/main.scss ./css/style.css",
-    "watch": "sass --watch ./scss/main.scss ./css/style.css"
+    "build": "sass ./scss/main.scss ./css/styleGrid.css",
+    "watch": "sass --watch ./scss/main.scss ./css/styleGrid.css"
   },
   "repository": {
     "type": "git",
