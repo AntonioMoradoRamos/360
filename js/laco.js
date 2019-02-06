@@ -1,7 +1,3 @@
-jQuery('id-form-laco-submit'); 
-
-alert('Fortaleceste um laço'); 
-
 function addOnInputEventOnInput() {
 
     // Submeter o formulário
@@ -46,7 +42,7 @@ function addEventListener2ButtonLaco() {
 
 function addEventOnSubmit2ButtonContinuar() {
     // Alterar o conteúdo em função do click
-    jQuery('id-btn-to-esolha-2').on('submit', function (event) {
+    jQuery('id-btn-to-escolha-2').on('submit', function (event) {
         event.preventDefault(); 
         alert('teste'); 
 
