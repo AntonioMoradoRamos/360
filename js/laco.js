@@ -46,13 +46,13 @@ function addEventOnSubmit2ButtonContinuar() {
     jQuery('#id-btn-to-escolha-2').on('click', function (event) {
         //event.preventDefault(); 
         
-        alert('fazer o post'); 
+        alert('submit'); 
         
         /*jQuery('#form-escolha-1').submit(function () {
             alert('submit'); 
         });*/ 
             
-        jQuery().get("/projecto.360.io/escolha-2.html"); 
+        this.submit(); 
         
     }); 
 }
