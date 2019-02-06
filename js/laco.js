@@ -44,15 +44,15 @@ function addEventOnSubmit2ButtonContinuar() {
     alert('teste 3'); 
     // Alterar o conteúdo em função do click
     jQuery('#id-btn-to-escolha-2').on('click', function (event) {
-        //event.preventDefault(); 
+        event.preventDefault(); 
         
-        alert('submit'); 
+        //alert('submit'); 
         
-        /*jQuery('#form-escolha-1').submit(function () {
+        jQuery('#form-escolha-1').submit(function () {
             alert('submit'); 
-        });*/ 
+        }); 
             
-        this.submit(); 
+        //this.submit(); 
         
     }); 
 }
