@@ -40,8 +40,14 @@ function addEventListener2ButtonLaco() {
 
 }
 
+function addAction2Form(idForm, theAction) {
+
+    jQuery('#form-escolha-1').attr("action", theAction); 
+    
+}
+
 function addEventOnSubmit2ButtonContinuar() {
-    alert('teste 3'); 
+    
     // Alterar o conteúdo em função do click
     jQuery('#id-btn-to-escolha-2').on('click', function (event) {
         event.preventDefault(); 
@@ -58,6 +64,7 @@ function addEventOnSubmit2ButtonContinuar() {
     }); 
 }
 
+addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html'); 
 addEventOnSubmit2ButtonContinuar(); 
 //addEventListener2ButtonVoltar(); 
 
