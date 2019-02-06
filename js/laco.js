@@ -48,10 +48,11 @@ function addEventOnSubmit2ButtonContinuar() {
         
         //alert('submit'); 
         
-        jQuery('#form-escolha-1').submit(function () {
+        /*jQuery('#form-escolha-1').submit(function () {
             alert('submit'); 
-        }); 
-            
+        });*/ 
+           
+        jQuery('#form-escolha-1').submit(); 
         //this.submit(); 
         
     }); 
