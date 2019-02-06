@@ -42,7 +42,9 @@ function addEventListener2ButtonLaco() {
 
 function addAction2Form(idForm, theAction) {
 
-    jQuery('#form-escolha-1').attr("action", theAction); 
+    alert(idForm); 
+    alert(theAction); 
+    jQuery(idForm).attr("action", theAction); 
     
 }
 
