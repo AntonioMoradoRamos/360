@@ -52,7 +52,7 @@ function addEventOnSubmit2ButtonContinuar() {
             alert('submit'); 
         });*/ 
             
-        jQuery().post("/projecto.360.io/escolha-2.html"); 
+        jQuery().get("/projecto.360.io/escolha-2.html"); 
         
     }); 
 }
