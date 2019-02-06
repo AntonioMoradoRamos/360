@@ -47,10 +47,11 @@ function addEventOnSubmit2ButtonContinuar() {
         event.preventDefault(); 
         
         
-        jQuery('#form-escolha-1').submit(function () {
+        /*jQuery('#form-escolha-1').submit(function () {
             alert('submit'); 
-        }); 
+        });*/ 
             
+        jQuery().post("/projecto.360.io/escolha-2.html"); 
         
     }); 
 }
