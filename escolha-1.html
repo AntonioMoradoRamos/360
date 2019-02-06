@@ -50,41 +50,5 @@
 
 </body>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>
-
-</script>
-jQuery('id-form-laco-submit');
-
-alert('Fortaleceste um laço');
-
-function addOnInputEventOnInput() {
-
-// Submeter o formulário
-jQuery("#pesqGatinhos").on('input', function (event) {
-
-jQuery(".images-container").html('');
-jQuery(".images-container").append('<p><img class="imgDefault" src=default.gif></p>');
-clearTimeout(myTimeOut);
-myTimeOut = setTimeout(function () {
-
-
-
-let pesquisar = jQuery("#pesqGatinhos").val();
-jQuery.ajax(
-"http://api.giphy.com/v1/gifs/search?q=+" + pesquisar + "+&limit=10&api_key=dc6zaTOxFJmzC"
-).done(function (result) {
-console.log(result);
-jQuery(".images-container").html('');
-result.data.forEach(element => {
-const url2show = element.images.original.url;
-jQuery(".images-container").append('<p><img class="main img" src=' + url2show + '></p>');
-});
-
-});
-}, 3500);
-
-});
-
-}
 
 </html>
