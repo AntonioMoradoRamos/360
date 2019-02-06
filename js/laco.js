@@ -41,11 +41,12 @@ function addEventListener2ButtonLaco() {
 }
 
 function addEventOnSubmit2ButtonContinuar() {
-    alert('teste 2'); 
+    alert('teste 3'); 
     // Alterar o conteúdo em função do click
     jQuery('#id-btn-to-escolha-2').on('click', function (event) {
         //event.preventDefault(); 
         
+        alert('fazer o post'); 
         
         /*jQuery('#form-escolha-1').submit(function () {
             alert('submit'); 
