@@ -48,10 +48,10 @@ function addAction2Form(idForm, theAction) {
     
 }
 
-function addEventOnSubmit2ButtonContinuar() {
+function addEventOnSubmit2Button(idButton) {
     
     // Alterar o conteúdo em função do click
-    jQuery('#id-btn-to-escolha-2').on('click', function (event) {
+    jQuery(idButton).on('click', function (event) {
         event.preventDefault(); 
         
         //alert('submit'); 
@@ -66,8 +66,15 @@ function addEventOnSubmit2ButtonContinuar() {
     }); 
 }
 
+// Página escolha-1
 addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html'); 
-addEventOnSubmit2ButtonContinuar(); 
+addEventOnSubmit2Button('#id-btn-to-escolha-2'); 
+
+// Página escolha-2
+addAction2Form('#form-escolha-2', '/projecto.360.io/form-1.html'); 
+addEventOnSubmit2Button('#id-btn-to-form-1'); 
+ 
+
 //addEventListener2ButtonVoltar(); 
 
 /*
