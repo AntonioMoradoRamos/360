@@ -43,7 +43,7 @@ function addEventListener2ButtonLaco() {
 function addEventOnSubmit2ButtonContinuar() {
     alert('teste 1'); 
     // Alterar o conteúdo em função do click
-    jQuery('id-btn-to-escolha-2').on('submit', function (event) {
+    jQuery('#id-btn-to-escolha-2').on('click', function (event) {
         event.preventDefault(); 
         alert('teste'); 
 
