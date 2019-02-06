@@ -8,263 +8,116 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleBenefits.css">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="w3-content w3-display-container">
-            <img class="mySlides" src="images/img_snowtops.jpg" style="width:100%">
-            <img class="mySlides" src="images/img_lights.jpg" style="width:100%">
-            <img class="mySlides" src="images/img_mountains.jpg" style="width:100%">
-            <img class="mySlides" src="images/img_forest.jpg" style="width:100%">
-            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <div class="header-image-container">
+            <img class="header-image" src="images/img_forest.jpg" style="width:100%">
         </div>
+
 
     </header>
 
-    <section class="sectionWhatToDo">
+    <main>
+        <section class="section-escolhas">
 
-        <div class="subSectionWhatToDo">
-
-            <div class="subSectionWhatToDo_1">
-                <div class="subSectionWhatToDo__header">
-                    <img class="subSectionWhatToD__img" src="images/mundo.png" alt="Mundo">
+            <div class="row-esolhas">
+                <div class="col-4-m col-8-t col-12-d">
+                    <button class="escolha_Familia__btn">Família</button>
+                    <button class="escolha_Amigos__btn">Amigos</button>
+                    <!-- <img class="imgfit escolha_1__img" src="images/mundo.png" alt="Mundo">
+                <img class="imgfit escolha_2__img" src="images/mundo.png" alt="Mundo"> -->
                 </div>
-                <div class="subSectionWhatToDo__main">
-                    <p class="subSectionWhatToDo__paragraph">Lorem ipsum</p>
-                    <p class="subSectionWhatToDo__desc">Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit.
-                        Aperiam,
-                        ipsum sapiente aspernatur.</p>
-                </div>
-            </div>
-            <div class="subSectionWhatToDo_2">
-                <div class="subSectionWhatToDo__header">
-                    <img class="subSectionWhatToD__img" src="images/mundo.png" alt="Meet Nature">
-                </div>
-                <div class="subSectionWhatToDo__main">
-                    <p class="subSectionWhatToDo__paragraph">Lorem ipsum</p>
-                    <p class="subSectionWhatToDo__desc">Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit.
-                        Aperiam,
-                        ipsum sapiente aspernatur.</p>
-                </div>
-            </div>
-
-            <div class="subSectionWhatToDo_3">
-                <div class="subSectionWhatToDo__header">
-                    <img class="subSectionWhatToD__img" src="images/mundo.png" alt="Find your way">
-                </div>
-                <div class="subSectionWhatToDo__main">
-                    <p class="subSectionWhatToDo__paragraph">Lorem ipsum</p>
-                    <p class="subSectionWhatToDo__desc">Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit.
-                        Aperiam,
-                        ipsum sapiente aspernatur.</p>
+                <div class="col-4-m col-8-t col-12-d">
+                    <button class="escolha_Homem__btn">Homem</button>
+                    <button class="escolha_Mulher__btn">Mulher</button>
                 </div>
 
             </div>
 
-            <div class="subSectionWhatToDo_4">
-                <div class="subSectionWhatToDo__header">
-                    <img class="subSectionWhatToD__img" src="images/mundo.png" alt="Live Healthier Life">
+        </section>
+        <section class="section-form">
+
+            <form action="form-laco">
+
+                <div class="form-laco-origem">
+                    <div class="form-laco-nome_origem">
+                        <label class="label" for="nomeOrigem">Nome</label>
+                        <input class="input" type="text" id="nomeOrigem">
+                    </div>
+
+                    <div class="form-laco-email_origem">
+                        <label class="label" for="emailOrigem">email</label>
+                        <input class="input" type="text" id="emailOrigem">
+                    </div>
                 </div>
-                <div class="subSectionWhatToDo__main">
-                    <p class="subSectionWhatToDo__paragraph">Lorem ipsum</p>
-                    <p class="subSectionWhatToDo__desc">Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit.
-                        Aperiam,
-                        ipsum sapiente aspernatur.</p>
+                <div class="form-laco-destino">
+                    <div class="form-laco-nome_destino">
+                        <label class="label" for="nomeDestino">Nome</label>
+                        <input class="input" type="text" id="nomeDestino">
+                    </div>
+
+                    <div class="form-laco-email_destino">
+                        <label class="label" for="emailDestino">email</label>
+                        <input class="input" type="text" id="emailDestino">
+                    </div>
                 </div>
-
-            </div>
-
-        </div>
+                <button id="id-form-laco-submit" class="form-laco-submit" type="submit">Criar laço</button>
+            </form>
 
 
 
-    </section>
+
+        </section>
+
+    </main>
+
 
     <footer class="footer">
-        <div class="market-info-footer">
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-4 col-8 col-12">
-                        <div class="info">
-                            <img src="images/icon-payments.png" alt="PAGAMENTOS SEGUROS" title="PAGAMENTOS
-                                    SEGUROS">
-                            <p class="infoText">PAGAMENTOS SEGUROS</p>
-                            <a class="infoMais" href="//marquessoares.redicom.work/pt/guia-de-compra/pagamentos_245.html"
-                                rel="nofollow">SABER MAIS</a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 col-8 col-12">
-                        <div class="info">
-                            <img src="images/icon-truck.png" alt="Envios
-                                    grátis acima de 50€"
-                                title="Envios grátis
-                                    acima de 50€">
-                            <p class="infoText">ENVIOS GRÁTIS A CIMA DE 50€</p>
-                            <a class="infoMais" href="//marquessoares.redicom.work/pt/guia-de-compra/envios-trocas-e-devolucoes_243.html"
-                                rel="nofollow">SABER MAIS</a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 col-8 col-12">
-                        <div class="info">
-                            <img src="images/icon-returns.png" alt="Devoluções gratuitas" title="Devoluções
-                                    gratuitas">
-                            <p class="infoText">DEVOLUÇÕES GRATUTITAS</p>
-                            <a class="infoMais" href="//marquessoares.redicom.work/pt/guia-de-compra/envios-trocas-e-devolucoes_243.html"
-                                rel="nofollow">SABER MAIS</a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 col-12">
-                        <div class="info">
-                            <img src="images/icon-phone.png" alt="Apoio ao
-                                    cliente"
-                                title="Apoio ao cliente">
-                            <p class="infoText">APOIO AO CLIENTE</p>
-                            <a class="infoMais" href="//marquessoares.redicom.work/pt/marques-soares/contactos_222.html"
-                                rel="nofollow">SABER MAIS</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div id="lastfooter">
-                <div class="footercontainer">
-                    <div class="row">
-                        <div class="company">
-                            <img src="images/logo.png" alt="Marques Soares">
-                            <p>Siga-nos </p>
-                            <div class="social-icons">
-                                <a href="https://www.facebook.com/armazensmarquessoares/" target="_blank" class="fb"
-                                    rel="nofollow"></a>
-                                <a href="https://www.instagram.com/marquessoares.pt/" target="_blank" class="in" rel="nofollow"></a>
-                                <a href="https://twitter.com/ptmarquessoares" target="_blank" class="tw" rel="nofollow"></a>
-                                <a href="https://pt.linkedin.com/company/marques-soares" target="_blank" class="lk" rel="nofollow"></a>
-                            </div>
-                        </div>
-
-                        <div class="marquessoares" break="1" style="width:
-                                15%;">
-                            <p class="title-menu hasChilds">Marques Soares</p>
-                            <ul>
-                                <li><a href="//marquessoares.redicom.work/pt/marques-soares/historia_215.html">História</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/marques-soares/lojas_217.html">Lojas</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/marques-soares/seccoes_218.html">Secções</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/marques-soares/trabalhe-connosco_221.html">Trabalhe
-                                        connosco</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/marques-soares/contactos_222.html">Contactos</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="seccoesgerais" break="0" style="width:
-                                15%;">
-                            <a href="//marquessoares.redicom.work/pt/marcas_201.html" class="title-menu">Marcas</a>
-                            <a href="//marquessoares.redicom.work/pt/mulher_202.html" class="title-menu">Mulher</a>
-                            <a href="//marquessoares.redicom.work/pt/homem-roupa_324-337.html" class="title-menu">Homem</a>
-                            <a href="//marquessoares.redicom.work/pt/crianca-menina-3-16-anos/casacos-e-blusoes_496-346.html"
-                                class="title-menu">Criança</a>
-                            <a href="//marquessoares.redicom.work/pt/calcado-mulher_529-351.html" class="title-menu">Calçado</a>
-                        </div>
-
-                        <div class="seccoesexta" break="0" style="width:
-                                15%;">
-                            <a href="//marquessoares.redicom.work/pt/acessorios-relogios_533-355.html" class="title-menu">Joias
-                                &amp; Relógios</a>
-                            <a href="//marquessoares.redicom.work/pt/mulher-acessorios_535-357.html" class="title-menu">Acessórios</a>
-                            <a href="//marquessoares.redicom.work/pt/perfumes-e-cosmeticos-perfumaria_541-363.html"
-                                class="title-menu">Perfumes &amp; Cosméticos</a>
-                            <a href="//marquessoares.redicom.work/pt/casa-e-eletronica-pequenos-electrodomesticos_546-368.html"
-                                class="title-menu">Casa &amp; Eletrónica</a>
-                        </div>
-
-                        <div class="infos" break="1" style="width: 15%;">
-                            <p class="title-menu hasChilds">Guia de compra</p>
-                            <ul>
-                                <li><a href="//marquessoares.redicom.work/pt/guia-de-compra/faqs_238.html">FAQs</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/guia-de-compra/guia-de-tamanhos_240.html">Guia
-                                        de Tamanhos</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/guia-de-compra/cartao-marques-soares+_241.html">Cartão
-                                        Marques Soares+</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/guia-de-compra/envios-trocas-e-devolucoes_243.html">Envios,
-                                        Trocas e Devoluções</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/guia-de-compra/informacao-geral_244.html">Informação
-                                        Geral</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/guia-de-compra/pagamentos_245.html">Pagamentos</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/guia-de-compra/protocolos_246.html">Protocolos</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="sabermais" break="0" style="width:
-                                15%;">
-                            <p class="title-menu hasChilds">Explore</p>
-                            <ul>
-                                <li><a href="//marquessoares.redicom.work/pt/explore/imprensa_249.html">Imprensa</a></li>
-                                <li><a href="//marquessoares.redicom.work/pt/explore/catalogos-e-revistas_250.html">Catálogose
-                                        Revistas</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="lastinfos">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 column copy-notice">
-                                <p class="hidden-xs">2019 © Marques Soares.
-                                    Todos os direitos reservados. <a href="https://www.redicom.pt" target="_blank">Redicom</a></p>
-                                <ul>
-                                    <li>
-                                        <a href="//marquessoares.redicom.work/pt/termos-e-condicoes_318.html">Termos
-                                            &amp; Condições</a>
-                                    </li>
-                                    <li>
-                                        <a href="//marquessoares.redicom.work/pt/politica-de-privacidade_319.html">Política
-                                            de Privacidade</a>
-                                    </li>
-                                </ul>
-                                <img src="images/img-payments-footer.png" alt="Payments" title="Payments" class="hidden-sm hidden-md hidden-lg">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
     </footer>
 
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
 
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-    </script>
 </body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+
+</script>
+jQuery('id-form-laco-submit');
+
+alert('Fortaleceste um laço');
+
+function addOnInputEventOnInput() {
+
+// Submeter o formulário
+jQuery("#pesqGatinhos").on('input', function (event) {
+
+jQuery(".images-container").html('');
+jQuery(".images-container").append('<p><img class="imgDefault" src=default.gif></p>');
+clearTimeout(myTimeOut);
+myTimeOut = setTimeout(function () {
+
+
+
+let pesquisar = jQuery("#pesqGatinhos").val();
+jQuery.ajax(
+"http://api.giphy.com/v1/gifs/search?q=+" + pesquisar + "+&limit=10&api_key=dc6zaTOxFJmzC"
+).done(function (result) {
+console.log(result);
+jQuery(".images-container").html('');
+result.data.forEach(element => {
+const url2show = element.images.original.url;
+jQuery(".images-container").append('<p><img class="main img" src=' + url2show + '></p>');
+});
+
+});
+}, 3500);
+
+});
+
+}
 
 </html>

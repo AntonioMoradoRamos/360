@@ -1,0 +1,40 @@
+@mixin mx-col-grid-escolhas($gridwidth) {
+    @if($gridwidth==$gridwidthmobile) {
+        .col-4-m {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            width: 33.3333333333%;
+            //float: left;
+            //padding-left: 15px;
+            //padding-right: 15px;
+        }
+
+
+    }
+
+    @if($gridwidth==$gridwidthtablet) {
+        @media only screen and (min-width: $gridwidth) {
+            .col-8-t {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
+    }
+
+    @if($gridwidth==$gridwidthtabletbig) {
+        @media only screen and (min-width: $gridwidth) {
+            .col-12-d {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+        }
+    }
+
+
+}

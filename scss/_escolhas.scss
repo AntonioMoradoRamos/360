@@ -1,0 +1,9 @@
+@include mx-col-grid-escolhas($gridwidthmobile);
+@include mx-col-grid-escolhas($gridwidthtablet);
+@include mx-col-grid-escolhas($gridwidthtabletbig);
+
+.imgfit {
+    display: block;
+    width: 100%;
+    height: auto;
+}

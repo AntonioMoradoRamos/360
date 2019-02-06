@@ -421,43 +421,31 @@ template {
   font-weight: normal;
   font-style: normal;
 }
-.row {
+.col-4-m {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 33.3333333333%;
 }
 
 @media only screen and (min-width: 720px) {
-  .row {
+  .col-8-t {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
   }
 }
 @media only screen and (min-width: 900px) {
-  .row {
+  .col-12-d {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 }
-.info {
-  text-align: center;
-}
-
-.infoText {
-  font-size: 13px;
-  margin: 2px;
-}
-
-.infoMais {
-  font-size: 10px;
-}
-
-.market-info-footer {
-  padding: 21px 0 24px;
-  border-top: 2px solid #f2f2f2;
-  background: rgba(242, 242, 242, 0.4);
+.imgfit {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
