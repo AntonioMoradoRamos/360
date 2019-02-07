@@ -42,8 +42,8 @@ function addEventListener2ButtonLaco() {
 
 function addAction2Form(idForm, theAction) {
 
-    //alert(idForm); 
-    //alert(theAction); 
+    alert(idForm);
+    alert(theAction);
     jQuery(idForm).attr("action", theAction);
 
 }
