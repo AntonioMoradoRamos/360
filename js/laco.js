@@ -85,7 +85,11 @@ addEventOnSubmit2Button('#id-btn-to-form-2', '#form-1-laco');
 
 // Página form-2
 addAction2Form('#form-2-laco', '/projecto.360.io/parabens.html');
-addEventOnSubmit2Button('#id-btn-to-parabens', '#form-2-laco');
+addEventOnSubmit2Button('#id-btn-go-form-2', '#form-2-laco');
+
+// Página parabens
+addAction2Form('#form-parabens', '/projecto.360.io/lacoFortalecido.html');
+addEventOnSubmit2Button('#id-btn-go-parabens', '#form-parabens');
 
 //addEventListener2ButtonVoltar(); 
 
