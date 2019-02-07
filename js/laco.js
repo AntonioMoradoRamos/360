@@ -1,6 +1,32 @@
+// Instanciar a variável local para armazenamento
+const localStorageValue = localStorage.getItem('myListStoraged');
+const valueParsed = JSON.parse(localStorageValue);
+
+// Caso a variável "valueParsed" seja null então inicializar
+const myList = valueParsed || [];
+
+let LACO = {
+    escolha1: "",
+    escolha2: "",
+    nomeForm1: "",
+    emailForm1: "",
+    nomeForm2: "",
+    emailForm2: ""
+}
+
+/*let escolha1 = {
+    escolha: ""
+};*/
+let escolha2 = "";
+let nomeForm1 = "";
+let emailForm1 = "";
+let nomeForm2 = "";
+let emailForm2 = "";
+
+/*
 function addOnInputEventOnInput() {
 
-    // Submeter o formulário
+    
     jQuery("#pesqGatinhos").on('input', function (event) {
 
         jQuery(".images-container").html('');
@@ -46,6 +72,50 @@ function addAction2Form(idForm, theAction) {
     //alert(theAction);
     jQuery(idForm).attr("action", theAction);
 
+}*/
+
+function saveListInLocalStorage() {
+    //alert('gravar');
+    localStorage.setItem('myListStoraged', JSON.stringify(myList));
+}
+
+function addEventOnSubmitForm1(idForm) {
+    // Alterar o conteúdo em função do click
+    jQuery(idForm).on('submit', function (event) {
+        //event.preventDefault();
+        // Obter os elementos input do tipo text
+        formForm1 = jQuery('#' + event.target.id + " :input[type='text']");
+
+        formForm1.each((index, elemForm) => {
+            //btnElement.addEventListener("click", processButtonOperation);
+            if (elemForm.id === 'nomeOrigem')
+                nomeForm1 = elemForm.value;
+
+            if (elemForm.id === 'emailOrigem')
+                emailForm1 = elemForm.value;
+        });
+    });
+}
+
+function addEventOnSubmitForm2(idForm) {
+    // Alterar o conteúdo em função do click
+    jQuery(idForm).on('submit', function (event) {
+        event.preventDefault();
+        // Obter os elementos input do tipo text
+        formForm1 = jQuery('#' + event.target.id + " :input[type='text']");
+
+        formForm1.each((index, elemForm) => {
+            //btnElement.addEventListener("click", processButtonOperation);
+            if (elemForm.id === 'nomeDestino')
+                nomeForm2 = elemForm.value;
+
+            if (elemForm.id === 'emailDestino')
+                emailForm2 = elemForm.value;
+
+            alert('nomeForm2: ' + nomeForm2);
+            alert('emailForm2: ' + emailForm2);
+        });
+    });
 }
 
 function addEventOnSubmit(idButton, idForm, theAction) {
@@ -53,20 +123,41 @@ function addEventOnSubmit(idButton, idForm, theAction) {
     // Alterar o conteúdo em função do click
     jQuery(idButton).on('click', function (event) {
         event.preventDefault();
-
-        //alert('submit');
-
-        /*jQuery('#form-escolha-1').submit(function () {
-            alert('submit'); 
-        });*/
-
-        //jQuery('#form-escolha-1').submit();
+        saveListInLocalStorage();
         jQuery(idForm).attr("action", theAction);
         jQuery(idForm).submit();
-        //this.submit(); 
-
     });
 }
+
+
+
+function addEventOnClickEscolha1(idButton) {
+    jQuery(idButton).on("click", function (event) {
+        event.preventDefault();
+        let btnTarget = event.target;
+        LACO.escolha1 = btnTarget.value;
+        alert("LACO.escolha1: " + LACO.escolha1);
+        myList.push(LACO);
+    });
+}
+
+function addEventOnClickEscolha2(idButton) {
+    jQuery(idButton).on("click", function (event) {
+        event.preventDefault();
+        let btnTarget = event.target;
+        escolha2 = btnTarget.value;
+        alert("escolha2: " + escolha2);
+    });
+}
+
+addEventOnClickEscolha1('#btn-escolha-f');
+addEventOnClickEscolha1('#btn-escolha-a');
+addEventOnClickEscolha2('#btn-escolha-h');
+addEventOnClickEscolha2('#btn-escolha-m');
+
+
+addEventOnSubmitForm1('#form-1-laco');
+addEventOnSubmitForm2('#form-2-laco');
 
 // Página de entrada
 //addAction2Form('#form-fortaleca', '/projecto.360.io/escolha-1.html');
