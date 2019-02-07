@@ -70,7 +70,7 @@ function addEventOnSubmit(idButton, idForm, theAction) {
 
 // Página de entrada
 //addAction2Form('#form-fortaleca', '/projecto.360.io/escolha-1.html');
-addEventOnSubmit('#id-btn-go-fortaleca', '#form-fortaleca', '/projecto.360.io/escolha-1.html');
+addEventOnSubmit('#id-btn-go-fortaleca', '#form-fortaleca', '/projecto.360.io/pages/escolha-1.html');
 
 // Página escolha-1
 //addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html');
