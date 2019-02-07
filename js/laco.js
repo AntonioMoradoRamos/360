@@ -112,8 +112,8 @@ function addEventOnSubmitForm2(idForm) {
             if (elemForm.id === 'emailDestino')
                 emailForm2 = elemForm.value;
 
-            alert('nomeForm2: ' + nomeForm2);
-            alert('emailForm2: ' + emailForm2);
+            //alert('nomeForm2: ' + nomeForm2);
+            //alert('emailForm2: ' + emailForm2);
         });
     });
 }
