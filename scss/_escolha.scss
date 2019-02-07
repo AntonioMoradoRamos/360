@@ -1,0 +1,69 @@
+//@include mx-col-grid-bene($gridwidthmobile);
+.headerEscolha {
+    width: 100%;
+    border-bottom: 1px black solid;
+    background-color: white;
+}
+
+.main {
+    width: 100%;
+
+}
+
+.col-4-m {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.row-escolhas .col-4-m {
+    padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.row-botoes .col-4-m {
+    padding: 1rem 3.5rem 0 3.5rem;
+}
+
+
+.headerEscolha_image {
+    background-image: url('../images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.btn-escolha {
+
+    height: 10rem;
+    margin-bottom: 2%;
+    background-color: #C4C4C4;
+    border: 0;
+
+}
+
+/*
+.escolha_Amigos__btn {
+    height: 10rem;
+    margin-bottom: 2%;
+
+}*/
+
+.btn-continuar {
+    height: 2.5rem;
+    margin-bottom: 2%;
+    background-color: gray;
+    color: white;
+    border: 0;
+}
+
+.btn-voltar {
+    height: 2.5rem;
+    margin-bottom: 2%;
+    background-color: #ccc;
+    color: white;
+    border: 0;
+}

@@ -30,6 +30,7 @@ body {
   line-height: 20px;
   color: #333;
   margin: 0;
+  background-color: #EFEFEF;
 }
 
 /**
@@ -421,31 +422,67 @@ template {
   font-weight: normal;
   font-style: normal;
 }
+.headerEscolha {
+  width: 100%;
+  border-bottom: 1px black solid;
+  background-color: white;
+}
+
+.main {
+  width: 100%;
+}
+
 .col-4-m {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 33.3333333333%;
 }
 
-@media only screen and (min-width: 720px) {
-  .col-8-t {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
+.row-escolhas .col-4-m {
+  padding: 2rem 1.5rem 0 1.5rem;
 }
-@media only screen and (min-width: 900px) {
-  .col-12-d {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+
+.row-botoes .col-4-m {
+  padding: 1rem 3.5rem 0 3.5rem;
 }
-.imgfit {
-  display: block;
+
+.headerEscolha_image {
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  height: auto;
+  padding: 20px;
+}
+
+.btn-escolha {
+  height: 10rem;
+  margin-bottom: 2%;
+  background-color: #C4C4C4;
+  border: 0;
+}
+
+/*
+.escolha_Amigos__btn {
+    height: 10rem;
+    margin-bottom: 2%;
+
+}*/
+.btn-continuar {
+  height: 2.5rem;
+  margin-bottom: 2%;
+  background-color: gray;
+  color: white;
+  border: 0;
+}
+
+.btn-voltar {
+  height: 2.5rem;
+  margin-bottom: 2%;
+  background-color: #ccc;
+  color: white;
+  border: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,104 +8,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        .header {
-            width: 100%;
-            border-bottom: 1px black solid;
-        }
-
-        .main {
-            width: 100%;
-
-        }
-
-        .col-4-m {
-            width: 100%;
-        }
-
-        .row-escolhas .col-4-m {
-            padding: 2rem 1.5rem 0 1.5rem;
-        }
-
-        .row-botoes .col-4-m {
-            padding: 1rem 3.5rem 0 3.5rem;
-        }
-
-
-        .header_image {
-            background-image: url('images/logo.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 100%;
-            padding: 20px;
-
-        }
-
-        .escolha_Familia__btn {
-
-            height: 10rem;
-            margin-bottom: 2%;
-
-        }
-
-        .escolha_Amigos__btn {
-            height: 10rem;
-            margin-bottom: 2%;
-
-        }
-
-        .btn-continuar {
-            height: 2.5rem;
-            margin-bottom: 2%;
-        }
-
-        .btn-voltar {
-            height: 2.5rem;
-            margin-bottom: 2%;
-        }
-    </style>
 </head>
 
 <body>
-
-    <header class="header">
-        <div class="header_image">
-
+    <header class="headerEscolha">
+        <div class="headerEscolha_image">
         </div>
     </header>
-
     <main class="main">
         <div class="section-escolhas">
-
             <div class="row-escolhas">
                 <div class="col-4-m col-8-t col-12-d">
-                    <button class="escolha_Familia__btn">Família</button>
-                    <button class="escolha_Amigos__btn">Amigos</button>
+                    <button class="btn-escolha">Família</button>
+                    <button class="btn-escolha">Amigos</button>
                 </div>
             </div>
-
         </div>
-        <section class="section-form">
+        <div class="section-form">
             <form action="" method="get" id="form-escolha-1">
             </form>
-
             <div class="row-botoes">
                 <div class="col-4-m col-8-t col-12-d">
                     <button id="id-btn-to-escolha-2" class="btn-continuar">Continuar</button>
                     <button id="id-btn-to-index" class="btn-voltar">Voltar</button>
                 </div>
             </div>
-
-        </section>
+        </div>
     </main>
     <footer class="footer">
-
     </footer>
-
-
 </body>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/laco.js"></script>
