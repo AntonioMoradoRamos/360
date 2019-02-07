@@ -2,6 +2,7 @@
 .headerEscolha {
     width: 100%;
     border-bottom: 1px black solid;
+    box-shadow: 5px black solid;
     background-color: white;
 }
 
@@ -27,12 +28,14 @@
 
 
 .headerEscolha_image {
-    background-image: url('../images/logo.png');
+    background-image: url(../images/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
@@ -40,7 +43,7 @@
 
     height: 10rem;
     margin-bottom: 2%;
-    background-color: #C4C4C4;
+    background-color: white;
     border: 0;
 
 }
