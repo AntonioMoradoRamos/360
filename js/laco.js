@@ -42,8 +42,8 @@ function addEventListener2ButtonLaco() {
 
 function addAction2Form(idForm, theAction) {
 
-    alert(idForm);
-    alert(theAction);
+    //alert(idForm);
+    // alert(theAction);
     jQuery(idForm).attr("action", theAction);
 
 }
@@ -66,6 +66,10 @@ function addEventOnSubmit2Button(idButton, idForm) {
 
     });
 }
+
+// Página de entrada
+addAction2Form('#form-fortaleca', '/projecto.360.io/escolha-1.html');
+addEventOnSubmit2Button('#id-btn-go-fortaleca', '#form-fortaleca');
 
 // Página escolha-1
 addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html');
