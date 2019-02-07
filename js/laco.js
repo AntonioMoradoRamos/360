@@ -48,19 +48,20 @@ function addAction2Form(idForm, theAction) {
 
 }
 
-function addEventOnSubmit2Button(idButton) {
+function addEventOnSubmit2Button(idButton, idForm) {
 
     // Alterar o conteúdo em função do click
     jQuery(idButton).on('click', function (event) {
         event.preventDefault();
 
-        //alert('submit'); 
+        //alert('submit');
 
         /*jQuery('#form-escolha-1').submit(function () {
             alert('submit'); 
         });*/
 
-        jQuery('#form-escolha-1').submit();
+        //jQuery('#form-escolha-1').submit();
+        jQuery(idForm).submit();
         //this.submit(); 
 
     });
@@ -68,19 +69,19 @@ function addEventOnSubmit2Button(idButton) {
 
 // Página escolha-1
 addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html');
-addEventOnSubmit2Button('#id-btn-to-escolha-2');
+addEventOnSubmit2Button('#id-btn-to-escolha-2', '#form-escolha-1');
 
 // Página escolha-2
 addAction2Form('#form-escolha-2', '/projecto.360.io/form-1.html');
-addEventOnSubmit2Button('#id-btn-go-escolha-2');
+addEventOnSubmit2Button('#id-btn-go-escolha-2', '#form-escolha-2');
 
 // Página form-1
 addAction2Form('#form-1-laco', '/projecto.360.io/form-2.html');
-addEventOnSubmit2Button('#id-btn-to-form-2');
+addEventOnSubmit2Button('#id-btn-to-form-2', '#form-1-laco');
 
 // Página form-2
 addAction2Form('#form-2-laco', '/projecto.360.io/parabens.html');
-addEventOnSubmit2Button('#id-btn-to-parabens');
+addEventOnSubmit2Button('#id-btn-to-parabens', '#form-2-laco');
 
 //addEventListener2ButtonVoltar(); 
 
