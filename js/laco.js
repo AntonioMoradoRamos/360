@@ -72,7 +72,7 @@ addEventOnSubmit2Button('#id-btn-to-escolha-2');
 
 // Página escolha-2
 addAction2Form('#form-escolha-2', '/projecto.360.io/form-1.html');
-addEventOnSubmit2Button('#id-btn-to-form-1');
+addEventOnSubmit2Button('#id-btn-go-escolha-2');
 
 // Página form-1
 addAction2Form('#form-1-laco', '/projecto.360.io/form-2.html');
