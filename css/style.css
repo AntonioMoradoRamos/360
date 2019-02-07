@@ -30,7 +30,7 @@ body {
   line-height: 20px;
   color: #333;
   margin: 0;
-  background-color: #EFEFEF;
+  background-color: white;
 }
 
 /**
@@ -422,9 +422,16 @@ template {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Get show";
+  src: url("../fonts/Get Sow.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 .headerEscolha {
   width: 100%;
   border-bottom: 1px black solid;
+  box-shadow: 5px black solid;
   background-color: white;
 }
 
@@ -448,18 +455,20 @@ template {
 }
 
 .headerEscolha_image {
-  background-image: url("../images/logo.png");
+  background-image: url(../images/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  padding: 20px;
+  padding: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-escolha {
   height: 10rem;
   margin-bottom: 2%;
-  background-color: #C4C4C4;
+  background-color: white;
   border: 0;
 }
 
@@ -499,8 +508,46 @@ template {
   text-transform: uppercase;
 }
 
+.sectionFormParabens__heading-h1 {
+  padding: 2rem 1.5rem 0 1.5rem;
+  text-transform: uppercase;
+}
+
+.sectionFormLacoFortalecido__heading-h1 {
+  padding: 2rem 1.5rem 0 1.5rem;
+  text-transform: uppercase;
+}
+
 .sectionFortaleceLaco {
-  background-image: url("../images/nat-9.jpg");
+  background-image: url("../images/imagem_frinds.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+}
+
+.sectionFortaleceLaco__heading-h1 {
+  font-family: "Get Show";
+  color: white;
+  font-size: 80px;
+  text-align: center;
+}
+
+.sectionFortaleceLaco__heading-h3 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  font-style: normal;
+}
+
+.btn-continuar {
+  align-self: center;
+  background-color: white;
+  color: black;
+  letter-spacing: 5px;
+  font-size: 18px;
+  box-sizing: 22px;
+  width: 214px;
+  height: 56px;
 }
 
 /*# sourceMappingURL=style.css.map */
