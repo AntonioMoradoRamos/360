@@ -48,7 +48,7 @@ function addAction2Form(idForm, theAction) {
 
 }
 
-function addEventOnSubmit2ButtonContinuar(idButton, idForm, theAction) {
+function addEventOnSubmit(idButton, idForm, theAction) {
 
     // Alterar o conteúdo em função do click
     jQuery(idButton).on('click', function (event) {
@@ -70,32 +70,34 @@ function addEventOnSubmit2ButtonContinuar(idButton, idForm, theAction) {
 
 // Página de entrada
 //addAction2Form('#form-fortaleca', '/projecto.360.io/escolha-1.html');
-addEventOnSubmit2ButtonContinuar('#id-btn-go-fortaleca', '#form-fortaleca', '/projecto.360.io/escolha-1.html');
+addEventOnSubmit('#id-btn-go-fortaleca', '#form-fortaleca', '/projecto.360.io/escolha-1.html');
 
 // Página escolha-1
 //addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html');
-addEventOnSubmit2ButtonContinuar('#id-btn-to-escolha-2', '#form-escolha-1', '/projecto.360.io/escolha-2.html');
+addEventOnSubmit('#id-btn-go-escolha-1', '#form-escolha-1', '/projecto.360.io/escolha-2.html');
+addEventOnSubmit('#id-btn-back-escolha-1', '#form-escolha-1', '/projecto.360.io/index.html');
+
 
 // Página escolha-2
 //addAction2Form('#form-escolha-2', '/projecto.360.io/form-1.html');
-addEventOnSubmit2ButtonContinuar('#id-btn-go-escolha-2', '#form-escolha-2', '/projecto.360.io/form-1.html');
+addEventOnSubmit('#id-btn-go-escolha-2', '#form-escolha-2', '/projecto.360.io/form-1.html');
 
 // Página form-1
 //addAction2Form('#form-1-laco', '/projecto.360.io/form-2.html');
-addEventOnSubmit2ButtonContinuar('#id-btn-to-form-2', '#form-1-laco', '/projecto.360.io/form-2.html');
+addEventOnSubmit('#id-btn-to-form-2', '#form-1-laco', '/projecto.360.io/form-2.html');
 
 // Página form-2
 //addAction2Form('#form-2-laco', '/projecto.360.io/parabens.html');
-addEventOnSubmit2ButtonContinuar('#id-btn-go-form-2', '#form-2-laco', '/projecto.360.io/parabens.html');
+addEventOnSubmit('#id-btn-go-form-2', '#form-2-laco', '/projecto.360.io/parabens.html');
 
 // Página parabens
 //addAction2Form('#form-parabens', '/projecto.360.io/lacoFortalecido.html');
-addEventOnSubmit2ButtonContinuar('#id-btn-go-parabens', '#form-parabens', '/projecto.360.io/lacoFortalecido.html');
+addEventOnSubmit('#id-btn-go-parabens', '#form-parabens', '/projecto.360.io/lacoFortalecido.html');
 
 // Página laco
 // Para já manter na mesma página
 //addAction2Form('#form-laco', '/projecto.360.io/lacoFortalecido.html');
-addEventOnSubmit2ButtonContinuar('#id-btn-go-laco', '#form-laco', '/projecto.360.io/lacoFortalecido.html');
+addEventOnSubmit('#id-btn-go-laco', '#form-laco', '/projecto.360.io/lacoFortalecido.html');
 
 //addEventListener2ButtonVoltar(); 
 
