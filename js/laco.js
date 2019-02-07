@@ -91,6 +91,11 @@ addEventOnSubmit2Button('#id-btn-go-form-2', '#form-2-laco');
 addAction2Form('#form-parabens', '/projecto.360.io/lacoFortalecido.html');
 addEventOnSubmit2Button('#id-btn-go-parabens', '#form-parabens');
 
+// Página laco
+// Para já manter na mesma página
+addAction2Form('#form-laco', '/projecto.360.io/lacoFortalecido.html');
+addEventOnSubmit2Button('#id-btn-go-laco', '#form-laco');
+
 //addEventListener2ButtonVoltar(); 
 
 /*
