@@ -1,6 +1,7 @@
-@mixin mx-col-grid-bene($gridwidth) {
+@mixin mx-col-grid($gridwidth) {
     @if($gridwidth==$gridwidthmobile) {
         .col-4-m {
+            //width: 33.3%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -9,9 +10,10 @@
 
     @if($gridwidth==$gridwidthtablet) {
         @media only screen and (min-width: $gridwidth) {
-            .row {
+            .col-8-t {
+                width: 66.6%;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: space-around;
             }
         }
@@ -19,12 +21,12 @@
 
     @if($gridwidth==$gridwidthtabletbig) {
         @media only screen and (min-width: $gridwidth) {
-            .row {
+            .col-12-d {
+                width: 100%;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: space-around;
             }
-
         }
     }
 

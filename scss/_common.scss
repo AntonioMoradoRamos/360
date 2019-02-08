@@ -1,4 +1,7 @@
-//@include mx-col-grid-bene($gridwidthmobile);
+@include mx-col-grid($gridwidthmobile);
+@include mx-col-grid($gridwidthtablet);
+@include mx-col-grid($gridwidthtabletbig);
+
 .headerEscolha {
     width: 100%;
     border-bottom: 1px black solid;
@@ -11,20 +14,35 @@
 
 }
 
-.col-4-m {
-    width: 100%;
+// 4 / 12 = 0,33
+/*.col-4-m {
+    width: 33.3%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.row-escolhas .col-4-m {
-    padding: 2rem 1.5rem 0 1.5rem;
+// 8 / 12 = 0,66
+.col-8-t {
+    width: 66.6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.row-botoes .col-4-m {
-    padding: 1rem 3.5rem 0 3.5rem;
-}
+// 12 / 12 = 1
+.col-12-d {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}*/
+
+//.row-escolhas .col-4-m {
+//    padding: 2rem 1.5rem 0 1.5rem;
+//}
+
+
 
 
 .headerEscolha_image {
@@ -33,19 +51,29 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    padding: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 
 }
 
-.btn-escolha {
-
-    height: 10rem;
-    margin-bottom: 2%;
-    background-color: white;
+.btn-escolha1-a,
+.btn-escolha1-b {
     border: 0;
+    width: 100%;
+    height: 136px;
+    background-color: #CA9559;
 
+    // Texto
+    color: #FFFFFF;
+    line-height: normal;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+.btn-escolha1-b {
+    background-color: #4A4D41;
 }
 
 /*
@@ -55,16 +83,37 @@
 
 }*/
 
+/*
+.row-botoes .col-4-m {
+    padding: 1rem 3.5rem 0 3.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+}*/
+
+.row-botoes {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .btn-continuar {
-    height: 2.5rem;
-    margin-bottom: 2%;
-    background-color: gray;
-    color: white;
-    border: 0;
+    width: 9rem;
+    height: 3rem;
+    //margin-bottom: 2%;
+    margin: 22px 20px 45px 75px;
+    //background-color: gray;
+    background: rgba(237, 237, 237, 0.4);
+    color: #373535;
+    border: 1.5px solid #373535;
+
+    font-size: 1rem;
+    line-height: normal;
+    text-align: center;
+
+    letter-spacing: 0.1rem;
 }
 
 .btn-voltar {
-    height: 2.5rem;
+    height: 3rem;
     margin-bottom: 2%;
     background-color: #ccc;
     color: white;
@@ -73,6 +122,17 @@
 
 .sectionFortaleceLaco__heading-h1 {
     padding: 15rem 2rem 0 2rem;
+}
+
+.section-escolhas__h1 {
+    font-family: "Get-Show";
+    line-height: 40px;
+    font-size: 3rem;
+    text-align: center;
+
+    color: #373535;
+    margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+    font-weight: 100;
 }
 
 .sectionForm1__heading-h1 {

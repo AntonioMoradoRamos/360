@@ -150,8 +150,8 @@ function addEventOnClickEscolha2(idButton) {
     });
 }
 
-addEventOnClickEscolha1('#btn-escolha-f');
-addEventOnClickEscolha1('#btn-escolha-a');
+addEventOnClickEscolha1('#id-btn-escolhaa-a');
+addEventOnClickEscolha1('#id-btn-escolhaa-b');
 addEventOnClickEscolha2('#btn-escolha-h');
 addEventOnClickEscolha2('#btn-escolha-m');
 

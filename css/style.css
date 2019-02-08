@@ -26,11 +26,11 @@ html {
 body {
   font-family: "Metrocity-Book", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 20px;
   color: #333;
   margin: 0;
-  background-color: white;
+  background-color: #F4F4F4;
 }
 
 /**
@@ -423,10 +423,32 @@ template {
   font-style: normal;
 }
 @font-face {
-  font-family: "Get show";
-  src: url("../fonts/Get Sow.ttf") format("ttf");
+  font-family: "Get-Show";
+  src: url("../fonts/Get_Show.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+.col-4-m {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-8-t {
+    width: 66.6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .col-12-d {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 .headerEscolha {
   width: 100%;
@@ -439,37 +461,53 @@ template {
   width: 100%;
 }
 
-.col-4-m {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+/*.col-4-m {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.row-escolhas .col-4-m {
-  padding: 2rem 1.5rem 0 1.5rem;
+// 8 / 12 = 0,66
+.col-8-t {
+    width: 66.6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.row-botoes .col-4-m {
-  padding: 1rem 3.5rem 0 3.5rem;
-}
-
+// 12 / 12 = 1
+.col-12-d {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}*/
 .headerEscolha_image {
   background-image: url(../images/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  padding: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 20px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
-.btn-escolha {
-  height: 10rem;
-  margin-bottom: 2%;
-  background-color: white;
+.btn-escolha1-a,
+.btn-escolha1-b {
   border: 0;
+  width: 100%;
+  height: 136px;
+  background-color: #CA9559;
+  color: #FFFFFF;
+  line-height: normal;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.btn-escolha1-b {
+  background-color: #4A4D41;
 }
 
 /*
@@ -478,16 +516,32 @@ template {
     margin-bottom: 2%;
 
 }*/
+/*
+.row-botoes .col-4-m {
+    padding: 1rem 3.5rem 0 3.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+}*/
+.row-botoes {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .btn-continuar {
-  height: 2.5rem;
-  margin-bottom: 2%;
-  background-color: gray;
-  color: white;
-  border: 0;
+  width: 9rem;
+  height: 3rem;
+  margin: 22px 20px 45px 75px;
+  background: rgba(237, 237, 237, 0.4);
+  color: #373535;
+  border: 1.5px solid #373535;
+  font-size: 1rem;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: 0.1rem;
 }
 
 .btn-voltar {
-  height: 2.5rem;
+  height: 3rem;
   margin-bottom: 2%;
   background-color: #ccc;
   color: white;
@@ -496,6 +550,16 @@ template {
 
 .sectionFortaleceLaco__heading-h1 {
   padding: 15rem 2rem 0 2rem;
+}
+
+.section-escolhas__h1 {
+  font-family: "Get-Show";
+  line-height: 40px;
+  font-size: 3rem;
+  text-align: center;
+  color: #373535;
+  margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+  font-weight: 100;
 }
 
 .sectionForm1__heading-h1 {
@@ -539,15 +603,16 @@ template {
   font-style: normal;
 }
 
-.btn-continuar {
-  align-self: center;
-  background-color: white;
-  color: black;
-  letter-spacing: 5px;
-  font-size: 18px;
-  box-sizing: 22px;
-  width: 214px;
-  height: 56px;
-}
+/*
+.btn-continuar{
+    align-self: center;
+    background-color: white;
+    color: black;
+    letter-spacing: 5px;
+    font-size: 18px;
+    box-sizing: 22px;
+    width: 214px;
+    height: 56px;
+}*/
 
 /*# sourceMappingURL=style.css.map */
