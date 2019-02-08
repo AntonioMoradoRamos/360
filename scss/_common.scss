@@ -59,9 +59,10 @@
 
 .btn-escolha1-a,
 .btn-escolha1-b {
+    font-family: 'Gotham-Bold';
     border: 0;
-    width: 100%;
-    height: 136px;
+    //width: 100%;
+    //height: 136px;
     background-color: #CA9559;
 
     // Texto
@@ -124,21 +125,7 @@
     padding: 15rem 2rem 0 2rem;
 }
 
-.section-escolhas__h1 {
-    font-family: "Get-Show";
-    line-height: 40px;
-    font-size: 3rem;
-    text-align: center;
 
-    color: #373535;
-    margin: 1.5rem 3.5rem 1.5rem 3.5rem;
-    font-weight: 100;
-}
-
-.sectionForm1__heading-h1 {
-    padding: 2rem 1.5rem 0 1.5rem;
-    text-transform: uppercase;
-}
 
 .sectionForm2__heading-h1 {
     padding: 2rem 1.5rem 0 1.5rem;
@@ -154,4 +141,119 @@
 .sectionFormLacoFortalecido__heading-h1 {
     padding: 2rem 1.5rem 0 1.5rem;
     text-transform: uppercase;
+}
+
+
+// --------------------
+//  FORM1 e FORM2
+.sectionForm1 {
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-nome,
+.form-email {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-nome__margin {
+    margin-bottom: 35px;
+}
+
+//.form1-nome-origem {
+//    margin-bottom: 34px;
+//}
+
+.section-mensagem__heading-h1 {
+
+    font-family: "Get-Show";
+    line-height: 40px;
+    font-size: 3rem;
+    text-align: center;
+
+    color: #373535;
+    margin: 1.5rem 2rem 1.5rem 2rem;
+    font-weight: 100;
+}
+
+.section-form {
+    background-color: #CA9559;
+    width: 100%;
+    height: 272px;
+    padding: 35px;
+}
+
+.section-texto-laco-h1 {
+    font-family: "Get-Show";
+    line-height: 40px;
+    font-size: 3rem;
+    text-align: center;
+
+    color: #373535;
+    margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+    font-weight: 100;
+}
+
+.section-texto-laco-h1__form {
+    margin: 1.5rem 2rem 1.5rem 2rem;
+}
+
+.section-texto-laco-h2 {
+    font-family: "Gotham";
+    line-height: normal;
+    font-size: 1rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+}
+
+.label {
+    font-family: Gotham;
+    line-height: normal;
+    font-size: 1rem;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+
+
+.input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 44px;
+    padding-left: 10px;
+}
+
+::placeholder {
+    font-family: Gotham;
+    line-height: normal;
+    font-size: 1rem;
+    color: #FFFFFF;
+
+}
+
+.row-escolhas {
+    width: 100%;
+    height: 272px;
+    display: flex;
+    flex-direction: column
+}
+
+.row-escolhas__a {
+    background-color: #CA9559;
+    flex: 1;
+}
+
+.row-escolhas__b {
+    background-color: #4A4D41;
+    flex: 1;
 }

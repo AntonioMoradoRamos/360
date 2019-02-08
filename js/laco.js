@@ -152,47 +152,47 @@ function addEventOnClickEscolha2(idButton) {
 
 addEventOnClickEscolha1('#id-btn-escolhaa-a');
 addEventOnClickEscolha1('#id-btn-escolhaa-b');
-addEventOnClickEscolha2('#btn-escolha-h');
-addEventOnClickEscolha2('#btn-escolha-m');
+addEventOnClickEscolha2('#id-btn-escolha-h');
+addEventOnClickEscolha2('#id-btn-escolha-m');
 
 
-addEventOnSubmitForm1('#form-1-laco');
-addEventOnSubmitForm2('#form-2-laco');
+addEventOnSubmitForm1('#id-form-1-laco');
+addEventOnSubmitForm2('#id-form-2-laco');
 
 // Página de entrada
 //addAction2Form('#form-fortaleca', '/projecto.360.io/escolha-1.html');
-addEventOnSubmit('#id-btn-go-fortaleca', '#form-fortaleca', '/projecto.360.io/pages/escolha-1.html');
+addEventOnSubmit('#id-btn-go-fortaleca', '#id-form-fortaleca', '/projecto.360.io/pages/escolha-1.html');
 
 // Página escolha-1
 //addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html');
-addEventOnSubmit('#id-btn-go-escolha-1', '#form-escolha-1', '/projecto.360.io/pages/escolha-2.html');
-addEventOnSubmit('#id-btn-back-escolha-1', '#form-escolha-1', '/projecto.360.io/pages/index.html');
+addEventOnSubmit('#id-btn-go-escolha-1', '#id-form-escolha-1', '/projecto.360.io/pages/escolha-2.html');
+addEventOnSubmit('#id-btn-back-escolha-1', '#id-form-escolha-1', '/projecto.360.io/pages/index.html');
 
 
 // Página escolha-2
 //addAction2Form('#form-escolha-2', '/projecto.360.io/form-1.html');
-addEventOnSubmit('#id-btn-go-escolha-2', '#form-escolha-2', '/projecto.360.io/pages/form-1.html');
-addEventOnSubmit('#id-btn-back-escolha-2', '#form-escolha-2', '/projecto.360.io/pages/escolha-1.html');
+addEventOnSubmit('#id-btn-go-escolha-2', '#id-form-escolha-2', '/projecto.360.io/pages/form-1.html');
+addEventOnSubmit('#id-btn-back-escolha-2', '#id-form-escolha-2', '/projecto.360.io/pages/escolha-1.html');
 
 
 // Página form-1
 //addAction2Form('#form-1-laco', '/projecto.360.io/form-2.html');
-addEventOnSubmit('#id-btn-go-form-1', '#form-1-laco', '/projecto.360.io/pages/form-2.html');
-addEventOnSubmit('#id-btn-back-form-1', '#form-1-laco', '/projecto.360.io/pages/escolha-2.html');
+addEventOnSubmit('#id-btn-go-form-1', '#id-form-1-laco', '/projecto.360.io/pages/form-2.html');
+addEventOnSubmit('#id-btn-back-form-1', '#id-form-1-laco', '/projecto.360.io/pages/escolha-2.html');
 
 // Página form-2
 //addAction2Form('#form-2-laco', '/projecto.360.io/parabens.html');
-addEventOnSubmit('#id-btn-go-form-2', '#form-2-laco', '/projecto.360.io/pages/parabens.html');
-addEventOnSubmit('#id-btn-back-form-2', '#form-2-laco', '/projecto.360.io/pages/form-1.html');
+addEventOnSubmit('#id-btn-go-form-2', '#id-form-2-laco', '/projecto.360.io/pages/parabens.html');
+addEventOnSubmit('#id-btn-back-form-2', '#id-form-2-laco', '/projecto.360.io/pages/form-1.html');
 
 // Página parabens
 //addAction2Form('#form-parabens', '/projecto.360.io/lacoFortalecido.html');
-addEventOnSubmit('#id-btn-go-parabens', '#form-parabens', '/projecto.360.io/pages/lacoFortalecido.html');
+addEventOnSubmit('#id-btn-go-parabens', '#id-form-parabens', '/projecto.360.io/pages/lacoFortalecido.html');
 
 // Página laco
 // Para já manter na mesma página
 //addAction2Form('#form-laco', '/projecto.360.io/lacoFortalecido.html');
-addEventOnSubmit('#id-btn-go-laco', '#form-laco', '/projecto.360.io/pages/lacoFortalecido.html');
+addEventOnSubmit('#id-btn-go-laco', '#id-form-laco', '/projecto.360.io/pages/lacoFortalecido.html');
 
 //addEventListener2ButtonVoltar(); 
 
