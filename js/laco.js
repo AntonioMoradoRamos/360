@@ -166,7 +166,7 @@ addEventOnSubmit('#id-btn-go-fortaleca', '#id-form-fortaleca', '/projecto.360.io
 // Página escolha-1
 //addAction2Form('#form-escolha-1', '/projecto.360.io/escolha-2.html');
 addEventOnSubmit('#id-btn-go-escolha-1', '#id-form-escolha-1', '/projecto.360.io/pages/escolha-2.html');
-addEventOnSubmit('#id-btn-back-escolha-1', '#id-form-escolha-1', '/projecto.360.io/pages/index.html');
+addEventOnSubmit('#id-btn-back-escolha-1', '#id-form-escolha-1', '/projecto.360.io/index.html');
 
 
 // Página escolha-2
