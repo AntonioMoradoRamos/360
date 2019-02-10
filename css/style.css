@@ -768,7 +768,14 @@ span::before {
   width: 100%;
 }
 
+/*
 .section-texto-laco {
+    background-image: url('../images/imagem_frinds.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+}*/
+.section-texto-intro-laco {
   background-image: url("../images/imagem_frinds.png");
   background-repeat: no-repeat;
   background-position: center;
