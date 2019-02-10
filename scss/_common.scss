@@ -83,7 +83,9 @@
     margin: 22px 0 0 0;
 }
 
-
+.row-botoes_intro_margin {
+    margin: 90px 0 0 0;
+}
 
 .btn-continuar {
     width: 9rem;
@@ -99,6 +101,14 @@
     letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
+
+.btn-continuar-intro {
+    background: rgba(237, 237, 237, 0.4);
+    border: 1.5px solid #373535;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
 
 .btn-voltar {
     width: 9rem;
@@ -204,6 +214,13 @@ span::before {
     //padding: 35px;
 }
 
+.section-texto-laco {
+    background-image: url('../images/imagem_frinds.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+}
+
 .section-texto-laco-h1 {
     font-family: "Get-Show";
     line-height: 40px;
@@ -213,6 +230,29 @@ span::before {
     color: #373535;
     margin: 1.5rem 3.5rem 1.5rem 3.5rem;
     font-weight: 100;
+}
+
+
+
+.section-texto-intro-h1 {
+    font-family: "Get-Show";
+    line-height: 64px;
+    font-size: 5.6rem;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-weight: 100;
+    padding: 80px 0 0 0;
+}
+
+.section-texto-intro-p1 {
+    font-family: "Gotham";
+    line-height: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+
+    padding: 0 30px 5px 30px;
+    color: #FFFFFF;
 }
 
 .section-texto-laco-h1__form {
