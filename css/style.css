@@ -657,18 +657,6 @@ template {
   background-color: #4A4D41;
 }
 
-/*
-.escolha_Amigos__btn {
-    height: 10rem;
-    margin-bottom: 2%;
-
-}*/
-/*
-.row-botoes .col-4-m {
-    padding: 1rem 3.5rem 0 3.5rem;
-    display: flex;
-    flex-direction: row-reverse;
-}*/
 .row-botoes {
   display: flex;
   flex-direction: row-reverse;
@@ -709,13 +697,6 @@ span::before {
   color: rgba(55, 53, 53, 0.3);
 }
 
-/*.btn-voltar {
-    height: 3rem;
-    margin-bottom: 2%;
-    background-color: #ccc;
-    color: white;
-    border: 0;
-}*/
 .sectionFortaleceLaco__heading-h1 {
   padding: 15rem 2rem 0 2rem;
 }
@@ -774,7 +755,6 @@ span::before {
 
 .div-form {
   width: 100%;
-  height: 272px;
 }
 
 .section-texto-laco-h1 {
@@ -834,6 +814,14 @@ span::before {
   flex-direction: column;
 }
 
+@media only screen and (min-width: 900px) {
+  .row-escolhas-d {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+  }
+}
 .row-escolhas__a {
   background-color: #CA9559;
   flex: 1;
@@ -913,6 +901,27 @@ span::before {
   border: 1.5px solid #373535;
   box-sizing: border-box;
   border-radius: 2px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 14px 82px 14px 82px;
+}
+
+.footer-indicator {
+  width: 39px;
+  height: 7px;
+  border-radius: 1px;
+}
+
+.footer-indicator__active {
+  background-color: rgba(161, 161, 161, 0.6);
+}
+
+.footer-indicator__inactive {
+  background-color: rgba(211, 215, 220, 0.4);
 }
 
 .sectionFortaleceLaco {

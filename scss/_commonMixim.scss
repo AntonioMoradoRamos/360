@@ -1,3 +1,28 @@
+@mixin mx-row-escolhas($gridwidth) {
+
+    @if($gridwidth==$gridwidthmobile) {
+        .row-escolhas {
+            width: 100%;
+            height: 272px;
+            display: flex;
+            flex-direction: column
+        }
+    }
+
+    @if($gridwidth==$gridwidthtabletbig) {
+        @media only screen and (min-width: $gridwidth) {
+            .row-escolhas-d {
+                width: 100%;
+                height: 400px;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+}
+
+
 @mixin mx-col-grid($gridwidth) {
     @if($gridwidth==$gridwidthmobile) {
         .col-4-m {

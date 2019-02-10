@@ -61,8 +61,6 @@
 .btn-escolha1-b {
     font-family: 'Gotham-Bold';
     border: 0;
-    //width: 100%;
-    //height: 136px;
     background-color: #CA9559;
 
     // Texto
@@ -77,19 +75,6 @@
     background-color: #4A4D41;
 }
 
-/*
-.escolha_Amigos__btn {
-    height: 10rem;
-    margin-bottom: 2%;
-
-}*/
-
-/*
-.row-botoes .col-4-m {
-    padding: 1rem 3.5rem 0 3.5rem;
-    display: flex;
-    flex-direction: row-reverse;
-}*/
 
 .row-botoes {
     display: flex;
@@ -103,10 +88,6 @@
 .btn-continuar {
     width: 9rem;
     height: 3rem;
-    //margin-bottom: 2%;
-    //margin: 22px 20px 45px 75px;
-    //background-color: gray;
-    //background-color: rgba(237, 237, 237, 0.4);
     background-color: #F4F4F4;
     color: #373535;
     border: 1.5px solid #373535;
@@ -122,10 +103,6 @@
 .btn-voltar {
     width: 9rem;
     height: 3rem;
-    //margin-bottom: 2%;
-    //margin: 22px 20px 45px 30px;
-    //background-color: gray;
-    //background-color: rgba(237, 237, 237, 0.4);
     background-color: #F4F4F4;
     color: rgba(55, 53, 53, 0.3);
     border: 1.5px solid #373535;
@@ -137,7 +114,6 @@
     letter-spacing: 0.1rem;
     border: 0;
     text-transform: uppercase;
-    //border: 1.5px solid #373535;
 }
 
 span::before {
@@ -149,13 +125,7 @@ span::before {
 
 
 
-/*.btn-voltar {
-    height: 3rem;
-    margin-bottom: 2%;
-    background-color: #ccc;
-    color: white;
-    border: 0;
-}*/
+
 
 .sectionFortaleceLaco__heading-h1 {
     padding: 15rem 2rem 0 2rem;
@@ -230,7 +200,7 @@ span::before {
 
 .div-form {
     width: 100%;
-    height: 272px;
+    //height: 272px;
     //padding: 35px;
 }
 
@@ -288,12 +258,9 @@ span::before {
 
 }
 
-.row-escolhas {
-    width: 100%;
-    height: 272px;
-    display: flex;
-    flex-direction: column
-}
+@include mx-row-escolhas($gridwidthmobile);
+@include mx-row-escolhas($gridwidthtabletbig);
+
 
 .row-escolhas__a {
     background-color: #CA9559;
@@ -380,4 +347,25 @@ span::before {
     border: 1.5px solid #373535;
     box-sizing: border-box;
     border-radius: 2px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 14px 82px 14px 82px;
+}
+
+.footer-indicator {
+    width: 39px;
+    height: 7px;
+    border-radius: 1px;
+}
+
+.footer-indicator__active {
+    background-color: rgba(161, 161, 161, 0.6);
+}
+
+.footer-indicator__inactive {
+    background-color: rgba(211, 215, 220, 0.4);
 }
