@@ -94,15 +94,20 @@
 .row-botoes {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    margin: 22px 0 0 0;
 }
+
+
 
 .btn-continuar {
     width: 9rem;
     height: 3rem;
     //margin-bottom: 2%;
-    margin: 22px 20px 45px 75px;
+    //margin: 22px 20px 45px 75px;
     //background-color: gray;
-    background: rgba(237, 237, 237, 0.4);
+    //background-color: rgba(237, 237, 237, 0.4);
+    background-color: #F4F4F4;
     color: #373535;
     border: 1.5px solid #373535;
 
@@ -111,15 +116,46 @@
     text-align: center;
 
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 .btn-voltar {
+    width: 9rem;
+    height: 3rem;
+    //margin-bottom: 2%;
+    //margin: 22px 20px 45px 30px;
+    //background-color: gray;
+    //background-color: rgba(237, 237, 237, 0.4);
+    background-color: #F4F4F4;
+    color: rgba(55, 53, 53, 0.3);
+    border: 1.5px solid #373535;
+
+    font-size: 1rem;
+    line-height: normal;
+    text-align: center;
+
+    letter-spacing: 0.1rem;
+    border: 0;
+    text-transform: uppercase;
+    //border: 1.5px solid #373535;
+}
+
+span::before {
+    font-family: "Icomoon" !important;
+    content: "\e900";
+
+    color: rgba(55, 53, 53, 0.3);
+}
+
+
+
+/*.btn-voltar {
     height: 3rem;
     margin-bottom: 2%;
     background-color: #ccc;
     color: white;
     border: 0;
-}
+}*/
 
 .sectionFortaleceLaco__heading-h1 {
     padding: 15rem 2rem 0 2rem;
@@ -190,7 +226,7 @@
 .div-form {
     width: 100%;
     height: 272px;
-    padding: 35px;
+    //padding: 35px;
 }
 
 .section-texto-laco-h1 {
@@ -262,4 +298,81 @@
 .row-escolhas__b {
     background-color: #4A4D41;
     flex: 1;
+}
+
+// Parabens
+.section-parabens {
+    height: 286px;
+    background-color: #CA9559;
+}
+
+.section-parabens-h1 {
+    font-family: Gotham;
+    line-height: 44px;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    margin-top: 0;
+    padding: 40px 25px 0px 25px;
+}
+
+.section-parabens-p1 {
+    font-family: "Get-Show";
+    line-height: 24px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+
+    color: #FFFFFF;
+}
+
+.section-parabens-p2 {
+    font-family: "Gotham";
+    line-height: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 30px 5px 30px;
+
+    color: #FFFFFF;
+}
+
+.section-parabens-p3 {
+    font-family: "Get-Show";
+    line-height: 24px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+
+    color: #FFFFFF;
+    padding: 28px 30px 28px 30px;
+    margin: 0 auto;
+}
+
+.section-parabens-p4 {
+    font-family: "Gotham";
+    line-height: 20px;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 0 76px 5px 76px;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.section-form-saber-mais {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #4A4D41;
+}
+
+.btn-continuar_color {
+    background: rgba(237, 237, 237, 0.4);
+    border: 1.5px solid #373535;
+    box-sizing: border-box;
+    border-radius: 2px;
 }
