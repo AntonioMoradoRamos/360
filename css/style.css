@@ -657,28 +657,10 @@ template {
   line-height: normal;
   font-size: 2rem;
   text-align: center;
-  height: 100%;
 }
 
 .btn-escolha1-b {
   background-color: #606C3C;
-}
-
-/* explorar melhor como span
-.btn-escolha1-a__active {
-    //text-decoration: underline;
-    border-bottom: solid 2px #000000;
-    display: inline;
-    padding-bottom: 3px;
-}*/
-.btn-escolha1-a__active {
-  background-color: #DE9D3C;
-  text-decoration: underline;
-}
-
-.btn-escolha1-b__active {
-  background-color: #49542A;
-  text-decoration: underline;
 }
 
 .row-botoes {
@@ -731,7 +713,7 @@ template {
   text-transform: uppercase;
 }
 
-#id-icon-arrow-left::before {
+span::before {
   font-family: "Icomoon" !important;
   content: "";
   color: rgba(55, 53, 53, 0.3);
@@ -811,16 +793,6 @@ template {
   height: 600px;
 }
 
-.section-texto-laco-h1 {
-  font-family: "Get-Show";
-  line-height: 40px;
-  font-size: 3rem;
-  text-align: center;
-  color: #373535;
-  margin: 1.5rem 3.5rem 1.5rem 3.5rem;
-  font-weight: 100;
-}
-
 .section-texto-intro-h1 {
   font-family: "Get-Show";
   line-height: 64px;
@@ -896,23 +868,17 @@ template {
     flex-direction: row;
   }
 }
+.row-escolhas {
+  display: flex;
+}
+
 .row-escolhas__a {
   background-color: #F3B14D;
   flex: 1;
 }
 
-/*
-.row-escolhas-a__active {
-    background-color: #DE9D3C;
-    flex: 1;
-}*/
 .row-escolhas__b {
   background-color: #606C3C;
-  flex: 1;
-}
-
-.row-escolhas-b__active {
-  background-color: #49542A;
   flex: 1;
 }
 
@@ -998,7 +964,7 @@ template {
   .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin: 14px 82px 14px 82px;
   }
 }
@@ -1006,6 +972,7 @@ template {
   width: 39px;
   height: 7px;
   border-radius: 1px;
+  margin: 4px;
 }
 
 .footer-indicator__active {
@@ -1016,6 +983,30 @@ template {
   background-color: rgba(211, 215, 220, 0.4);
 }
 
+.section-texto-laco-h1 {
+  font-family: "Get-Show";
+  line-height: 40px;
+  font-size: 3rem;
+  text-align: center;
+  color: #373535;
+  margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+  font-weight: 100;
+}
+
+@media only screen and (min-width: 900px) {
+  .section-texto-laco-h1 {
+    font-family: "Get-Show";
+    line-height: 40px;
+    font-size: 3rem;
+    text-align: center;
+    position: absolute;
+    padding-left: 200px;
+    padding-top: 30px;
+    color: #373535;
+    margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+    font-weight: 100;
+  }
+}
 .sectionFortaleceLaco {
   background-image: url("../images/imagem_frinds.png");
   background-repeat: no-repeat;
