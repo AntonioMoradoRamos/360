@@ -136,7 +136,7 @@ function addEventOnClickEscolha1(idButton) {
         event.preventDefault();
         let btnTarget = event.target;
         LACO.escolha1 = btnTarget.value;
-        alert("LACO.escolha1: " + LACO.escolha1);
+        //alert("LACO.escolha1: " + LACO.escolha1);
         myList.push(LACO);
     });
 }
@@ -146,7 +146,7 @@ function addEventOnClickEscolha2(idButton) {
         event.preventDefault();
         let btnTarget = event.target;
         escolha2 = btnTarget.value;
-        alert("escolha2: " + escolha2);
+        //alert("escolha2: " + escolha2);
     });
 }
 
