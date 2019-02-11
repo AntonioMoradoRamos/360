@@ -657,10 +657,28 @@ template {
   line-height: normal;
   font-size: 2rem;
   text-align: center;
+  height: 100%;
 }
 
 .btn-escolha1-b {
   background-color: #606C3C;
+}
+
+/* explorar melhor como span
+.btn-escolha1-a__active {
+    //text-decoration: underline;
+    border-bottom: solid 2px #000000;
+    display: inline;
+    padding-bottom: 3px;
+}*/
+.btn-escolha1-a__active {
+  background-color: #DE9D3C;
+  text-decoration: underline;
+}
+
+.btn-escolha1-b__active {
+  background-color: #49542A;
+  text-decoration: underline;
 }
 
 .row-botoes {
@@ -713,7 +731,7 @@ template {
   text-transform: uppercase;
 }
 
-span::before {
+#id-icon-arrow-left::before {
   font-family: "Icomoon" !important;
   content: "";
   color: rgba(55, 53, 53, 0.3);
@@ -877,8 +895,18 @@ span::before {
   flex: 1;
 }
 
+/*
+.row-escolhas-a__active {
+    background-color: #DE9D3C;
+    flex: 1;
+}*/
 .row-escolhas__b {
   background-color: #606C3C;
+  flex: 1;
+}
+
+.row-escolhas-b__active {
+  background-color: #49542A;
   flex: 1;
 }
 
