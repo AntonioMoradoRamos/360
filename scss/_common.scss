@@ -230,19 +230,6 @@ span::before {
 }
 
 
-.section-texto-laco-h1 {
-    font-family: "Get-Show";
-    line-height: 40px;
-    font-size: 3rem;
-    text-align: center;
-
-    color: #373535;
-    margin: 1.5rem 3.5rem 1.5rem 3.5rem;
-    font-weight: 100;
-}
-
-
-
 .section-texto-intro-h1 {
     font-family: "Get-Show";
     line-height: 64px;
@@ -310,7 +297,9 @@ span::before {
 @include mx-row-escolhas($gridwidthmobile);
 @include mx-row-escolhas($gridwidthtabletbig);
 
-
+.row-escolhas{
+    display: flex;
+}
 .row-escolhas__a {
     background-color: $primary;
     flex: 1;
@@ -406,6 +395,7 @@ span::before {
     width: 39px;
     height: 7px;
     border-radius: 1px;
+    margin: 4px;
 }
 
 .footer-indicator__active {
@@ -415,3 +405,6 @@ span::before {
 .footer-indicator__inactive {
     background-color: rgba(211, 215, 220, 0.4);
 }
+
+@include mx-textolaco($gridwidthmobile);
+@include mx-textolaco($gridwidthtabletbig);
