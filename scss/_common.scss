@@ -112,7 +112,7 @@
 .btn-continuar {
     width: 9rem;
     height: 3rem;
-    background-color: #F4F4F4;
+    background-color: $white;
     color: #373535;
     border: 1.5px solid #373535;
 
@@ -122,6 +122,11 @@
 
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+}
+
+.btn-continuar__active {
+    background-color: #EDEDED;
+    border: 1.5px solid #373535;
 }
 
 .btn-continuar-intro {
@@ -245,7 +250,10 @@
 }*/
 
 .section-texto-intro-laco {
-    background-image: url('../images/imagem_frinds.png');
+    //background-image: url('../images/imagem_frinds.png');
+    background-image: url('../images/banner-mobile-amigos.png');
+    // O slide será desktop
+    //background-image: url('../images/banner-mobile-familia.png'); // 511
     background-repeat: no-repeat;
     background-position: center;
     height: 600px;

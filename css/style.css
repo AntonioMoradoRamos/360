@@ -695,7 +695,7 @@ template {
 .btn-continuar {
   width: 9rem;
   height: 3rem;
-  background-color: #F4F4F4;
+  background-color: #FFF;
   color: #373535;
   border: 1.5px solid #373535;
   font-size: 1rem;
@@ -703,6 +703,11 @@ template {
   text-align: center;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+}
+
+.btn-continuar__active {
+  background-color: #EDEDED;
+  border: 1.5px solid #373535;
 }
 
 .btn-continuar-intro {
@@ -800,7 +805,7 @@ template {
     height: 600px;
 }*/
 .section-texto-intro-laco {
-  background-image: url("../images/imagem_frinds.png");
+  background-image: url("../images/banner-mobile-amigos.png");
   background-repeat: no-repeat;
   background-position: center;
   height: 600px;
