@@ -132,11 +132,18 @@ function addEventOnSubmit(idButton, idForm, theAction) {
 
 
 function addEventOnClickEscolha1(idButton) {
+    //alert('add evento: ' + idButton);
     jQuery(idButton).on("click", function (event) {
         event.preventDefault();
         let btnTarget = event.target;
         LACO.escolha1 = btnTarget.value;
-        //alert("LACO.escolha1: " + LACO.escolha1);
+        //alert('btnTarget.id: ' + btnTarget.id);
+        if (btnTarget.id === 'id-btn-escolha-f')
+            jQuery(idButton).toggleClass('btn-escolha1-a__active');
+        if (btnTarget.id === 'id-btn-escolha-a')
+            jQuery(idButton).toggleClass('btn-escolha1-b__active');
+
+
         myList.push(LACO);
     });
 }
@@ -146,12 +153,19 @@ function addEventOnClickEscolha2(idButton) {
         event.preventDefault();
         let btnTarget = event.target;
         escolha2 = btnTarget.value;
-        //alert("escolha2: " + escolha2);
+        if (btnTarget.id === 'id-btn-escolha-h')
+            jQuery(idButton).toggleClass('btn-escolha1-a__active');
+        if (btnTarget.id === 'id-btn-escolha-m')
+            jQuery(idButton).toggleClass('btn-escolha1-b__active');
+
+
+
+
     });
 }
 
-addEventOnClickEscolha1('#id-btn-escolhaa-a');
-addEventOnClickEscolha1('#id-btn-escolhaa-b');
+addEventOnClickEscolha1('#id-btn-escolha-f');
+addEventOnClickEscolha1('#id-btn-escolha-a');
 addEventOnClickEscolha2('#id-btn-escolha-h');
 addEventOnClickEscolha2('#id-btn-escolha-m');
 
@@ -193,6 +207,23 @@ addEventOnSubmit('#id-btn-go-parabens', '#id-form-parabens', '/projecto.360.io/p
 // Para já manter na mesma página
 //addAction2Form('#form-laco', '/projecto.360.io/lacoFortalecido.html');
 addEventOnSubmit('#id-btn-go-laco', '#id-form-laco', '/projecto.360.io/pages/lacoFortalecido.html');
+
+
+function addEventOnClickSelectButton(idButton) {
+
+    // Alterar o conteúdo em função do click
+    jQuery(idButton).on('click', function (event) {
+        event.preventDefault();
+        //saveListInLocalStorage();
+        //jQuery(idForm).attr("action", theAction);
+        //jQuery(idForm).submit();
+    });
+}
+
+// Botão família
+//addEventOnClickSelectButton('id-btn-escolha-f');
+
+
 
 //addEventListener2ButtonVoltar(); 
 
