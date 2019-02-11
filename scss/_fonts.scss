@@ -245,6 +245,13 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'GothamPro-Medium';
+	src: url('../fonts/GothamPro-Medium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 [class^="icon-"],
 [class*=" icon-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */

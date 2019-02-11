@@ -59,7 +59,7 @@
 
 .btn-escolha1-a,
 .btn-escolha1-b {
-    font-family: 'Gotham-Bold';
+    font-family: $primaryfont;
     border: 0;
     background-color: #CA9559;
 
@@ -255,7 +255,7 @@ span::before {
 }
 
 .section-texto-intro-p1 {
-    font-family: "Gotham";
+    font-family: $primaryfont;
     line-height: 30px;
     font-size: 1.5rem;
     text-align: center;
@@ -269,7 +269,7 @@ span::before {
 }
 
 .section-texto-laco-h2 {
-    font-family: "Gotham";
+    font-family: $primaryfont;
     line-height: normal;
     font-size: 1rem;
     text-align: left;
@@ -280,7 +280,7 @@ span::before {
 }
 
 .label {
-    font-family: Gotham;
+    font-family: $primaryfont;
     line-height: normal;
     font-size: 1rem;
     text-align: left;
@@ -300,7 +300,7 @@ span::before {
 }
 
 ::placeholder {
-    font-family: Gotham;
+    font-family: $primaryfont;
     line-height: normal;
     font-size: 1rem;
     color: #FFFFFF;
@@ -328,7 +328,7 @@ span::before {
 }
 
 .section-parabens-h1 {
-    font-family: Gotham;
+    font-family: $primaryfont;
     line-height: 44px;
     font-size: 38px;
     text-align: center;
@@ -350,7 +350,7 @@ span::before {
 }
 
 .section-parabens-p2 {
-    font-family: "Gotham";
+    font-family: $primaryfont;
     line-height: 20px;
     font-size: 1.1rem;
     text-align: center;
@@ -373,7 +373,7 @@ span::before {
 }
 
 .section-parabens-p4 {
-    font-family: "Gotham";
+    font-family: $primaryfont;
     line-height: 20px;
     font-size: 1rem;
     text-align: center;

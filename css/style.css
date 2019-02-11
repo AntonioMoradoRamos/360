@@ -561,6 +561,12 @@ template {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "GothamPro-Medium";
+  src: url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 [class^=icon-],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -644,7 +650,7 @@ template {
 
 .btn-escolha1-a,
 .btn-escolha1-b {
-  font-family: "Gotham-Bold";
+  font-family: "GothamPro-Medium";
   border: 0;
   background-color: #CA9559;
   color: #FFFFFF;
@@ -665,7 +671,7 @@ template {
 }
 
 .row-botoes_intro_margin {
-  margin: 90px 0 0 0;
+  margin: 5.6rem 0 0 0;
 }
 
 .btn-continuar {
@@ -804,7 +810,7 @@ span::before {
 }
 
 .section-texto-intro-p1 {
-  font-family: "Gotham";
+  font-family: "GothamPro-Medium";
   line-height: 30px;
   font-size: 1.5rem;
   text-align: center;
@@ -817,7 +823,7 @@ span::before {
 }
 
 .section-texto-laco-h2 {
-  font-family: "Gotham";
+  font-family: "GothamPro-Medium";
   line-height: normal;
   font-size: 1rem;
   text-align: left;
@@ -828,7 +834,7 @@ span::before {
 }
 
 .label {
-  font-family: Gotham;
+  font-family: "GothamPro-Medium";
   line-height: normal;
   font-size: 1rem;
   text-align: left;
@@ -846,7 +852,7 @@ span::before {
 }
 
 ::placeholder {
-  font-family: Gotham;
+  font-family: "GothamPro-Medium";
   line-height: normal;
   font-size: 1rem;
   color: #FFFFFF;
@@ -883,7 +889,7 @@ span::before {
 }
 
 .section-parabens-h1 {
-  font-family: Gotham;
+  font-family: "GothamPro-Medium";
   line-height: 44px;
   font-size: 38px;
   text-align: center;
@@ -903,7 +909,7 @@ span::before {
 }
 
 .section-parabens-p2 {
-  font-family: "Gotham";
+  font-family: "GothamPro-Medium";
   line-height: 20px;
   font-size: 1.1rem;
   text-align: center;
@@ -924,7 +930,7 @@ span::before {
 }
 
 .section-parabens-p4 {
-  font-family: "Gotham";
+  font-family: "GothamPro-Medium";
   line-height: 20px;
   font-size: 1rem;
   text-align: center;
