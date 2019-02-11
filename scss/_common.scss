@@ -61,7 +61,7 @@
 .btn-escolha1-b {
     font-family: $primaryfont;
     border: 0;
-    background-color: #CA9559;
+    background-color: $primary;
 
     // Texto
     color: #FFFFFF;
@@ -72,7 +72,7 @@
 }
 
 .btn-escolha1-b {
-    background-color: #4A4D41;
+    background-color: $secondary;
 }
 
 
@@ -191,20 +191,20 @@ span::before {
     font-size: 3rem;
     text-align: center;
 
-    color: #373535;
+    color: $secondary;
     margin: 1.5rem 2rem 1.5rem 2rem;
     font-weight: 100;
 }
 
 .section-form {
-    background-color: #CA9559;
+    background-color: $primary;
     width: 100%;
     height: 272px;
     padding: 35px;
 }
 
 .section-form__background-color {
-    background-color: #4A4D41;
+    background-color: $secondary;
 
 }
 
@@ -312,19 +312,19 @@ span::before {
 
 
 .row-escolhas__a {
-    background-color: #CA9559;
+    background-color: $primary;
     flex: 1;
 }
 
 .row-escolhas__b {
-    background-color: #4A4D41;
+    background-color: $secondary;
     flex: 1;
 }
 
 // Parabens
 .section-parabens {
     height: 286px;
-    background-color: #CA9559;
+    background-color: $primary;
 }
 
 .section-parabens-h1 {
@@ -388,7 +388,7 @@ span::before {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #4A4D41;
+    background-color: $secondary;
 }
 
 .btn-continuar_color {
@@ -398,12 +398,9 @@ span::before {
     border-radius: 2px;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 14px 82px 14px 82px;
-}
+@include mx-footer($gridwidthmobile);
+@include mx-footer($gridwidthtabletbig);
+
 
 .footer-indicator {
     width: 39px;

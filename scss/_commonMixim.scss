@@ -57,3 +57,26 @@
 
 
 }
+
+@mixin mx-footer($gridwidth) {
+    @if($gridwidth==$gridwidthmobile) {
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 14px 82px 14px 82px;
+        }
+    }
+
+    @if($gridwidth==$gridwidthtabletbig) {
+        @media only screen and (min-width: $gridwidth) {
+            .footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 14px 82px 14px 82px;
+            }
+        }
+    }
+    
+}
