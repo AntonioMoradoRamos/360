@@ -657,28 +657,10 @@ template {
   line-height: normal;
   font-size: 2rem;
   text-align: center;
-  height: 100%;
 }
 
 .btn-escolha1-b {
   background-color: #606C3C;
-}
-
-/* explorar melhor como span
-.btn-escolha1-a__active {
-    //text-decoration: underline;
-    border-bottom: solid 2px #000000;
-    display: inline;
-    padding-bottom: 3px;
-}*/
-.btn-escolha1-a__active {
-  background-color: #DE9D3C;
-  text-decoration: underline;
-}
-
-.btn-escolha1-b__active {
-  background-color: #49542A;
-  text-decoration: underline;
 }
 
 .row-botoes {
@@ -695,7 +677,7 @@ template {
 .btn-continuar {
   width: 9rem;
   height: 3rem;
-  background-color: #FFF;
+  background-color: #F4F4F4;
   color: #373535;
   border: 1.5px solid #373535;
   font-size: 1rem;
@@ -703,11 +685,6 @@ template {
   text-align: center;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-}
-
-.btn-continuar__active {
-  background-color: #EDEDED;
-  border: 1.5px solid #373535;
 }
 
 .btn-continuar-intro {
@@ -731,7 +708,7 @@ template {
   text-transform: uppercase;
 }
 
-#id-icon-arrow-left::before {
+span::before {
   font-family: "Icomoon" !important;
   content: "";
   color: rgba(55, 53, 53, 0.3);
@@ -805,7 +782,7 @@ template {
     height: 600px;
 }*/
 .section-texto-intro-laco {
-  background-image: url("../images/banner-mobile-amigos.png");
+  background-image: url("../images/imagem_frinds.png");
   background-repeat: no-repeat;
   background-position: center;
   height: 600px;
@@ -895,18 +872,8 @@ template {
   flex: 1;
 }
 
-/*
-.row-escolhas-a__active {
-    background-color: #DE9D3C;
-    flex: 1;
-}*/
 .row-escolhas__b {
   background-color: #606C3C;
-  flex: 1;
-}
-
-.row-escolhas-b__active {
-  background-color: #49542A;
   flex: 1;
 }
 
