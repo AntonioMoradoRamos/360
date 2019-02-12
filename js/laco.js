@@ -27,11 +27,18 @@ let LACO = {
 /*let escolha1 = {
     escolha: ""
 };*/
-let escolha2 = "";
+/*let escolha2 = "";
 let nomeForm1 = "";
 let emailForm1 = "";
 let nomeForm2 = "";
 let emailForm2 = "";
+*/
+const ID_MAIN_ESCOLHA1 = 'id-main-escolha-1';
+const QS_ID_MAIN_ESCOLHA1 = '#' + ID_MAIN_ESCOLHA1;
+
+const ID_MAIN_ESCOLHA2 = 'id-main-escolha-2';
+const QS_ID_MAIN_ESCOLHA2 = '#' + ID_MAIN_ESCOLHA2;
+
 
 function clearListInLocalStorage(){
     localStorage.clear();
@@ -348,6 +355,18 @@ addEventOnSubmit('#id-btn-go-parabens', '#id-form-parabens', '/projecto.360.io/p
 //addAction2Form('#form-laco', '/projecto.360.io/lacoFortalecido.html');
 addEventOnSubmit('#id-btn-go-laco', '#id-form-laco', '/projecto.360.io/pages/lacoFortalecido.html');
 
+const ID_BTN_ESCOLHA1_A = 'id-btn-escolha1-a';
+const QS_ID_BTN_ESCOLHA1_A = '#' + ID_BTN_ESCOLHA1_A;
+
+const ID_BTN_ESCOLHA1_B = 'id-btn-escolha1-b';
+const QS_ID_BTN_ESCOLHA1_B = '#' + ID_BTN_ESCOLHA1_B;
+
+const ID_BTN_ESCOLHA2_A = 'id-btn-escolha2-a';
+const QS_ID_BTN_ESCOLHA2_A = '#' + ID_BTN_ESCOLHA2_A;
+
+const ID_BTN_ESCOLHA2_B = 'id-btn-escolha2-b';
+const QS_ID_BTN_ESCOLHA2_B = '#' + ID_BTN_ESCOLHA2_B;
+
 function activateOptions(idMain) {
     
     // Se a lista não tiver elementos, nada a fazer
@@ -356,9 +375,9 @@ function activateOptions(idMain) {
     
     LACO = myList[0];
 
-    if(idMain === 'id-main-escolha-1'){
+    if(idMain === ID_MAIN_ESCOLHA1){
         if( LACO.escolha1a === ""){
-            activateDesactivateEscolha1('id-btn-escolha1-b');
+            activateDesactivateEscolha1(ID_BTN_ESCOLHA1_B);
             return;    
         }
         if( LACO.escolha1b === ""){
@@ -367,7 +386,7 @@ function activateOptions(idMain) {
         }     
     }
 
-    if(idMain === 'id-main-escolha-2'){
+    if(idMain === ID_MAIN_ESCOLHA2){
         if( LACO.escolha2a === ""){
             activateDesactivateEscolha2('id-btn-escolha2-b');
             return;    
@@ -398,7 +417,19 @@ function addEventOnClickSelectButton(idButton) {
 
 
 jQuery(document).ready(function (event) {
-    alert('ready');
+    
+     if(jQuery(QS_ID_MAIN_ESCOLHA1).length){
+        //alert('existe');
+        activateOptions(ID_MAIN_ESCOLHA1);
+        return;
+     }
+
+     if(jQuery(QS_ID_MAIN_ESCOLHA2).length){
+        //alert('existe');
+        activateOptions(ID_MAIN_ESCOLHA2);
+        return;
+     }
+
     //activateOptions('id-main-escolha-1');
     //activateOptions('id-main-escolha-2');
 
