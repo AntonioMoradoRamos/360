@@ -40,6 +40,21 @@ const ID_MAIN_ESCOLHA2 = 'id-main-escolha-2';
 const QS_ID_MAIN_ESCOLHA2 = '#' + ID_MAIN_ESCOLHA2;
 
 
+const ID_BTN_ESCOLHA1_A = 'id-btn-escolha1-a';
+const QS_ID_BTN_ESCOLHA1_A = '#' + ID_BTN_ESCOLHA1_A;
+
+const ID_BTN_ESCOLHA1_B = 'id-btn-escolha1-b';
+const QS_ID_BTN_ESCOLHA1_B = '#' + ID_BTN_ESCOLHA1_B;
+
+const ID_BTN_ESCOLHA2_A = 'id-btn-escolha2-a';
+const QS_ID_BTN_ESCOLHA2_A = '#' + ID_BTN_ESCOLHA2_A;
+
+const ID_BTN_ESCOLHA2_B = 'id-btn-escolha2-b';
+const QS_ID_BTN_ESCOLHA2_B = '#' + ID_BTN_ESCOLHA2_B;
+
+
+
+
 function clearListInLocalStorage(){
     localStorage.clear();
     let lst = [];
@@ -188,9 +203,10 @@ function isButtonActive(idButton) {
 
 }
 
+/*
 function validarForm(idForm) {
     return true;
-}
+}*/
 
 function addEventOnSubmit(idButton, idForm, theAction) {
 
@@ -311,10 +327,12 @@ function addEventOnClickEscolha2(idButton) {
     });
 }
 
-addEventOnClickEscolha1('#id-btn-escolha1-a');
-addEventOnClickEscolha1('#id-btn-escolha1-b');
-addEventOnClickEscolha2('#id-btn-escolha2-a');
-addEventOnClickEscolha2('#id-btn-escolha2-b');
+
+
+addEventOnClickEscolha1(QS_ID_BTN_ESCOLHA1_A);
+addEventOnClickEscolha1(QS_ID_BTN_ESCOLHA1_B);
+addEventOnClickEscolha2(QS_ID_BTN_ESCOLHA2_A);
+addEventOnClickEscolha2(QS_ID_BTN_ESCOLHA2_B);
 
 
 addEventOnSubmitForm1('#id-form-1');
@@ -355,17 +373,6 @@ addEventOnSubmit('#id-btn-go-parabens', '#id-form-parabens', '/projecto.360.io/p
 //addAction2Form('#form-laco', '/projecto.360.io/lacoFortalecido.html');
 addEventOnSubmit('#id-btn-go-laco', '#id-form-laco', '/projecto.360.io/pages/lacoFortalecido.html');
 
-const ID_BTN_ESCOLHA1_A = 'id-btn-escolha1-a';
-const QS_ID_BTN_ESCOLHA1_A = '#' + ID_BTN_ESCOLHA1_A;
-
-const ID_BTN_ESCOLHA1_B = 'id-btn-escolha1-b';
-const QS_ID_BTN_ESCOLHA1_B = '#' + ID_BTN_ESCOLHA1_B;
-
-const ID_BTN_ESCOLHA2_A = 'id-btn-escolha2-a';
-const QS_ID_BTN_ESCOLHA2_A = '#' + ID_BTN_ESCOLHA2_A;
-
-const ID_BTN_ESCOLHA2_B = 'id-btn-escolha2-b';
-const QS_ID_BTN_ESCOLHA2_B = '#' + ID_BTN_ESCOLHA2_B;
 
 function activateOptions(idMain) {
     
@@ -376,23 +383,23 @@ function activateOptions(idMain) {
     LACO = myList[0];
 
     if(idMain === ID_MAIN_ESCOLHA1){
-        if( LACO.escolha1a === ""){
+        if( LACO.escolha1b != "" && LACO.escolha1a === ""){
             activateDesactivateEscolha1(ID_BTN_ESCOLHA1_B);
             return;    
         }
-        if( LACO.escolha1b === ""){
-            activateDesactivateEscolha1('id-btn-escolha1-a');
+        if( LACO.escolha1b === "" && LACO.escolha1a != ""){
+            activateDesactivateEscolha1(ID_BTN_ESCOLHA1_A);
             return;    
         }     
     }
 
     if(idMain === ID_MAIN_ESCOLHA2){
-        if( LACO.escolha2a === ""){
-            activateDesactivateEscolha2('id-btn-escolha2-b');
+        if( LACO.escolha2b != "" && LACO.escolha2a === ""){
+            activateDesactivateEscolha2(ID_BTN_ESCOLHA2_B);
             return;    
         }
-        if( LACO.escolha2b === ""){
-            activateDesactivateEscolha2('id-btn-escolha2-a');
+        if( LACO.escolha2b === "" && LACO.escolha2a != ""){
+            activateDesactivateEscolha2(ID_BTN_ESCOLHA2_A);
             return;    
         }     
     }
