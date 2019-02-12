@@ -202,8 +202,8 @@ function addEventOnSubmit(idButton, idForm, theAction) {
                 validarForm(idForm);
             }*/
             saveListInLocalStorage();
-            //jQuery(idForm).attr("action", theAction);
-            //jQuery(idForm).submit();
+            jQuery(idForm).attr("action", theAction);
+            jQuery(idForm).submit();
         }
 
     });
@@ -379,8 +379,6 @@ function activateOptions(idMain) {
     }
 }
 
-//activateOptions('id-main-escolha-1');
-//activateOptions('id-main-escolha-2');
 
 //clearListInLocalStorage();
 //alert("LACO.escolha1: " + myList[0].escolha1);
@@ -397,3 +395,11 @@ function addEventOnClickSelectButton(idButton) {
         //jQuery(idForm).submit();
     });
 }*/
+
+
+jQuery(document).ready(function (event) {
+    alert('ready');
+    //activateOptions('id-main-escolha-1');
+    //activateOptions('id-main-escolha-2');
+
+});
