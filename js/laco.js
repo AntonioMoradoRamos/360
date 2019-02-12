@@ -35,23 +35,23 @@ let emailForm2 = "";
 */
 const ID_MAIN_ESCOLHA1 = 'id-main-escolha-1';
 const QS_ID_MAIN_ESCOLHA1 = '#' + ID_MAIN_ESCOLHA1;
-
-const ID_MAIN_ESCOLHA2 = 'id-main-escolha-2';
-const QS_ID_MAIN_ESCOLHA2 = '#' + ID_MAIN_ESCOLHA2;
-
-
 const ID_BTN_ESCOLHA1_A = 'id-btn-escolha1-a';
 const QS_ID_BTN_ESCOLHA1_A = '#' + ID_BTN_ESCOLHA1_A;
-
 const ID_BTN_ESCOLHA1_B = 'id-btn-escolha1-b';
 const QS_ID_BTN_ESCOLHA1_B = '#' + ID_BTN_ESCOLHA1_B;
 
+const ID_MAIN_ESCOLHA2 = 'id-main-escolha-2';
+const QS_ID_MAIN_ESCOLHA2 = '#' + ID_MAIN_ESCOLHA2;
 const ID_BTN_ESCOLHA2_A = 'id-btn-escolha2-a';
 const QS_ID_BTN_ESCOLHA2_A = '#' + ID_BTN_ESCOLHA2_A;
-
 const ID_BTN_ESCOLHA2_B = 'id-btn-escolha2-b';
 const QS_ID_BTN_ESCOLHA2_B = '#' + ID_BTN_ESCOLHA2_B;
 
+const ID_MAIN_FORM1 = 'id-main-form1';
+const ID_FORM1 = 'id-form-1';
+const QS_ID_FORM1 = '#' + ID_FORM1;
+const NOME_ORIGEM = 'nomeOrigem';
+const EMAIL_ORIGEM = 'emailOrigem';
 
 
 
@@ -64,6 +64,36 @@ function saveListInLocalStorage() {
     //alert('gravar');
     localStorage.setItem('myListStoraged', JSON.stringify(myList));
 }
+
+
+function fillForm1(idForm){
+
+    LACO = myList[0];
+
+    //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
+    let formForm1 = jQuery(idForm + " :input[type='text']");
+    formForm1.each((index, elemForm) => {
+        if (elemForm.id === NOME_ORIGEM) {
+            elemForm.value = LACO.nomeForm1;
+        }
+        if (elemForm.id === EMAIL_ORIGEM) {
+            elemForm.value = LACO.emailForm1;
+        }
+    });
+}
+
+function atualizaForm1(nome, email){
+
+    if(myList.length == 0)
+        myList.push(LACO);
+    
+    LACO = myList[0];
+    if(nome != "")
+        LACO.nomeForm1 = nome;
+    if(email != "")
+        LACO.emailForm1 = email;
+}
+
 
 function addEventOnSubmitForm1(idForm) {
     // Alterar o conteúdo em função do click
@@ -86,7 +116,8 @@ function addEventOnSubmitForm1(idForm) {
                     jQuery('#' + elemForm.id).toggleClass('input__error');
 
                 } else {
-                    nomeForm1 = elemForm.value;
+                    //nomeForm1 = elemForm.value;
+                    atualizaForm1(elemForm.value, "");
                     jQuery('#' + elemForm.id).removeClass('input__error');
                 }
             }
@@ -99,7 +130,8 @@ function addEventOnSubmitForm1(idForm) {
                     event.preventDefault();
                     jQuery('#' + elemForm.id).toggleClass('input__error');
                 } else {
-                    emailForm1 = elemForm.value;
+                    //emailForm1 = elemForm.value;
+                    atualizaForm1("", elemForm.value);
                     jQuery('#' + elemForm.id).removeClass('input__error');
                 }
             }
@@ -403,6 +435,12 @@ function activateOptions(idMain) {
             return;    
         }     
     }
+
+    if(idMain === ID_MAIN_FORM1){
+        atualizaForm1(QS_ID_FORM1);     
+    }
+
+
 }
 
 
