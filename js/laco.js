@@ -81,18 +81,42 @@ function saveListInLocalStorage() {
 
 function addEventOnSubmitForm1(idForm) {
     // Alterar o conteúdo em função do click
+
     jQuery(idForm).on('submit', function (event) {
+        // alert("addEventOnSubmitForm1");
         //event.preventDefault();
         // Obter os elementos input do tipo text
         formForm1 = jQuery('#' + event.target.id + " :input[type='text']");
 
         formForm1.each((index, elemForm) => {
             //btnElement.addEventListener("click", processButtonOperation);
-            if (elemForm.id === 'nomeOrigem')
-                nomeForm1 = elemForm.value;
+            if (elemForm.id === 'nomeOrigem') {
+                //alert("elemForm.value: " + elemForm.value);
 
-            if (elemForm.id === 'emailOrigem')
-                emailForm1 = elemForm.value;
+                if (elemForm.value === "") {
+                    //alert("falta preencher dados");
+                    event.preventDefault();
+                    jQuery('#' + elemForm.id).toggleClass('input__error');
+
+                } else {
+                    nomeForm1 = elemForm.value;
+                    jQuery('#' + elemForm.id).removeClass('input__error');
+                }
+            }
+
+
+            if (elemForm.id === 'emailOrigem') {
+
+                if (elemForm.value === "") {
+                    //alert("falta preencher dados");
+                    event.preventDefault();
+                    jQuery('#' + elemForm.id).toggleClass('input__error');
+                } else {
+                    emailForm1 = elemForm.value;
+                    jQuery('#' + elemForm.id).removeClass('input__error');
+                }
+            }
+
         });
     });
 }
@@ -100,17 +124,37 @@ function addEventOnSubmitForm1(idForm) {
 function addEventOnSubmitForm2(idForm) {
     // Alterar o conteúdo em função do click
     jQuery(idForm).on('submit', function (event) {
-        event.preventDefault();
+        //event.preventDefault();
         // Obter os elementos input do tipo text
         formForm1 = jQuery('#' + event.target.id + " :input[type='text']");
 
         formForm1.each((index, elemForm) => {
             //btnElement.addEventListener("click", processButtonOperation);
-            if (elemForm.id === 'nomeDestino')
-                nomeForm2 = elemForm.value;
+            if (elemForm.id === 'nomeDestino') {
 
-            if (elemForm.id === 'emailDestino')
-                emailForm2 = elemForm.value;
+                if (elemForm.value === "") {
+                    //alert("falta preencher dados");
+                    event.preventDefault();
+                    jQuery('#' + elemForm.id).toggleClass('input__error');
+                } else {
+                    nomeForm2 = elemForm.value;
+                    jQuery('#' + elemForm.id).removeClass('input__error');
+                }
+            }
+
+
+            if (elemForm.id === 'emailDestino') {
+
+                if (elemForm.value === "") {
+                    //alert("falta preencher dados");
+                    event.preventDefault();
+                    jQuery('#' + elemForm.id).toggleClass('input__error');
+                } else {
+                    emailForm2 = elemForm.value;
+                    jQuery('#' + elemForm.id).removeClass('input__error');
+                }
+            }
+
 
             //alert('nomeForm2: ' + nomeForm2);
             //alert('emailForm2: ' + emailForm2);
@@ -118,14 +162,55 @@ function addEventOnSubmitForm2(idForm) {
     });
 }
 
+function isButtonActive(idButton) {
+    //alert("idButton: " + idButton);
+    if (idButton === '#id-btn-go-escolha-1') {
+        //lert("hasclass: " + jQuery(idButton).hasClass("btn-continuar__active"));
+        return jQuery(idButton).hasClass("btn-continuar__active");
+    }
+    if (idButton === '#id-btn-go-escolha-2') {
+        //alert("hasclass: " + jQuery(idButton).hasClass("btn-continuar__active"));
+        return jQuery(idButton).hasClass("btn-continuar__active")
+    }
+    if (idButton === '#id-btn-go-form-1') {
+        //return jQuery(idButton).hasClass("btn-continuar__active")
+        return true;
+    }
+    alert(idButton);
+    if (idButton === '#id-btn-go-form-2') {
+        //return jQuery(idButton).hasClass("btn-continuar__active")
+        return true;
+    }
+
+    return false;
+
+}
+
+function validarForm(idForm) {
+    return true;
+}
+
 function addEventOnSubmit(idButton, idForm, theAction) {
 
     // Alterar o conteúdo em função do click
     jQuery(idButton).on('click', function (event) {
         event.preventDefault();
-        saveListInLocalStorage();
-        jQuery(idForm).attr("action", theAction);
-        jQuery(idForm).submit();
+        if (isButtonActive(idButton)) {
+            // Se o botão estiver ativo, verificar se é 
+            // uma das páginas do formulário.
+            // Se sim, validar se os campos estão preenchidos
+            // Se existir pelo menos um campo não preenchido
+            // então não deixar avançar e destacar o campo
+            // que deve ser preenchido
+            /*if (idForm === '#id-form-1' || idForm === '#id-form-2') {
+                // Validar form
+                validarForm(idForm);
+            }*/
+            saveListInLocalStorage();
+            jQuery(idForm).attr("action", theAction);
+            jQuery(idForm).submit();
+        }
+
     });
 }
 
@@ -178,8 +263,8 @@ addEventOnClickEscolha2('#id-btn-escolha2-a');
 addEventOnClickEscolha2('#id-btn-escolha2-b');
 
 
-addEventOnSubmitForm1('#id-form-1-laco');
-addEventOnSubmitForm2('#id-form-2-laco');
+addEventOnSubmitForm1('#id-form-1');
+addEventOnSubmitForm2('#id-form-2');
 
 // Página de entrada
 //addAction2Form('#form-fortaleca', '/projecto.360.io/escolha-1.html');
