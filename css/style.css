@@ -930,7 +930,7 @@ template {
 }
 
 .section-parabens {
-  height: 286px;
+  height: 275px;
   background-color: #84935A;
 }
 
@@ -942,7 +942,7 @@ template {
   text-transform: uppercase;
   color: #FFF;
   margin: 0 auto;
-  padding: 40px 25px 0px 25px;
+  padding: 25px 25px 0px 25px;
 }
 
 .section-parabens-p1 {
