@@ -180,7 +180,7 @@ function isButtonActive(idButton) {
         //return jQuery(idButton).hasClass("btn-continuar__active")
         return true;
     }
-    if (idButton === '#id-btn-go-laco') {
+    if (idButton === '#id-btn-go-fortaleca') {
         //return jQuery(idButton).hasClass("btn-continuar__active")
         return true;
     }
