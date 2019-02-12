@@ -176,7 +176,6 @@ function isButtonActive(idButton) {
         //return jQuery(idButton).hasClass("btn-continuar__active")
         return true;
     }
-    alert(idButton);
     if (idButton === '#id-btn-go-form-2') {
         //return jQuery(idButton).hasClass("btn-continuar__active")
         return true;
