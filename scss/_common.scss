@@ -58,10 +58,12 @@
 }
 
 .btn-escolha1-a,
-.btn-escolha1-b {
+.btn-escolha1-b,
+.btn-escolha2-a,
+.btn-escolha2-b {
     font-family: $primaryfont;
     border: 0;
-    background-color: $primary;
+    //background-color: $primary;
 
     // Texto
     color: #FFFFFF;
@@ -69,33 +71,58 @@
     font-size: 2rem;
     text-align: center;
     height: 100%;
+    background-color: inherit;
 
 }
 
+.btn-escolha1-a {
+    background-color: $escolha1a-not-selected;
+    flex: 1;
+}
+
+.btn-escolha1-a__active {
+    background-color: $escolha1a-selected;
+    text-decoration: underline;
+    flex: 1;
+}
 
 .btn-escolha1-b {
-    background-color: $secondary;
-}
-
-
-/* explorar melhor como span
-.btn-escolha1-a__active {
-    //text-decoration: underline;
-    border-bottom: solid 2px #000000;
-    display: inline;
-    padding-bottom: 3px;
-}*/
-
-
-.btn-escolha1-a__active {
-    background-color: #DE9D3C;
-    text-decoration: underline;
+    background-color: $escolha1b-not-selected;
+    flex: 1;
 }
 
 .btn-escolha1-b__active {
-    background-color: #49542A;
+    background-color: $escolha1b-selected;
     text-decoration: underline;
+    flex: 1;
 }
+
+.btn-escolha2-a {
+    background-color: $escolha2a-not-selected;
+    flex: 1;
+}
+
+.btn-escolha2-a__active {
+    background-color: $escolha2a-selected;
+    text-decoration: underline;
+    flex: 1;
+}
+
+.btn-escolha2-b {
+    background-color: $escolha2b-not-selected;
+    flex: 1;
+}
+
+.btn-escolha2-b__active {
+    background-color: $escolha2b-selected;
+    text-decoration: underline;
+    flex: 1;
+}
+
+
+
+
+
 
 
 .row-botoes {
@@ -109,10 +136,11 @@
     margin: 5.6rem 0 0 0;
 }
 
-.btn-continuar {
+.btn-continuar,
+.btn-continuar__active {
     width: 9rem;
     height: 3rem;
-    background-color: $white;
+    background-color: $btn-go-not-activo;
     color: #373535;
     border: 1.5px solid #373535;
 
@@ -125,7 +153,7 @@
 }
 
 .btn-continuar__active {
-    background-color: #EDEDED;
+    background-color: $btn-go-activo;
     border: 1.5px solid #373535;
 }
 
@@ -140,7 +168,7 @@
 .btn-voltar {
     width: 9rem;
     height: 3rem;
-    background-color: #F4F4F4;
+    background-color: $btn-back-not-activo;
     color: rgba(55, 53, 53, 0.3);
     border: 1.5px solid #373535;
 
@@ -223,17 +251,26 @@
     font-weight: 100;
 }
 
-.section-form {
-    background-color: $primary;
+.section-form-1 {
+    background-color: $section-form1;
     width: 100%;
     height: 272px;
     padding: 35px;
 }
 
+
+.section-form-2 {
+    background-color: $section-form2;
+    width: 100%;
+    height: 272px;
+    padding: 35px;
+}
+
+/*
 .section-form__background-color {
     background-color: $secondary;
 
-}
+}*/
 
 .div-form {
     width: 100%;
@@ -327,27 +364,13 @@
 @include mx-row-escolhas($gridwidthmobile);
 @include mx-row-escolhas($gridwidthtabletbig);
 
-.row-escolhas{
+.row-escolhas {
     display: flex;
 }
-.row-escolhas__a {
-    background-color: $primary;
-    flex: 1;
-}
 
-/*
-.row-escolhas-a__active {
-    background-color: #DE9D3C;
-    flex: 1;
-}*/
-
-.row-escolhas__b {
-    background-color: $secondary;
-    flex: 1;
-}
-
-.row-escolhas-b__active {
-    background-color: #49542A;
+.row-escolha1,
+.row-escolha2 {
+    //background-color: $escolha1a-not-selected;
     flex: 1;
 }
 

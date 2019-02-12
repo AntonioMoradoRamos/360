@@ -138,12 +138,16 @@ function addEventOnClickEscolha1(idButton) {
         let btnTarget = event.target;
         LACO.escolha1 = btnTarget.value;
         //alert('btnTarget.id: ' + btnTarget.id);
-        if (btnTarget.id === 'id-btn-escolha-f')
+        if (btnTarget.id === 'id-btn-escolha1-a') {
             jQuery(idButton).toggleClass('btn-escolha1-a__active');
-        if (btnTarget.id === 'id-btn-escolha-a')
+            jQuery("#id-btn-escolha1-b").removeClass('btn-escolha1-b__active');
+        }
+
+        if (btnTarget.id === 'id-btn-escolha1-b') {
             jQuery(idButton).toggleClass('btn-escolha1-b__active');
-
-
+            jQuery("#id-btn-escolha1-a").removeClass('btn-escolha1-a__active');
+        }
+        jQuery("#id-btn-go-escolha-1").attr('class', 'btn-continuar__active');
         myList.push(LACO);
     });
 }
@@ -153,21 +157,25 @@ function addEventOnClickEscolha2(idButton) {
         event.preventDefault();
         let btnTarget = event.target;
         escolha2 = btnTarget.value;
-        if (btnTarget.id === 'id-btn-escolha-h')
-            jQuery(idButton).toggleClass('btn-escolha1-a__active');
-        if (btnTarget.id === 'id-btn-escolha-m')
-            jQuery(idButton).toggleClass('btn-escolha1-b__active');
+        if (btnTarget.id === 'id-btn-escolha2-a') {
+            jQuery(idButton).toggleClass('btn-escolha2-a__active');
+            jQuery("#id-btn-escolha2-b").removeClass('btn-escolha2-b__active');
+        }
 
+        if (btnTarget.id === 'id-btn-escolha2-b') {
+            jQuery(idButton).toggleClass('btn-escolha2-b__active');
+            jQuery("#id-btn-escolha2-a").removeClass('btn-escolha2-a__active');
+        }
 
-
+        jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar__active');
 
     });
 }
 
-addEventOnClickEscolha1('#id-btn-escolha-f');
-addEventOnClickEscolha1('#id-btn-escolha-a');
-addEventOnClickEscolha2('#id-btn-escolha-h');
-addEventOnClickEscolha2('#id-btn-escolha-m');
+addEventOnClickEscolha1('#id-btn-escolha1-a');
+addEventOnClickEscolha1('#id-btn-escolha1-b');
+addEventOnClickEscolha2('#id-btn-escolha2-a');
+addEventOnClickEscolha2('#id-btn-escolha2-b');
 
 
 addEventOnSubmitForm1('#id-form-1-laco');

@@ -78,19 +78,43 @@
             }
         }
     }
-    
+
 }
 
 @mixin mx-textolaco($gridwidth) {
     @if($gridwidth==$gridwidthmobile) {
         .section-texto-laco-h1 {
-            font-family: "Get-Show";
+            /*font-family: "Get-Show";
             line-height: 40px;
             font-size: 3rem;
             text-align: center;
         
             color: #373535;
+            
+            font-weight: 100;*/
             margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+            text-align: center;
+        }
+
+        .section-texto-laco-span1 {
+            font-family: $primaryfont;
+            line-height: 2.25rem;
+            font-size: 1.75rem;
+
+
+            color: #373535;
+            //margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+            font-weight: 100;
+        }
+
+        .section-texto-laco-span2 {
+            font-family: $secondaryfont;
+            line-height: 2.25rem;
+            font-size: 3rem;
+
+
+            color: #373535;
+            //margin: 1.5rem 3.5rem 1.5rem 3.5rem;
             font-weight: 100;
         }
     }
@@ -105,12 +129,12 @@
                 position: absolute;
                 padding-left: 200px;
                 padding-top: 30px;
-            
+
                 color: #373535;
                 margin: 1.5rem 3.5rem 1.5rem 3.5rem;
                 font-weight: 100;
             }
         }
     }
-    
+
 }

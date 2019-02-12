@@ -11,6 +11,28 @@ $graylight: #F3F3F3;
 $white: #FFF;
 $black: #000;
 
+$section-form1: #A7BECA;
+$section-form2: #1C5C65;
+
+$escolha1a-not-selected: #A7BECA;
+$escolha1a-selected: #95ACB8;
+
+$escolha1b-not-selected: #216872;
+$escolha1b-selected: #1C5C65;
+
+$escolha2a-not-selected: #8B9B5F;
+$escolha2a-selected: #84935A;
+
+$escolha2b-not-selected: #535E36;
+$escolha2b-selected: #47512E;
+
+$btn-go-not-activo: $white;
+$btn-go-activo: #EDEDED;
+
+$btn-back-not-activo: $white;
+$btn-back-activo: $white;
+
+
 $animationtime: 0.4s;
 
 $gridcolumnsmobile: 4;
@@ -27,3 +49,4 @@ $gridgutter: 30px;
 $gridwidth: 1200px;
 
 $primaryfont: "GothamPro-Medium";
+$secondaryfont: "Get-Show";
