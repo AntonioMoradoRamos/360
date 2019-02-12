@@ -378,7 +378,7 @@
 // Parabens
 .section-parabens {
     height: 286px;
-    background-color: $primary;
+    background-color: $escolha2a-selected;
 }
 
 .section-parabens-h1 {
@@ -387,31 +387,46 @@
     font-size: 38px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $text-secundary;
 
-    margin-top: 0;
+    //margin-top: 0;
+    margin: 0 auto;
     padding: 40px 25px 0px 25px;
 }
 
 .section-parabens-p1 {
-    font-family: "Get-Show";
-    line-height: 24px;
-    font-size: 30px;
+    //font-family: "Get-Show";
+    //line-height: 24px;
+    //font-size: 30px;
     text-align: center;
-    margin-bottom: 25px;
+    //margin-bottom: 25px;
+    margin: 25px 0 30px 0;
 
-    color: #FFFFFF;
+    //color: #FFFFFF;
+}
+
+.section-parabens-p1-span1 {
+    font-family: $primaryfont;
+    color: $text-secundary;
+    line-height: 0.81rem;
+    font-size: 1rem;
+}
+
+.section-parabens-p1-span2 {
+    font-family: $secondaryfont;
+    color: $text-secundary;
+    font-size: 2rem;
 }
 
 .section-parabens-p2 {
     font-family: $primaryfont;
-    line-height: 20px;
-    font-size: 1.1rem;
+    line-height: 1.25rem;
+    font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
     padding: 0 30px 5px 30px;
 
-    color: #FFFFFF;
+    color: $text-secundary;
 }
 
 .section-parabens-p3 {
@@ -442,11 +457,11 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: $secondary;
+    background-color: $escolha2b-selected;
 }
 
 .btn-continuar_color {
-    background: rgba(237, 237, 237, 0.4);
+    background: btn-go-not-activo;
     border: 1.5px solid #373535;
     box-sizing: border-box;
     border-radius: 2px;

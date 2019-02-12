@@ -931,7 +931,7 @@ template {
 
 .section-parabens {
   height: 286px;
-  background-color: #F3B14D;
+  background-color: #84935A;
 }
 
 .section-parabens-h1 {
@@ -940,28 +940,37 @@ template {
   font-size: 38px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
-  margin-top: 0;
+  color: #FFF;
+  margin: 0 auto;
   padding: 40px 25px 0px 25px;
 }
 
 .section-parabens-p1 {
-  font-family: "Get-Show";
-  line-height: 24px;
-  font-size: 30px;
   text-align: center;
-  margin-bottom: 25px;
-  color: #FFFFFF;
+  margin: 25px 0 30px 0;
+}
+
+.section-parabens-p1-span1 {
+  font-family: "GothamPro-Medium";
+  color: #FFF;
+  line-height: 0.81rem;
+  font-size: 1rem;
+}
+
+.section-parabens-p1-span2 {
+  font-family: "Get-Show";
+  color: #FFF;
+  font-size: 2rem;
 }
 
 .section-parabens-p2 {
   font-family: "GothamPro-Medium";
-  line-height: 20px;
-  font-size: 1.1rem;
+  line-height: 1.25rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   padding: 0 30px 5px 30px;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .section-parabens-p3 {
@@ -990,11 +999,11 @@ template {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #606C3C;
+  background-color: #47512E;
 }
 
 .btn-continuar_color {
-  background: rgba(237, 237, 237, 0.4);
+  background: btn-go-not-activo;
   border: 1.5px solid #373535;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1043,10 +1052,14 @@ template {
   text-align: center;
 }
 
+.section-texto-laco-h1__margin {
+  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+}
+
 .section-texto-laco-span1 {
   font-family: "GothamPro-Medium";
   line-height: 2.25rem;
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   color: #373535;
   font-weight: 100;
 }
