@@ -180,6 +180,11 @@ function isButtonActive(idButton) {
         //return jQuery(idButton).hasClass("btn-continuar__active")
         return true;
     }
+    if (idButton === '#id-btn-go-laco') {
+        //return jQuery(idButton).hasClass("btn-continuar__active")
+        return true;
+    }
+
 
     return false;
 
