@@ -5,6 +5,8 @@ const valueParsed = JSON.parse(localStorageValue);
 // Caso a variável "valueParsed" seja null então inicializar
 const myList = valueParsed || [];
 
+let validaInputForm = true;
+
 let LACO = {
     escolha1: "",
     escolha2: "",
@@ -81,6 +83,7 @@ function saveListInLocalStorage() {
 
 function addEventOnSubmitForm1(idForm) {
     // Alterar o conteúdo em função do click
+    validaInputForm = true;
 
     jQuery(idForm).on('submit', function (event) {
         // alert("addEventOnSubmitForm1");
@@ -93,7 +96,7 @@ function addEventOnSubmitForm1(idForm) {
             if (elemForm.id === 'nomeOrigem') {
                 //alert("elemForm.value: " + elemForm.value);
 
-                if (elemForm.value === "") {
+                if (elemForm.value === "" && validaInputForm) {
                     //alert("falta preencher dados");
                     event.preventDefault();
                     jQuery('#' + elemForm.id).toggleClass('input__error');
@@ -107,7 +110,7 @@ function addEventOnSubmitForm1(idForm) {
 
             if (elemForm.id === 'emailOrigem') {
 
-                if (elemForm.value === "") {
+                if (elemForm.value === "" && validaInputForm) {
                     //alert("falta preencher dados");
                     event.preventDefault();
                     jQuery('#' + elemForm.id).toggleClass('input__error');
@@ -122,6 +125,7 @@ function addEventOnSubmitForm1(idForm) {
 }
 
 function addEventOnSubmitForm2(idForm) {
+    validaInputForm = true;
     // Alterar o conteúdo em função do click
     jQuery(idForm).on('submit', function (event) {
         //event.preventDefault();
@@ -132,7 +136,7 @@ function addEventOnSubmitForm2(idForm) {
             //btnElement.addEventListener("click", processButtonOperation);
             if (elemForm.id === 'nomeDestino') {
 
-                if (elemForm.value === "") {
+                if (elemForm.value === "" && validaInputForm) {
                     //alert("falta preencher dados");
                     event.preventDefault();
                     jQuery('#' + elemForm.id).toggleClass('input__error');
@@ -145,7 +149,7 @@ function addEventOnSubmitForm2(idForm) {
 
             if (elemForm.id === 'emailDestino') {
 
-                if (elemForm.value === "") {
+                if (elemForm.value === "" && validaInputForm) {
                     //alert("falta preencher dados");
                     event.preventDefault();
                     jQuery('#' + elemForm.id).toggleClass('input__error');
@@ -184,6 +188,31 @@ function isButtonActive(idButton) {
         //return jQuery(idButton).hasClass("btn-continuar__active")
         return true;
     }
+
+    if (idButton === '#id-btn-back-escolha-1') {
+        //return jQuery(idButton).hasClass("btn-continuar__active")
+        validaInputForm = false;
+        return true;
+    }
+    if (idButton === '#id-btn-back-escolha-2') {
+        //return jQuery(idButton).hasClass("btn-continuar__active")
+        validaInputForm = false;
+        return true;
+    }
+    if (idButton === '#id-btn-back-form-1') {
+        //return jQuery(idButton).hasClass("btn-continuar__active")
+        validaInputForm = false;
+        return true;
+    }
+    if (idButton === '#id-btn-back-form-2') {
+        validaInputForm = false;
+        //return jQuery(idButton).hasClass("btn-continuar__active")
+        return true;
+    }
+
+
+
+
 
 
     return false;
