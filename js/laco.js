@@ -2,14 +2,22 @@
 const localStorageValue = localStorage.getItem('myListStoraged');
 const valueParsed = JSON.parse(localStorageValue);
 
+// Limpar a cache
+//localStorage.removeItem('myListStoraged');
+//localStorage.clear();
+
+
 // Caso a variável "valueParsed" seja null então inicializar
 const myList = valueParsed || [];
+//saveListInLocalStorage();
 
 let validaInputForm = true;
 
 let LACO = {
-    escolha1: "",
-    escolha2: "",
+    escolha1a: "",
+    escolha1b: "",
+    escolha2a: "",
+    escolha2b: "",
     nomeForm1: "",
     emailForm1: "",
     nomeForm2: "",
@@ -25,57 +33,11 @@ let emailForm1 = "";
 let nomeForm2 = "";
 let emailForm2 = "";
 
-/*
-function addOnInputEventOnInput() {
-
-    
-    jQuery("#pesqGatinhos").on('input', function (event) {
-
-        jQuery(".images-container").html('');
-        jQuery(".images-container").append('<p><img class="imgDefault" src=default.gif></p>');
-        clearTimeout(myTimeOut);
-        myTimeOut = setTimeout(function () {
-
-
-
-            let pesquisar = jQuery("#pesqGatinhos").val();
-            jQuery.ajax(
-                "http://api.giphy.com/v1/gifs/search?q=+" + pesquisar + "+&limit=10&api_key=dc6zaTOxFJmzC").done(function (result) {
-                console.log(result);
-                jQuery(".images-container").html('');
-                result.data.forEach(element => {
-                    const url2show = element.images.original.url;
-                    jQuery(".images-container").append('<p><img class="main img" src=' + url2show + '></p>');
-                });
-
-            });
-        }, 3500);
-
-    });
-
+function clearListInLocalStorage(){
+    localStorage.clear();
+    let lst = [];
+    localStorage.setItem('myListStoraged', JSON.stringify(lst));
 }
-
-const ID_INPUT_VALUE = '#id-form-laco-submit';
-
-function getElementId(idElement) {
-    return document.querySelector(idElement);
-}
-
-function addEventListener2ButtonLaco() {
-    let lstBotao = getElementId(ID_INPUT_VALUE);
-    lstBotao.addEventListener("click", addOnInputEventOnInput);
-
-
-}
-
-function addAction2Form(idForm, theAction) {
-
-    //alert(idForm);
-    //alert(theAction);
-    jQuery(idForm).attr("action", theAction);
-
-}*/
-
 function saveListInLocalStorage() {
     //alert('gravar');
     localStorage.setItem('myListStoraged', JSON.stringify(myList));
@@ -240,13 +202,48 @@ function addEventOnSubmit(idButton, idForm, theAction) {
                 validarForm(idForm);
             }*/
             saveListInLocalStorage();
-            jQuery(idForm).attr("action", theAction);
-            jQuery(idForm).submit();
+            //jQuery(idForm).attr("action", theAction);
+            //jQuery(idForm).submit();
         }
 
     });
 }
 
+function activateDesactivateEscolha1(idButton) {
+    //alert(idButton);
+
+    if (idButton === 'id-btn-escolha1-a') {
+        jQuery('#'+idButton).toggleClass('btn-escolha1-a__active');
+        jQuery("#id-btn-escolha1-b").removeClass('btn-escolha1-b__active');
+    }
+
+    if (idButton === 'id-btn-escolha1-b') {
+        jQuery('#'+idButton).toggleClass('btn-escolha1-b__active');
+        jQuery("#id-btn-escolha1-a").removeClass('btn-escolha1-a__active');
+    }
+    jQuery("#id-btn-go-escolha-1").attr('class', 'btn-continuar__active');
+    
+}
+
+function atualizaEscolha1(escolha1, idButton){
+
+    if(myList.length == 0)
+        myList.push(LACO);
+    
+    LACO = myList[0];
+    if(idButton === 'id-btn-escolha1-a'){
+        LACO.escolha1a = escolha1;
+        LACO.escolha1b = "";
+    }
+        
+
+    if(idButton === 'id-btn-escolha1-b'){
+        LACO.escolha1b = escolha1;
+        LACO.escolha1a = "";
+    }
+        
+
+}
 
 
 function addEventOnClickEscolha1(idButton) {
@@ -254,38 +251,55 @@ function addEventOnClickEscolha1(idButton) {
     jQuery(idButton).on("click", function (event) {
         event.preventDefault();
         let btnTarget = event.target;
-        LACO.escolha1 = btnTarget.value;
-        //alert('btnTarget.id: ' + btnTarget.id);
-        if (btnTarget.id === 'id-btn-escolha1-a') {
-            jQuery(idButton).toggleClass('btn-escolha1-a__active');
-            jQuery("#id-btn-escolha1-b").removeClass('btn-escolha1-b__active');
-        }
-
-        if (btnTarget.id === 'id-btn-escolha1-b') {
-            jQuery(idButton).toggleClass('btn-escolha1-b__active');
-            jQuery("#id-btn-escolha1-a").removeClass('btn-escolha1-a__active');
-        }
-        jQuery("#id-btn-go-escolha-1").attr('class', 'btn-continuar__active');
-        myList.push(LACO);
+        atualizaEscolha1(btnTarget.value, btnTarget.id);
+        activateDesactivateEscolha1(btnTarget.id);
     });
+}
+
+
+function activateDesactivateEscolha2(idButton) {
+    //alert(idButton);
+
+    if (idButton === 'id-btn-escolha2-a') {
+        jQuery('#'+idButton).toggleClass('btn-escolha2-a__active');
+        jQuery("#id-btn-escolha2-b").removeClass('btn-escolha2-b__active');
+    }
+
+    if (idButton === 'id-btn-escolha2-b') {
+        jQuery('#'+idButton).toggleClass('btn-escolha2-b__active');
+        jQuery("#id-btn-escolha2-a").removeClass('btn-escolha2-a__active');
+    }
+
+    jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar__active');
+}
+
+function atualizaEscolha2(escolha2, idButton){
+
+    if(myList.length == 0)
+        myList.push(LACO);
+    
+    LACO = myList[0];
+    if(idButton === 'id-btn-escolha2-a'){
+        LACO.escolha2a = escolha2;
+        LACO.escolha2b = "";
+    }
+        
+
+    if(idButton === 'id-btn-escolha2-b'){
+        LACO.escolha2b = escolha2;
+        LACO.escolha2a = "";
+    }
+
 }
 
 function addEventOnClickEscolha2(idButton) {
     jQuery(idButton).on("click", function (event) {
         event.preventDefault();
         let btnTarget = event.target;
-        escolha2 = btnTarget.value;
-        if (btnTarget.id === 'id-btn-escolha2-a') {
-            jQuery(idButton).toggleClass('btn-escolha2-a__active');
-            jQuery("#id-btn-escolha2-b").removeClass('btn-escolha2-b__active');
-        }
-
-        if (btnTarget.id === 'id-btn-escolha2-b') {
-            jQuery(idButton).toggleClass('btn-escolha2-b__active');
-            jQuery("#id-btn-escolha2-a").removeClass('btn-escolha2-a__active');
-        }
-
-        jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar__active');
+        atualizaEscolha2( btnTarget.value,  btnTarget.id);
+        activateDesactivateEscolha2(btnTarget.id);
+        //escolha2 = btnTarget.value;
+        
 
     });
 }
@@ -334,6 +348,44 @@ addEventOnSubmit('#id-btn-go-parabens', '#id-form-parabens', '/projecto.360.io/p
 //addAction2Form('#form-laco', '/projecto.360.io/lacoFortalecido.html');
 addEventOnSubmit('#id-btn-go-laco', '#id-form-laco', '/projecto.360.io/pages/lacoFortalecido.html');
 
+function activateOptions(idMain) {
+    
+    // Se a lista não tiver elementos, nada a fazer
+    if(myList.length == 0)
+        return;
+    
+    LACO = myList[0];
+
+    if(idMain === 'id-main-escolha-1'){
+        if( LACO.escolha1a === ""){
+            activateDesactivateEscolha1('id-btn-escolha1-b');
+            return;    
+        }
+        if( LACO.escolha1b === ""){
+            activateDesactivateEscolha1('id-btn-escolha1-a');
+            return;    
+        }     
+    }
+
+    if(idMain === 'id-main-escolha-2'){
+        if( LACO.escolha2a === ""){
+            activateDesactivateEscolha2('id-btn-escolha2-b');
+            return;    
+        }
+        if( LACO.escolha2b === ""){
+            activateDesactivateEscolha2('id-btn-escolha2-a');
+            return;    
+        }     
+    }
+}
+
+//activateOptions('id-main-escolha-1');
+//activateOptions('id-main-escolha-2');
+
+//clearListInLocalStorage();
+//alert("LACO.escolha1: " + myList[0].escolha1);
+
+/*
 
 function addEventOnClickSelectButton(idButton) {
 
@@ -344,18 +396,4 @@ function addEventOnClickSelectButton(idButton) {
         //jQuery(idForm).attr("action", theAction);
         //jQuery(idForm).submit();
     });
-}
-
-// Botão família
-//addEventOnClickSelectButton('id-btn-escolha-f');
-
-
-
-//addEventListener2ButtonVoltar(); 
-
-/*
-jQuery(document).ready(function (event) {
-    // Carregar o header e o footer
-    loadJqInclude(); 
-    loadHome(); 
-});  */
+}*/
