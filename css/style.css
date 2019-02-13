@@ -840,10 +840,11 @@ template {
 }
 
 .section-texto-intro-laco {
-  background-image: url("../images/ImagemLaco.png");
+  background-image: url("../images/banner-mobile-amigos.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 550px;
+  background-size: cover;
+  height: 577px;
 }
 
 .section-texto-intro-h1 {
@@ -1034,6 +1035,21 @@ template {
   border: 1.5px solid #373535;
   box-sizing: border-box;
   border-radius: 2px;
+}
+
+.col-btn-m__margin {
+  margin: 167px 0 0 0;
+  background-color: transparent;
+  font-family: "GothamPro-Medium";
+  font-size: 15px;
+}
+
+.col-btn-m__position {
+  position: absolute;
+  width: 144px;
+  height: 48px;
+  left: 116px;
+  top: 365px;
 }
 
 .indicator {
