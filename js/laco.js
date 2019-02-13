@@ -48,6 +48,7 @@ const ID_BTN_ESCOLHA2_B = 'id-btn-escolha2-b';
 const QS_ID_BTN_ESCOLHA2_B = '#' + ID_BTN_ESCOLHA2_B;
 
 const ID_MAIN_FORM1 = 'id-main-form1';
+const QS_ID_MAIN_FORM1 = '#' + ID_MAIN_FORM1;
 const ID_FORM1 = 'id-form-1';
 const QS_ID_FORM1 = '#' + ID_FORM1;
 const NOME_ORIGEM = 'nomeOrigem';
@@ -440,7 +441,7 @@ function activateOptions(idMain) {
     }
 
     if(idMain === ID_MAIN_FORM1){
-        atualizaForm1(QS_ID_FORM1);     
+        fillForm1(QS_ID_FORM1);     
     }
 
 
@@ -474,7 +475,13 @@ jQuery(document).ready(function (event) {
 
      if(jQuery(QS_ID_MAIN_ESCOLHA2).length){
         //alert('existe');
-        fillForm1(ID_MAIN_ESCOLHA2);
+        activateOptions(ID_MAIN_ESCOLHA2);
+        return;
+     }
+
+     if(jQuery(QS_ID_MAIN_FORM1).length){
+        //alert('existe');
+        activateOptions(ID_MAIN_FORM1);
         return;
      }
 
