@@ -75,9 +75,11 @@ const QS_ID_SPAN_PARABENS_H1 = '#' + ID_SPAN_PARABENS_H1;
 
 
 function clearListInLocalStorage() {
+    if (myList.length > 0)
+        myList.pop(LACO);
     localStorage.clear();
-    let lst = [];
-    localStorage.setItem('myListStoraged', JSON.stringify(lst));
+    //let lst = [];
+    localStorage.setItem('myListStoraged', JSON.stringify(myList));
 }
 
 function saveListInLocalStorage() {
