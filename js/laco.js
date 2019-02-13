@@ -60,7 +60,7 @@ const NOME_ORIGEM = 'nomeOrigem';
 const EMAIL_ORIGEM = 'emailOrigem';
 
 const ID_MAIN_FORM2 = 'id-main-form2';
-const QS_ID_MAIN_FORM2 = '#' + ID_MAIN_FORM1;
+const QS_ID_MAIN_FORM2 = '#' + ID_MAIN_FORM2;
 const ID_FORM2 = 'id-form-2';
 const QS_ID_FORM2 = '#' + ID_FORM2;
 const NOME_DESTINO = 'nomeDestino';
@@ -186,6 +186,8 @@ function addEventOnSubmitForm1(idForm) {
 }
 
 function fillForm2(idForm) {
+
+    //alert('fillForm2 ' + fillForm2);
     LACO = myList[0];
 
     //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
