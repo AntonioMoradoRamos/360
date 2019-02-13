@@ -411,6 +411,13 @@ function addEventOnClickEscolha1(idButton) {
                 atualizaEscolha1("", btnTarget.id);
             //alert('não está ativo');
         }
+        if (btnTarget.id === ID_BTN_ESCOLHA1_B) {
+            if (jQuery('#' + btnTarget.id).hasClass('btn-escolha1-b__active'))
+                atualizaEscolha1(btnTarget.value, btnTarget.id);
+            else
+                atualizaEscolha1("", btnTarget.id);
+            //alert('não está ativo');
+        }
 
     });
 }
@@ -465,9 +472,23 @@ function addEventOnClickEscolha2(idButton) {
     jQuery(idButton).on("click", function (event) {
         event.preventDefault();
         let btnTarget = event.target;
-        atualizaEscolha2(btnTarget.value, btnTarget.id);
+        //atualizaEscolha2(btnTarget.value, btnTarget.id);
         activateDesactivateEscolha2(btnTarget.id);
         //escolha2 = btnTarget.value;
+        if (btnTarget.id === ID_BTN_ESCOLHA2_A) {
+            if (jQuery('#' + btnTarget.id).hasClass('btn-escolha2-a__active'))
+                atualizaEscolha2(btnTarget.value, btnTarget.id);
+            else
+                atualizaEscolha2("", btnTarget.id);
+            //alert('não está ativo');
+        }
+        if (btnTarget.id === ID_BTN_ESCOLHA2_B) {
+            if (jQuery('#' + btnTarget.id).hasClass('btn-escolha2-b__active'))
+                atualizaEscolha2(btnTarget.value, btnTarget.id);
+            else
+                atualizaEscolha2("", btnTarget.id);
+            //alert('não está ativo');
+        }
 
 
     });
