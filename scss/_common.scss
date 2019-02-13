@@ -251,20 +251,21 @@
     font-weight: 100;
 }
 
+
+
+/*
 .section-form-1 {
     background-color: $section-form1;
     width: 100%;
     height: 272px;
     //padding: 35px;
 }
-
-
 .section-form-2 {
     background-color: $section-form2;
     width: 100%;
     height: 272px;
     padding: 35px;
-}
+}*/
 
 /*
 .section-form__background-color {
@@ -357,7 +358,7 @@
     line-height: normal;
     font-size: 1rem;
     text-align: left;
-    color: #FFFFFF;
+    color: $text-secundary;
     margin-bottom: 6px;
 }
 
@@ -371,6 +372,7 @@
     border-radius: 2px;
     height: 44px;
     padding-left: 10px;
+    color: $text-secundary;
 }
 
 .input__error {
