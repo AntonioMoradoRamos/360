@@ -652,7 +652,7 @@ template {
 .btn-escolha1-b,
 .btn-escolha2-a,
 .btn-escolha2-b {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   border: 0;
   color: #FFFFFF;
   line-height: normal;
@@ -866,7 +866,7 @@ template {
 }
 
 .section-texto-intro-p1 {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: 30px;
   font-size: 1.5rem;
   text-align: center;
@@ -899,7 +899,7 @@ template {
 }
 
 .section-texto-laco-h2 {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: normal;
   font-size: 1rem;
   text-align: left;
@@ -910,7 +910,7 @@ template {
 }
 
 .label {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: normal;
   font-size: 1rem;
   text-align: left;
@@ -934,7 +934,7 @@ template {
 }
 
 ::placeholder {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: normal;
   font-size: 1rem;
   color: #FFFFFF;
@@ -966,11 +966,11 @@ template {
 
 .section-parabens {
   height: 275px;
-  background-color: #84935A;
+  background-color: #47512E;
 }
 
 .section-parabens-h1 {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: 44px;
   font-size: 38px;
   text-align: center;
@@ -986,7 +986,7 @@ template {
 }
 
 .section-parabens-p1-span1 {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   color: #FFF;
   line-height: 0.81rem;
   font-size: 1rem;
@@ -999,7 +999,7 @@ template {
 }
 
 .section-parabens-p2 {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: 1.25rem;
   font-size: 1rem;
   text-align: center;
@@ -1020,7 +1020,7 @@ template {
 }
 
 .section-parabens-p4 {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: 20px;
   font-size: 1rem;
   text-align: center;
@@ -1034,7 +1034,7 @@ template {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #47512E;
+  background-color: #8B9B5F;
 }
 
 .btn-continuar_color {
@@ -1114,7 +1114,7 @@ template {
 
 .section-texto-laco-span1,
 .section-texto-laco-span2 {
-  font-family: "GothamPro-Medium";
+  font-family: "Metrocity-Book";
   line-height: 2.25rem;
   font-size: 1.55rem;
   color: #373535;
