@@ -8,6 +8,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Marques Soares</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .div-form__padding{
+            padding: 35px 35px 35px 35px;
+            
+        }
+        .div-form__backgrouncolor{
+            background-color: #A7BECA;
+        }
+        .div-form__margin{
+            margin: 0 auto;
+        }
+        .section-texto-laco-h1__margin{
+            margin: 1.5rem 1.5rem 1.5rem 3.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,45 +30,62 @@
         <div class="headerEscolha_image">
         </div>
     </header>
-    <main id="id-main-form1">
-        <section class="section-texto-laco">
-            <!--            <h1 class="section-texto-laco-h1 section-texto-laco-h1__form">Cada vez mais próximo de o/a surpreender!</h1> -->
+    <main id="id-main-form1" class="main">
+        <!--    <section class="section-texto-laco">
             <h1 class="section-texto-laco-h1 section-texto-laco-h1__margin"> <span class="section-texto-laco-span1">Cada
                     vez mais próximo de o/a</span>
                 <span class="section-texto-laco-span2"><small>surpreender</small></span></h1>
-        </section>
-        <section class="section-form-1">
-            <h2 class="section-texto-laco-h2">Quem envia:</h2>
-            <form method="get" id="id-form-1">
-                <div class="col-4-m">
-                    <div class="form-nome form-nome__margin">
-                        <label class="label" for="nomeOrigem">Nome da sua ligação</label>
-                        <input class="input" type="text" id="nomeOrigem" placeholder="ex João Silva">
+        </section>-->
+        <section class="section-texto-laco">
+            <h1 class="section-texto-laco-h1 section-texto-laco-h1__margin clearfix">
+                <span class="section-texto-laco-span1">Cada vez mais próximo</span>
+                <span class="section-texto-laco-span2">de o/a</span>
+                <span class="section-texto-laco-span3">surpreender</span>
+            </h1>
+            <div class="div-form div-form__padding div-form__backgrouncolor div-form__margin">
+                <form method="get" id="id-form-1">
+                    <p class="section-texto-laco-h2">Quem envia:</p>
+                    <div class="col-4-m">
+                        <div class="form-nome form-nome__margin">
+                            <label class="label" for="nomeOrigem">Nome da sua ligação</label>
+                            <input class="input" type="text" id="nomeOrigem" placeholder="ex João Silva">
+                        </div>
+                        <div class="form-email">
+                            <label class="label" for="emailOrigem">Email da sua ligação</label>
+                            <input class="input" type="text" id="emailOrigem" placeholder="ex joaosilva@gmail.com">
+                        </div>
                     </div>
-                    <div class="form-email">
-                        <label class="label" for="emailOrigem">Email da sua ligação</label>
-                        <input class="input" type="text" id="emailOrigem" placeholder="ex joaosilva@gmail.com">
-                    </div>
+                </form>
+            </div>
+
+            <!-- <button id="id-btn-to-form-2" class="id-btn-to-form-2" type="submit">Criar laço</button> -->
+            <div class="row-botoes">
+                <div class="col-btn-m">
+                    <button id="id-btn-go-form-1" class="btn-continuar">Continuar</button>
                 </div>
-            </form>
+                <div class="col-btn-m">
+                    <button id="id-btn-back-form-1" class="btn-voltar"><span id="id-icon-arrow-left" class="icon-arrow-left"></span>
+                        Voltar</button> </div>
+            </div>
+            <div class="indicator">
+                <div class="footer-indicator footer-indicator__active"></div>
+                <div class="footer-indicator footer-indicator__inactive"></div>
+                <div class="footer-indicator footer-indicator__inactive"></div>
+                <div class="footer-indicator footer-indicator__inactive"></div>
+                <div class="footer-indicator footer-indicator__inactive"></div>
+            </div>
         </section>
 
-        <!-- <button id="id-btn-to-form-2" class="id-btn-to-form-2" type="submit">Criar laço</button> -->
-        <div class="row-botoes">
-            <div class="col-btn-m">
-                <button id="id-btn-go-form-1" class="btn-continuar">Continuar</button>
-            </div>
-            <div class="col-btn-m">
-                <button id="id-btn-back-form-1" class="btn-voltar"><span id="id-icon-arrow-left" class="icon-arrow-left"></span>
-                    Voltar</button> </div>
-        </div>
+
     </main>
     <footer class="footer">
-        <div class="footer-indicator footer-indicator__active"></div>
+        <div class="footer-intro__copyright">
+        </div>
+        <!-- <div class="footer-indicator footer-indicator__active"></div>
         <div class="footer-indicator footer-indicator__active"></div>
         <div class="footer-indicator footer-indicator__active"></div>
         <div class="footer-indicator footer-indicator__inactive"></div>
-        <div class="footer-indicator footer-indicator__inactive"></div>
+        <div class="footer-indicator footer-indicator__inactive"></div>-->
     </footer>
 </body>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
