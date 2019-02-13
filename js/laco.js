@@ -213,7 +213,7 @@ function addEventOnSubmitForm2(idForm) {
                     jQuery('#' + elemForm.id).toggleClass('input__error');
                 } else {
                     //emailForm2 = elemForm.value;
-                    atualizaForm1("", elemForm.value);
+                    atualizaForm2("", elemForm.value);
                     jQuery('#' + elemForm.id).removeClass('input__error');
                 }
             }
