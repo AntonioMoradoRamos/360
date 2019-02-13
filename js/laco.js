@@ -267,7 +267,8 @@ function addEventOnSubmitForm2(idForm) {
 function isButtonActive(idButton) {
     //alert("idButton: " + idButton);
     if (idButton === '#id-btn-go-escolha-1') {
-        //lert("hasclass: " + jQuery(idButton).hasClass("btn-continuar__active"));
+        //alert("hasclass: " + jQuery(idButton).hasClass("btn-continuar__active"));
+        //alert('está ativo ' + idButton);
         return jQuery(idButton).hasClass("btn-continuar__active");
     }
     if (idButton === '#id-btn-go-escolha-2') {
@@ -349,7 +350,7 @@ function addEventOnSubmit(idButton, idForm, theAction) {
 }
 
 function activateDesactivateEscolha1(idButton) {
-    //alert(idButton);
+    //alert('activateDesactivateEscolha1');
 
     if (idButton === 'id-btn-escolha1-a') {
         jQuery('#' + idButton).toggleClass('btn-escolha1-a__active');
@@ -360,12 +361,21 @@ function activateDesactivateEscolha1(idButton) {
         jQuery('#' + idButton).toggleClass('btn-escolha1-b__active');
         jQuery("#id-btn-escolha1-a").removeClass('btn-escolha1-a__active');
     }
-    jQuery("#id-btn-go-escolha-1").attr('class', 'btn-continuar__active');
+
+    // Se existir pelo menos um ativo, então ativar o botão continuar
+    if (jQuery('#' + idButton).hasClass('btn-escolha1-a__active') ||
+        jQuery('#' + idButton).hasClass('btn-escolha1-b__active')) {
+        jQuery("#id-btn-go-escolha-1").attr('class', 'btn-continuar__active');
+    } else {
+        // Se não, desativar o botão continuar
+        jQuery("#id-btn-go-escolha-1").remove('class', 'btn-continuar__active');
+        jQuery("#id-btn-go-escolha-1").attr('class', 'btn-continuar');
+    }
 
 }
 
 function atualizaEscolha1(escolha1, idButton) {
-
+    //alert('escolha1' + escolha1);
     if (myList.length == 0)
         myList.push(LACO);
 
@@ -390,8 +400,18 @@ function addEventOnClickEscolha1(idButton) {
     jQuery(idButton).on("click", function (event) {
         event.preventDefault();
         let btnTarget = event.target;
-        atualizaEscolha1(btnTarget.value, btnTarget.id);
+
         activateDesactivateEscolha1(btnTarget.id);
+        // Se o botão estiver com a classe de estilo
+        // que indica que está ativo
+        if (btnTarget.id === ID_BTN_ESCOLHA1_A) {
+            if (jQuery('#' + btnTarget.id).hasClass('btn-escolha1-a__active'))
+                atualizaEscolha1(btnTarget.value, btnTarget.id);
+            else
+                atualizaEscolha1("", btnTarget.id);
+            //alert('não está ativo');
+        }
+
     });
 }
 
@@ -409,7 +429,17 @@ function activateDesactivateEscolha2(idButton) {
         jQuery("#id-btn-escolha2-a").removeClass('btn-escolha2-a__active');
     }
 
-    jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar__active');
+    // Se existir pelo menos um ativo, então ativar o botão continuar
+    if (jQuery('#' + idButton).hasClass('btn-escolha2-a__active') ||
+        jQuery('#' + idButton).hasClass('btn-escolha2-b__active')) {
+        jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar__active');
+    } else {
+        // Se não, desativar o botão continuar
+        jQuery("#id-btn-go-escolha-2").remove('class', 'btn-continuar__active');
+        jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar');
+    }
+
+
 }
 
 function atualizaEscolha2(escolha2, idButton) {
