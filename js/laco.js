@@ -54,6 +54,14 @@ const QS_ID_FORM1 = '#' + ID_FORM1;
 const NOME_ORIGEM = 'nomeOrigem';
 const EMAIL_ORIGEM = 'emailOrigem';
 
+const ID_MAIN_FORM2 = 'id-main-form2';
+const QS_ID_MAIN_FORM2 = '#' + ID_MAIN_FORM1;
+const ID_FORM2 = 'id-form-2';
+const QS_ID_FORM2 = '#' + ID_FORM2;
+const NOME_DESTINO = 'nomeDestino';
+const EMAIL_DESTINO = 'emailDestino';
+
+
 
 
 function clearListInLocalStorage(){
@@ -68,7 +76,6 @@ function saveListInLocalStorage() {
 
 
 function fillForm1(idForm){
-alert(idForm);
     LACO = myList[0];
 
     //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
@@ -94,7 +101,7 @@ function atualizaForm1(nome, email){
     if(email != "")
         LACO.emailForm1 = email;
 
-    alert(LACO.nomeForm1 + ' ' + LACO.emailForm1);
+    
 }
 
 
@@ -144,6 +151,36 @@ function addEventOnSubmitForm1(idForm) {
     });
 }
 
+function fillForm2(idForm){
+    LACO = myList[0];
+
+    //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
+    let formForm1 = jQuery(idForm + " :input[type='text']");
+    formForm1.each((index, elemForm) => {
+        if (elemForm.id === NOME_ORIGEM) {
+            elemForm.value = LACO.nomeForm2;
+        }
+        if (elemForm.id === EMAIL_ORIGEM) {
+            elemForm.value = LACO.emailForm2;
+        }
+    });
+}
+
+function atualizaForm2(nome, email){
+
+    if(myList.length == 0)
+        myList.push(LACO);
+    
+    LACO = myList[0];
+    if(nome != "")
+        LACO.nomeForm2 = nome;
+    if(email != "")
+        LACO.emailForm2 = email;
+
+    
+}
+
+
 function addEventOnSubmitForm2(idForm) {
     validaInputForm = true;
     // Alterar o conteúdo em função do click
@@ -154,35 +191,34 @@ function addEventOnSubmitForm2(idForm) {
 
         formForm1.each((index, elemForm) => {
             //btnElement.addEventListener("click", processButtonOperation);
-            if (elemForm.id === 'nomeDestino') {
+            if (elemForm.id === NOME_DESTINO) {
 
                 if (elemForm.value === "" && validaInputForm) {
                     //alert("falta preencher dados");
                     event.preventDefault();
                     jQuery('#' + elemForm.id).toggleClass('input__error');
                 } else {
-                    nomeForm2 = elemForm.value;
+                    //nomeForm2 = elemForm.value;
+                    atualizaForm2(elemForm.value, "");
                     jQuery('#' + elemForm.id).removeClass('input__error');
                 }
             }
 
 
-            if (elemForm.id === 'emailDestino') {
+            if (elemForm.id === EMAIL_DESTINO) {
 
                 if (elemForm.value === "" && validaInputForm) {
                     //alert("falta preencher dados");
                     event.preventDefault();
                     jQuery('#' + elemForm.id).toggleClass('input__error');
                 } else {
-                    emailForm2 = elemForm.value;
+                    //emailForm2 = elemForm.value;
+                    atualizaForm1("", elemForm.value);
                     jQuery('#' + elemForm.id).removeClass('input__error');
                 }
             }
-
-
-            //alert('nomeForm2: ' + nomeForm2);
-            //alert('emailForm2: ' + emailForm2);
         });
+        saveListInLocalStorage();
     });
 }
 
@@ -444,6 +480,9 @@ function activateOptions(idMain) {
         fillForm1(QS_ID_FORM1);     
     }
 
+    if(idMain === ID_MAIN_FORM2){
+        fillForm1(QS_ID_FORM2);     
+    }
 
 }
 
@@ -482,6 +521,12 @@ jQuery(document).ready(function (event) {
      if(jQuery(QS_ID_MAIN_FORM1).length){
         //alert('existe');
         activateOptions(ID_MAIN_FORM1);
+        return;
+     }
+
+     if(jQuery(QS_ID_MAIN_FORM2).length){
+        //alert('existe');
+        activateOptions(ID_MAIN_FORM2);
         return;
      }
 
