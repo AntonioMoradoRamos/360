@@ -33,6 +33,11 @@ let emailForm1 = "";
 let nomeForm2 = "";
 let emailForm2 = "";
 */
+
+
+const ID_MAIN_INDEX = 'id-main-index';
+const QS_ID_MAIN_INDEX = '#id-main-index';
+
 const ID_MAIN_ESCOLHA1 = 'id-main-escolha-1';
 const QS_ID_MAIN_ESCOLHA1 = '#' + ID_MAIN_ESCOLHA1;
 const ID_BTN_ESCOLHA1_A = 'id-btn-escolha1-a';
@@ -566,6 +571,12 @@ jQuery(document).ready(function (event) {
     if (jQuery(QS_ID_MAIN_PARABENS).length) {
         //alert('existe');
         activateOptions(ID_MAIN_PARABENS);
+        return;
+    }
+
+    if (jQuery(QS_ID_MAIN_INDEX).length) {
+        //alert('existe');
+        clearListInLocalStorage();
         return;
     }
 

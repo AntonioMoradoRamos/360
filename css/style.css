@@ -829,20 +829,18 @@ template {
 }*/
 .div-form {
   width: 100%;
+  margin: 50px 0 0 0;
 }
 
-/*
 .section-texto-laco {
-    background-image: url('../images/imagem_frinds.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 600px;
-}*/
+  height: 520px;
+}
+
 .section-texto-intro-laco {
   background-image: url("../images/banner-mobile-amigos.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 600px;
+  height: 550px;
 }
 
 .section-texto-intro-h1 {
@@ -861,8 +859,28 @@ template {
   line-height: 30px;
   font-size: 1.5rem;
   text-align: center;
-  padding: 0 30px 5px 30px;
   color: #FFFFFF;
+}
+
+#texto-intro-span1::before {
+  content: "\a";
+  white-space: pre;
+}
+
+#texto-intro-span2::before {
+  content: "\a";
+  white-space: pre;
+}
+
+.footer-intro__copyright {
+  background-image: url("../images/Footer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .section-texto-laco-h1__form {
@@ -1014,7 +1032,7 @@ template {
   border-radius: 2px;
 }
 
-.footer {
+.indicator {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1044,6 +1062,12 @@ template {
   background-color: rgba(211, 215, 220, 0.4);
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .section-texto-laco-h1 {
   /*font-family: "Get-Show";
       line-height: 40px;
@@ -1053,7 +1077,7 @@ template {
       color: #373535;
       
       font-weight: 100;*/
-  margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+  margin: 1.5rem 1.5rem 1.5rem 5.5rem;
   text-align: center;
 }
 
@@ -1061,20 +1085,45 @@ template {
   margin: 1.5rem 0.5rem 1.5rem 0.5rem;
 }
 
-.section-texto-laco-span1 {
+.section-texto-laco-span1,
+.section-texto-laco-span2 {
   font-family: "GothamPro-Medium";
   line-height: 2.25rem;
   font-size: 1.55rem;
   color: #373535;
   font-weight: 100;
+  display: block;
+  float: left;
 }
 
-.section-texto-laco-span2 {
+.section-texto-laco-span1::after {
+  content: "\a";
+  white-space: pre;
+}
+
+/*.section-texto-laco-span2::before {
+    content: "\A";
+    white-space: pre;
+}*/
+/*.section-texto-laco-span2 {
+            font-family: $secondaryfont;
+            line-height: 2.25rem;
+            font-size: 3rem;
+
+
+            color: #373535;
+            //margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+            font-weight: 100;
+        }*/
+.section-texto-laco-span3 {
   font-family: "Get-Show";
   line-height: 2.25rem;
   font-size: 3rem;
   color: #373535;
   font-weight: 100;
+  display: block;
+  float: right;
+  padding: 3px 70px 0 0;
 }
 
 @media only screen and (min-width: 900px) {

@@ -274,17 +274,13 @@
 
 .div-form {
     width: 100%;
-    //height: 272px;
-    //padding: 35px;
+    margin: 50px 0 0 0;
 }
 
-/*
+
 .section-texto-laco {
-    background-image: url('../images/imagem_frinds.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 600px;
-}*/
+    height: 520px;
+}
 
 .section-texto-intro-laco {
     //background-image: url('../images/imagem_frinds.png');
@@ -293,7 +289,7 @@
     //background-image: url('../images/banner-mobile-familia.png'); // 511
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
+    height: 550px;
 }
 
 
@@ -314,8 +310,31 @@
     font-size: 1.5rem;
     text-align: center;
 
-    padding: 0 30px 5px 30px;
+    //padding: 0 30px 5px 30px;
     color: #FFFFFF;
+}
+
+// Ponto de quebra na frase
+#texto-intro-span1::before {
+    content: "\A";
+    white-space: pre;
+}
+
+#texto-intro-span2::before {
+    content: "\A";
+    white-space: pre;
+}
+
+//Footer.png
+.footer-intro__copyright {
+    background-image: url('../images/Footer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .section-texto-laco-h1__form {
