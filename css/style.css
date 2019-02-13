@@ -1074,13 +1074,13 @@ template {
 
 .section-texto-laco-h1 {
   /*font-family: "Get-Show";
-      line-height: 40px;
-      font-size: 3rem;
-      text-align: center;
-  
-      color: #373535;
-      
-      font-weight: 100;*/
+  line-height: 40px;
+  font-size: 3rem;
+  text-align: center;
+
+  color: #373535;
+
+  font-weight: 100;*/
   margin: 1.5rem 1.5rem 1.5rem 5rem;
   text-align: center;
 }
@@ -1110,24 +1110,35 @@ template {
     white-space: pre;
 }*/
 /*.section-texto-laco-span2 {
-            font-family: $secondaryfont;
-            line-height: 2.25rem;
-            font-size: 3rem;
+    font-family: $secondaryfont;
+    line-height: 2.25rem;
+    font-size: 3rem;
 
 
-            color: #373535;
-            //margin: 1.5rem 3.5rem 1.5rem 3.5rem;
-            font-weight: 100;
-        }*/
+    color: #373535;
+    //margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+    font-weight: 100;
+}*/
 .section-texto-laco-span3 {
   font-family: "Get-Show";
   line-height: 2.25rem;
-  font-size: 3.25rem;
+  font-size: 4.25rem;
   color: #373535;
   font-weight: 100;
   display: block;
   float: right;
-  padding: 3px 71px 0 0;
+  padding: 0px 58px 0 0;
+}
+
+.section-texto-laco-spanS {
+  font-family: "Get-Show";
+  line-height: 2.25rem;
+  font-size: 4.25rem;
+  color: #373535;
+  font-weight: 100;
+  display: block;
+  float: right;
+  padding: 0px 9px 0px;
 }
 
 @media only screen and (min-width: 900px) {
