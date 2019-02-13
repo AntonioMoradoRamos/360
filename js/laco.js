@@ -191,10 +191,10 @@ function fillForm2(idForm) {
     //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
     let formForm1 = jQuery(idForm + " :input[type='text']");
     formForm1.each((index, elemForm) => {
-        if (elemForm.id === NOME_ORIGEM) {
+        if (elemForm.id === NOME_DESTINO) {
             elemForm.value = LACO.nomeForm2;
         }
-        if (elemForm.id === EMAIL_ORIGEM) {
+        if (elemForm.id === EMAIL_DESTINO) {
             elemForm.value = LACO.emailForm2;
         }
     });
@@ -216,16 +216,21 @@ function atualizaForm2(nome, email) {
 
 
 function addEventOnSubmitForm2(idForm) {
+    //alert('addEventOnSubmitForm2: ' + idForm);
+
     validaInputForm = true;
     // Alterar o conteúdo em função do click
     jQuery(idForm).on('submit', function (event) {
         //event.preventDefault();
+        //event.preventDefault();
         // Obter os elementos input do tipo text
+
         formForm1 = jQuery('#' + event.target.id + " :input[type='text']");
 
         formForm1.each((index, elemForm) => {
             //btnElement.addEventListener("click", processButtonOperation);
             if (elemForm.id === NOME_DESTINO) {
+
 
                 if (elemForm.value === "" && validaInputForm) {
                     //alert("falta preencher dados");
@@ -233,6 +238,7 @@ function addEventOnSubmitForm2(idForm) {
                     jQuery('#' + elemForm.id).toggleClass('input__error');
                 } else {
                     //nomeForm2 = elemForm.value;
+                    //alert('elemForm.id: ' + elemForm.id);
                     atualizaForm2(elemForm.value, "");
                     jQuery('#' + elemForm.id).removeClass('input__error');
                 }
@@ -319,6 +325,7 @@ function addEventOnSubmit(idButton, idForm, theAction) {
     // Alterar o conteúdo em função do click
     jQuery(idButton).on('click', function (event) {
         event.preventDefault();
+        //alert('idButton:' + idButton);
         if (isButtonActive(idButton)) {
             // Se o botão estiver ativo, verificar se é 
             // uma das páginas do formulário.
@@ -330,6 +337,7 @@ function addEventOnSubmit(idButton, idForm, theAction) {
                 // Validar form
                 validarForm(idForm);
             }*/
+
             saveListInLocalStorage();
             jQuery(idForm).attr("action", theAction);
             jQuery(idForm).submit();
@@ -459,16 +467,17 @@ addEventOnSubmit('#id-btn-back-escolha-1', '#id-form-escolha-1', '/projecto.360.
 addEventOnSubmit('#id-btn-go-escolha-2', '#id-form-escolha-2', '/projecto.360.io/pages/form-2.html');
 addEventOnSubmit('#id-btn-back-escolha-2', '#id-form-escolha-2', '/projecto.360.io/pages/escolha-1.html');
 
+// Página form-2
+//addAction2Form('#form-2-laco', '/projecto.360.io/form-1.html');
+addEventOnSubmit('#id-btn-go-form-2', '#id-form-2', '/projecto.360.io/pages/form-1.html');
+addEventOnSubmit('#id-btn-back-form-2', '#id-form-2', '/projecto.360.io/pages/escolha-2.html');
+
 
 // Página form-1
 //addAction2Form('#form-1-laco', '/projecto.360.io/form-2.html');
 addEventOnSubmit('#id-btn-go-form-1', '#id-form-1', '/projecto.360.io/pages/parabens.html');
 addEventOnSubmit('#id-btn-back-form-1', '#id-form-1', '/projecto.360.io/pages/form-2.html');
 
-// Página form-2
-//addAction2Form('#form-2-laco', '/projecto.360.io/parabens.html');
-addEventOnSubmit('#id-btn-go-form-2', '#id-form-2', '/projecto.360.io/pages/form-1.html');
-addEventOnSubmit('#id-btn-back-form-2', '#id-form-2', '/projecto.360.io/pages/escolha-2.html');
 
 // Página parabens
 //addAction2Form('#form-parabens', '/projecto.360.io/lacoFortalecido.html');
@@ -515,7 +524,7 @@ function activateOptions(idMain) {
     }
 
     if (idMain === ID_MAIN_FORM2) {
-        fillForm1(QS_ID_FORM2);
+        fillForm2(QS_ID_FORM2);
     }
 
     if (idMain === ID_MAIN_PARABENS) {
