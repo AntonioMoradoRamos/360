@@ -757,6 +757,10 @@ template {
   text-transform: uppercase;
 }
 
+.btn-voltar__margin {
+  margin-right: 75px;
+}
+
 #id-icon-arrow-left::before {
   font-family: "Icomoon" !important;
   content: "";
@@ -836,7 +840,7 @@ template {
 }
 
 .section-texto-intro-laco {
-  background-image: url("../images/banner-mobile-amigos.png");
+  background-image: url("../images/ImagemLaco.png");
   background-repeat: no-repeat;
   background-position: center;
   height: 550px;

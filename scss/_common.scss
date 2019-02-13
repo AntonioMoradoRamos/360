@@ -47,6 +47,7 @@
 
 .headerEscolha_image {
     background-image: url(../images/logo.png);
+    //background-image: url(../images/ImagemLaco.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -181,6 +182,10 @@
     text-transform: uppercase;
 }
 
+.btn-voltar__margin {
+    margin-right: 75px;
+}
+
 #id-icon-arrow-left::before {
     font-family: "Icomoon" !important;
     content: "\e900";
@@ -285,7 +290,8 @@
 
 .section-texto-intro-laco {
     //background-image: url('../images/imagem_frinds.png');
-    background-image: url('../images/banner-mobile-amigos.png');
+    //background-image: url('../images/banner-mobile-amigos.png');
+    background-image: url('../images/ImagemLaco.png');
     // O slide será desktop
     //background-image: url('../images/banner-mobile-familia.png'); // 511
     background-repeat: no-repeat;
