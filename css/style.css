@@ -710,7 +710,14 @@ template {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  margin: 22px 0 0 0;
+  margin: -27px 21px 22px 0;
+}
+
+.row-botoes1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: 22px 21px 22px 0;
 }
 
 .row-botoes_intro_margin {
@@ -758,7 +765,7 @@ template {
 }
 
 .btn-voltar__margin {
-  margin-right: 75px;
+  margin-right: 61px;
 }
 
 #id-icon-arrow-left::before {
