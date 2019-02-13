@@ -61,6 +61,11 @@ const QS_ID_FORM2 = '#' + ID_FORM2;
 const NOME_DESTINO = 'nomeDestino';
 const EMAIL_DESTINO = 'emailDestino';
 
+const ID_MAIN_PARABENS = 'id-main-parabens';
+const QS_ID_MAIN_PARABENS = '#' + ID_MAIN_PARABENS;
+const ID_SPAN_PARABENS_H1 = 'id-span-parabens-h1';
+const QS_ID_SPAN_PARABENS_H1 = '#' + ID_SPAN_PARABENS_H1;
+
 
 
 
@@ -72,6 +77,14 @@ function clearListInLocalStorage(){
 function saveListInLocalStorage() {
     //alert('gravar');
     localStorage.setItem('myListStoraged', JSON.stringify(myList));
+}
+
+
+function fillMsgParabens() {
+    LACO = myList[0];
+
+    let msg = 'Parabéns ' + LACO.nomeForm1 + "!";
+    jQuery(QS_ID_SPAN_PARABENS_H1).html(msg);
 }
 
 
@@ -484,6 +497,12 @@ function activateOptions(idMain) {
         fillForm1(QS_ID_FORM2);     
     }
 
+    if(idMain === ID_MAIN_PARABENS){
+        fillMsgParabens();     
+    }
+
+    
+
 }
 
 
@@ -529,6 +548,14 @@ jQuery(document).ready(function (event) {
         activateOptions(ID_MAIN_FORM2);
         return;
      }
+
+     if(jQuery(QS_ID_MAIN_PARABENS).length){
+        //alert('existe');
+        activateOptions(ID_MAIN_PARABENS);
+        return;
+     }
+
+     
 
     //activateOptions('id-main-escolha-1');
     //activateOptions('id-main-escolha-2');
