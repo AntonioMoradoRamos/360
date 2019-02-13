@@ -69,26 +69,40 @@ const QS_ID_SPAN_PARABENS_H1 = '#' + ID_SPAN_PARABENS_H1;
 
 
 
-function clearListInLocalStorage(){
+function clearListInLocalStorage() {
     localStorage.clear();
     let lst = [];
     localStorage.setItem('myListStoraged', JSON.stringify(lst));
 }
+
 function saveListInLocalStorage() {
     //alert('gravar');
     localStorage.setItem('myListStoraged', JSON.stringify(myList));
 }
 
+const ID_SPAN_PARABENS_P1 = 'id-span-parabens-p1';
+const QS_ID_SPAN_PARABENS_P1 = '#' + ID_SPAN_PARABENS_P1;
+
+const ID_SPAN_PARABENS_P3 = 'id-span-parabens-p3';
+const QS_ID_SPAN_PARABENS_P3 = '#' + ID_SPAN_PARABENS_P3;
 
 function fillMsgParabens() {
     LACO = myList[0];
 
     let msg = 'Parabéns ' + LACO.nomeForm1 + "!";
     jQuery(QS_ID_SPAN_PARABENS_H1).html(msg);
+
+    msg = 'O teu laço com a ' + LACO.nomeForm2 + ' foi';
+    jQuery(QS_ID_SPAN_PARABENS_P1).html(msg);
+
+    msg = 'Gostaste de mimar a  ' + LACO.nomeForm2 + '?';
+    jQuery(QS_ID_SPAN_PARABENS_P3).html(msg);
+
+
 }
 
 
-function fillForm1(idForm){
+function fillForm1(idForm) {
     LACO = myList[0];
 
     //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
@@ -103,18 +117,18 @@ function fillForm1(idForm){
     });
 }
 
-function atualizaForm1(nome, email){
+function atualizaForm1(nome, email) {
 
-    if(myList.length == 0)
+    if (myList.length == 0)
         myList.push(LACO);
-    
+
     LACO = myList[0];
-    if(nome != "")
+    if (nome != "")
         LACO.nomeForm1 = nome;
-    if(email != "")
+    if (email != "")
         LACO.emailForm1 = email;
 
-    
+
 }
 
 
@@ -164,7 +178,7 @@ function addEventOnSubmitForm1(idForm) {
     });
 }
 
-function fillForm2(idForm){
+function fillForm2(idForm) {
     LACO = myList[0];
 
     //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
@@ -179,18 +193,18 @@ function fillForm2(idForm){
     });
 }
 
-function atualizaForm2(nome, email){
+function atualizaForm2(nome, email) {
 
-    if(myList.length == 0)
+    if (myList.length == 0)
         myList.push(LACO);
-    
+
     LACO = myList[0];
-    if(nome != "")
+    if (nome != "")
         LACO.nomeForm2 = nome;
-    if(email != "")
+    if (email != "")
         LACO.emailForm2 = email;
 
-    
+
 }
 
 
@@ -321,35 +335,35 @@ function activateDesactivateEscolha1(idButton) {
     //alert(idButton);
 
     if (idButton === 'id-btn-escolha1-a') {
-        jQuery('#'+idButton).toggleClass('btn-escolha1-a__active');
+        jQuery('#' + idButton).toggleClass('btn-escolha1-a__active');
         jQuery("#id-btn-escolha1-b").removeClass('btn-escolha1-b__active');
     }
 
     if (idButton === 'id-btn-escolha1-b') {
-        jQuery('#'+idButton).toggleClass('btn-escolha1-b__active');
+        jQuery('#' + idButton).toggleClass('btn-escolha1-b__active');
         jQuery("#id-btn-escolha1-a").removeClass('btn-escolha1-a__active');
     }
     jQuery("#id-btn-go-escolha-1").attr('class', 'btn-continuar__active');
-    
+
 }
 
-function atualizaEscolha1(escolha1, idButton){
+function atualizaEscolha1(escolha1, idButton) {
 
-    if(myList.length == 0)
+    if (myList.length == 0)
         myList.push(LACO);
-    
+
     LACO = myList[0];
-    if(idButton === 'id-btn-escolha1-a'){
+    if (idButton === 'id-btn-escolha1-a') {
         LACO.escolha1a = escolha1;
         LACO.escolha1b = "";
     }
-        
 
-    if(idButton === 'id-btn-escolha1-b'){
+
+    if (idButton === 'id-btn-escolha1-b') {
         LACO.escolha1b = escolha1;
         LACO.escolha1a = "";
     }
-        
+
 
 }
 
@@ -369,31 +383,31 @@ function activateDesactivateEscolha2(idButton) {
     //alert(idButton);
 
     if (idButton === 'id-btn-escolha2-a') {
-        jQuery('#'+idButton).toggleClass('btn-escolha2-a__active');
+        jQuery('#' + idButton).toggleClass('btn-escolha2-a__active');
         jQuery("#id-btn-escolha2-b").removeClass('btn-escolha2-b__active');
     }
 
     if (idButton === 'id-btn-escolha2-b') {
-        jQuery('#'+idButton).toggleClass('btn-escolha2-b__active');
+        jQuery('#' + idButton).toggleClass('btn-escolha2-b__active');
         jQuery("#id-btn-escolha2-a").removeClass('btn-escolha2-a__active');
     }
 
     jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar__active');
 }
 
-function atualizaEscolha2(escolha2, idButton){
+function atualizaEscolha2(escolha2, idButton) {
 
-    if(myList.length == 0)
+    if (myList.length == 0)
         myList.push(LACO);
-    
+
     LACO = myList[0];
-    if(idButton === 'id-btn-escolha2-a'){
+    if (idButton === 'id-btn-escolha2-a') {
         LACO.escolha2a = escolha2;
         LACO.escolha2b = "";
     }
-        
 
-    if(idButton === 'id-btn-escolha2-b'){
+
+    if (idButton === 'id-btn-escolha2-b') {
         LACO.escolha2b = escolha2;
         LACO.escolha2a = "";
     }
@@ -404,10 +418,10 @@ function addEventOnClickEscolha2(idButton) {
     jQuery(idButton).on("click", function (event) {
         event.preventDefault();
         let btnTarget = event.target;
-        atualizaEscolha2( btnTarget.value,  btnTarget.id);
+        atualizaEscolha2(btnTarget.value, btnTarget.id);
         activateDesactivateEscolha2(btnTarget.id);
         //escolha2 = btnTarget.value;
-        
+
 
     });
 }
@@ -460,48 +474,48 @@ addEventOnSubmit('#id-btn-go-laco', '#id-form-laco', '/projecto.360.io/pages/lac
 
 
 function activateOptions(idMain) {
-    
+
     // Se a lista não tiver elementos, nada a fazer
-    if(myList.length == 0)
+    if (myList.length == 0)
         return;
-    
+
     LACO = myList[0];
 
-    if(idMain === ID_MAIN_ESCOLHA1){
-        if( LACO.escolha1b != "" && LACO.escolha1a === ""){
+    if (idMain === ID_MAIN_ESCOLHA1) {
+        if (LACO.escolha1b != "" && LACO.escolha1a === "") {
             activateDesactivateEscolha1(ID_BTN_ESCOLHA1_B);
-            return;    
+            return;
         }
-        if( LACO.escolha1b === "" && LACO.escolha1a != ""){
+        if (LACO.escolha1b === "" && LACO.escolha1a != "") {
             activateDesactivateEscolha1(ID_BTN_ESCOLHA1_A);
-            return;    
-        }     
-    }
-
-    if(idMain === ID_MAIN_ESCOLHA2){
-        if( LACO.escolha2b != "" && LACO.escolha2a === ""){
-            activateDesactivateEscolha2(ID_BTN_ESCOLHA2_B);
-            return;    
+            return;
         }
-        if( LACO.escolha2b === "" && LACO.escolha2a != ""){
+    }
+
+    if (idMain === ID_MAIN_ESCOLHA2) {
+        if (LACO.escolha2b != "" && LACO.escolha2a === "") {
+            activateDesactivateEscolha2(ID_BTN_ESCOLHA2_B);
+            return;
+        }
+        if (LACO.escolha2b === "" && LACO.escolha2a != "") {
             activateDesactivateEscolha2(ID_BTN_ESCOLHA2_A);
-            return;    
-        }     
+            return;
+        }
     }
 
-    if(idMain === ID_MAIN_FORM1){
-        fillForm1(QS_ID_FORM1);     
+    if (idMain === ID_MAIN_FORM1) {
+        fillForm1(QS_ID_FORM1);
     }
 
-    if(idMain === ID_MAIN_FORM2){
-        fillForm1(QS_ID_FORM2);     
+    if (idMain === ID_MAIN_FORM2) {
+        fillForm1(QS_ID_FORM2);
     }
 
-    if(idMain === ID_MAIN_PARABENS){
-        fillMsgParabens();     
+    if (idMain === ID_MAIN_PARABENS) {
+        fillMsgParabens();
     }
 
-    
+
 
 }
 
@@ -524,38 +538,38 @@ function addEventOnClickSelectButton(idButton) {
 
 
 jQuery(document).ready(function (event) {
-    
-     if(jQuery(QS_ID_MAIN_ESCOLHA1).length){
+
+    if (jQuery(QS_ID_MAIN_ESCOLHA1).length) {
         //alert('existe');
         activateOptions(ID_MAIN_ESCOLHA1);
         return;
-     }
+    }
 
-     if(jQuery(QS_ID_MAIN_ESCOLHA2).length){
+    if (jQuery(QS_ID_MAIN_ESCOLHA2).length) {
         //alert('existe');
         activateOptions(ID_MAIN_ESCOLHA2);
         return;
-     }
+    }
 
-     if(jQuery(QS_ID_MAIN_FORM1).length){
+    if (jQuery(QS_ID_MAIN_FORM1).length) {
         //alert('existe');
         activateOptions(ID_MAIN_FORM1);
         return;
-     }
+    }
 
-     if(jQuery(QS_ID_MAIN_FORM2).length){
+    if (jQuery(QS_ID_MAIN_FORM2).length) {
         //alert('existe');
         activateOptions(ID_MAIN_FORM2);
         return;
-     }
+    }
 
-     if(jQuery(QS_ID_MAIN_PARABENS).length){
+    if (jQuery(QS_ID_MAIN_PARABENS).length) {
         //alert('existe');
         activateOptions(ID_MAIN_PARABENS);
         return;
-     }
+    }
 
-     
+
 
     //activateOptions('id-main-escolha-1');
     //activateOptions('id-main-escolha-2');
