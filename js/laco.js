@@ -462,12 +462,12 @@ addEventOnSubmit('#id-btn-back-escolha-2', '#id-form-escolha-2', '/projecto.360.
 
 // Página form-1
 //addAction2Form('#form-1-laco', '/projecto.360.io/form-2.html');
-addEventOnSubmit('#id-btn-go-form-1', '#id-form-1', '/projecto.360.io/pages/form-1.html');
+addEventOnSubmit('#id-btn-go-form-1', '#id-form-1', '/projecto.360.io/pages/parabens.html');
 addEventOnSubmit('#id-btn-back-form-1', '#id-form-1', '/projecto.360.io/pages/escolha-2.html');
 
 // Página form-2
 //addAction2Form('#form-2-laco', '/projecto.360.io/parabens.html');
-addEventOnSubmit('#id-btn-go-form-2', '#id-form-2', '/projecto.360.io/pages/parabens.html');
+addEventOnSubmit('#id-btn-go-form-2', '#id-form-2', '/projecto.360.io/pages/form-1.html');
 addEventOnSubmit('#id-btn-back-form-2', '#id-form-2', '/projecto.360.io/pages/form-1.html');
 
 // Página parabens
