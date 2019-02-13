@@ -67,7 +67,7 @@ function saveListInLocalStorage() {
 
 
 function fillForm1(idForm){
-
+alert(idForm);
     LACO = myList[0];
 
     //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
@@ -92,6 +92,8 @@ function atualizaForm1(nome, email){
         LACO.nomeForm1 = nome;
     if(email != "")
         LACO.emailForm1 = email;
+
+    alert(LACO.nomeForm1 + ' ' + LACO.emailForm1);
 }
 
 
@@ -137,6 +139,7 @@ function addEventOnSubmitForm1(idForm) {
             }
 
         });
+        saveListInLocalStorage();
     });
 }
 
