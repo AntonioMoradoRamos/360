@@ -143,12 +143,23 @@
         .section-texto-laco-span3 {
             font-family: $secondaryfont;
             line-height: 2.25rem;
-            font-size: 3.25rem;
+            font-size: 4.25rem;
             color: #373535;
             font-weight: 100;
             display: block;
             float: right;
-            padding: 3px 71px 0 0;
+            padding: 0px 58px 0 0;
+        }
+
+        .section-texto-laco-spanS {
+            font-family: $secondaryfont;
+            line-height: 2.25rem;
+            font-size: 4.25rem;
+            color: #373535;
+            font-weight: 100;
+            display: block;
+            float: right;
+            padding: 0px 9px 0px;
         }
     }
 
