@@ -191,10 +191,10 @@ function fillForm2(idForm) {
     //let formForm1 = jQuery('#' + idForm + " :input[type='text']");
     let formForm1 = jQuery(idForm + " :input[type='text']");
     formForm1.each((index, elemForm) => {
-        if (elemForm.id === NOME_ORIGEM) {
+        if (elemForm.id === NOME_DESTINO) {
             elemForm.value = LACO.nomeForm2;
         }
-        if (elemForm.id === EMAIL_ORIGEM) {
+        if (elemForm.id === EMAIL_DESTINO) {
             elemForm.value = LACO.emailForm2;
         }
     });
@@ -325,7 +325,7 @@ function addEventOnSubmit(idButton, idForm, theAction) {
     // Alterar o conteúdo em função do click
     jQuery(idButton).on('click', function (event) {
         event.preventDefault();
-        alert('idButton:' + idButton);
+        //alert('idButton:' + idButton);
         if (isButtonActive(idButton)) {
             // Se o botão estiver ativo, verificar se é 
             // uma das páginas do formulário.
