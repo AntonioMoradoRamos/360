@@ -474,7 +474,7 @@ jQuery(document).ready(function (event) {
 
      if(jQuery(QS_ID_MAIN_ESCOLHA2).length){
         //alert('existe');
-        activateOptions(ID_MAIN_ESCOLHA2);
+        fill(ID_MAIN_ESCOLHA2);
         return;
      }
 
