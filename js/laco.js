@@ -122,6 +122,24 @@ function fillForm1(idForm) {
             elemForm.value = LACO.emailForm1;
         }
     });
+    let quemEnvia = "";
+    if (LACO.escolha1a != "") {
+        quemEnvia = "Família";
+    }
+    if (LACO.escolha1b != "") {
+        quemEnvia = "Amigos";
+    }
+
+    quemEnvia = "/";
+    if (LACO.escolha2a != "") {
+        quemEnvia = "Homem";
+    }
+    if (LACO.escolha2b != "") {
+        quemEnvia = "Mulher";
+    }
+
+    jQuery("#id-quem-envia-span").html(quemEnvia);
+
 }
 
 function atualizaForm1(nome, email) {

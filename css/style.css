@@ -909,6 +909,33 @@ template {
   margin: 0 0 20px 0;
 }
 
+.section-texto-laco-p1 {
+  font-family: "Metrocity-Book";
+  line-height: normal;
+  font-size: 1rem;
+  text-align: left;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: #FFFFFF;
+  flex: 1;
+}
+
+.section-texto-laco-p2 {
+  font-family: "Metrocity-Book";
+  line-height: normal;
+  font-size: 0.875rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-style: italic;
+  color: #FFFFFF;
+  flex: 1;
+}
+
+.section-texto-laco-quem-envia {
+  display: flex;
+  flex-direction: row;
+}
+
 .label {
   font-family: "Metrocity-Book";
   line-height: normal;
@@ -1097,13 +1124,13 @@ template {
 
 .section-texto-laco-h1 {
   /*font-family: "Get-Show";
-  line-height: 40px;
-  font-size: 3rem;
-  text-align: center;
-
-  color: #373535;
-
-  font-weight: 100;*/
+      line-height: 40px;
+      font-size: 3rem;
+      text-align: center;
+  
+      color: #373535;
+      
+      font-weight: 100;*/
   margin: 1.5rem 1.5rem 1.5rem 5rem;
   text-align: center;
 }
@@ -1133,15 +1160,15 @@ template {
     white-space: pre;
 }*/
 /*.section-texto-laco-span2 {
-    font-family: $secondaryfont;
-    line-height: 2.25rem;
-    font-size: 3rem;
+            font-family: $secondaryfont;
+            line-height: 2.25rem;
+            font-size: 3rem;
 
 
-    color: #373535;
-    //margin: 1.5rem 3.5rem 1.5rem 3.5rem;
-    font-weight: 100;
-}*/
+            color: #373535;
+            //margin: 1.5rem 3.5rem 1.5rem 3.5rem;
+            font-weight: 100;
+        }*/
 .section-texto-laco-span3 {
   font-family: "Get-Show";
   line-height: 2.25rem;

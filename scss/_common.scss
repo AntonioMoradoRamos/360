@@ -132,6 +132,7 @@
     justify-content: center;
     margin: -27px 21px 22px 0;
 }
+
 .row-botoes1 {
     display: flex;
     flex-direction: row-reverse;
@@ -355,6 +356,7 @@
     margin: 1.5rem 2rem 1.5rem 2rem;
 }
 
+// Deprecated
 .section-texto-laco-h2 {
     font-family: $primaryfont;
     line-height: normal;
@@ -364,6 +366,37 @@
     font-variant: small-caps;
     color: #FFFFFF;
     margin: 0 0 20px 0;
+}
+
+.section-texto-laco-p1 {
+    font-family: $primaryfont;
+    line-height: normal;
+    font-size: 1rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    color: #FFFFFF;
+    //margin: 0 0 20px 0;
+    flex: 1;
+}
+
+.section-texto-laco-p2 {
+    font-family: $primaryfont;
+    line-height: normal;
+    font-size: 0.875rem;
+    //text-align: left;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-style: italic;
+    color: #FFFFFF;
+    //margin: 0 0 20px 0;
+    flex: 1;
+}
+
+.section-texto-laco-quem-envia,
+.section-texto-laco-quem-recebe {
+    display: flex;
+    flex-direction: row;
 }
 
 .label {
