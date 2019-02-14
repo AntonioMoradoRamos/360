@@ -931,7 +931,8 @@ template {
   flex: 1;
 }
 
-.section-texto-laco-quem-envia {
+.section-texto-laco-quem-envia,
+.section-texto-laco-quem-recebe {
   display: flex;
   flex-direction: row;
 }
