@@ -58,6 +58,8 @@ const ID_FORM1 = 'id-form-1';
 const QS_ID_FORM1 = '#' + ID_FORM1;
 const NOME_ORIGEM = 'nomeOrigem';
 const EMAIL_ORIGEM = 'emailOrigem';
+const ID_QUEM_ENVIA_SPAN = 'id-quem-envia-span';
+const QS_ID_QUEM_ENVIA_SPAN = '#' + ID_QUEM_ENVIA_SPAN;
 
 const ID_MAIN_FORM2 = 'id-main-form2';
 const QS_ID_MAIN_FORM2 = '#' + ID_MAIN_FORM2;
@@ -65,11 +67,17 @@ const ID_FORM2 = 'id-form-2';
 const QS_ID_FORM2 = '#' + ID_FORM2;
 const NOME_DESTINO = 'nomeDestino';
 const EMAIL_DESTINO = 'emailDestino';
+const ID_QUEM_RECEBE_SPAN = 'id-quem-recebe-span';
+const QS_ID_QUEM_RECEBE_SPAN = '#' + ID_QUEM_RECEBE_SPAN;
 
 const ID_MAIN_PARABENS = 'id-main-parabens';
 const QS_ID_MAIN_PARABENS = '#' + ID_MAIN_PARABENS;
 const ID_SPAN_PARABENS_H1 = 'id-span-parabens-h1';
 const QS_ID_SPAN_PARABENS_H1 = '#' + ID_SPAN_PARABENS_H1;
+
+
+
+
 
 
 
@@ -108,6 +116,27 @@ function fillMsgParabens() {
 
 }
 
+function fillQuemEnviaRecebe(idSpam) {
+    let quemEnvia = "";
+    if (LACO.escolha1a != "") {
+        quemEnvia = "Família";
+    }
+    if (LACO.escolha1b != "") {
+        quemEnvia = "Amigos";
+    }
+
+    quemEnvia += "/";
+    if (LACO.escolha2a != "") {
+        quemEnvia += "Homem";
+    }
+    if (LACO.escolha2b != "") {
+        quemEnvia += "Mulher";
+    }
+    jQuery(idSpam).html(quemEnvia);
+
+
+}
+
 
 function fillForm1(idForm) {
     LACO = myList[0];
@@ -122,6 +151,7 @@ function fillForm1(idForm) {
             elemForm.value = LACO.emailForm1;
         }
     });
+    /*
     let quemEnvia = "";
     if (LACO.escolha1a != "") {
         quemEnvia = "Família";
@@ -138,7 +168,9 @@ function fillForm1(idForm) {
         quemEnvia += "Mulher";
     }
 
-    jQuery("#id-quem-envia-span").html(quemEnvia);
+    jQuery("#id-quem-envia-span").html(quemEnvia);*/
+
+    fillQuemEnviaRecebe(QS_ID_QUEM_ENVIA_SPAN);
 
 }
 
@@ -218,6 +250,8 @@ function fillForm2(idForm) {
             elemForm.value = LACO.emailForm2;
         }
     });
+
+    fillQuemEnviaRecebe(QS_ID_QUEM_RECEBE_SPAN);
 }
 
 function atualizaForm2(nome, email) {
