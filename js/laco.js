@@ -132,10 +132,10 @@ function fillForm1(idForm) {
 
     quemEnvia += "/";
     if (LACO.escolha2a != "") {
-        quemEnvia = "Homem";
+        quemEnvia += "Homem";
     }
     if (LACO.escolha2b != "") {
-        quemEnvia = "Mulher";
+        quemEnvia += "Mulher";
     }
 
     jQuery("#id-quem-envia-span").html(quemEnvia);
