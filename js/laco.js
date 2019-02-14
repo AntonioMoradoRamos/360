@@ -130,7 +130,7 @@ function fillForm1(idForm) {
         quemEnvia = "Amigos";
     }
 
-    quemEnvia = "/";
+    quemEnvia += "/";
     if (LACO.escolha2a != "") {
         quemEnvia = "Homem";
     }
