@@ -1094,12 +1094,20 @@ template {
   margin: 14px 82px 14px 82px;
 }
 
+.footer-indicator__active {
+  background-color: rgba(161, 161, 161, 0.6);
+}
+
 @media only screen and (min-width: 900px) {
   .indicator {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 14px 82px 14px 82px;
+  }
+
+  .footer-indicator__active {
+    background-color: #FFF;
   }
 
   .footer-indicator__displaynone {

@@ -66,6 +66,10 @@
             justify-content: space-between;
             margin: 14px 82px 14px 82px;
         }
+
+        .footer-indicator__active {
+            background-color: rgba(161, 161, 161, 0.6);
+        }
     }
 
     @if($gridwidth==$gridwidthtabletbig) {
@@ -76,6 +80,10 @@
                 flex-direction: row;
                 justify-content: center;
                 margin: 14px 82px 14px 82px;
+            }
+
+            .footer-indicator__active {
+                background-color: $text-secundary;
             }
 
             .footer-indicator__displaynone {
