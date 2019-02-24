@@ -19,6 +19,13 @@
 
         }
 
+        .span-escolha1-a__underline {
+            border-bottom: 10px solid currentColor;
+            display: inline-block;
+            line-height: 0.65;
+            padding: 1px 0px 15px 0px;
+        }
+
     }
 
     @if($gridwidth==$gridwidthtabletbig) {
@@ -39,6 +46,13 @@
                 height: 100%;
                 background-color: inherit;
 
+            }
+
+            .span-escolha1-a__underline {
+                border-bottom: 10px solid currentColor;
+                display: inline-block;
+                line-height: 0.85;
+                padding: 1px 0px 20px 0px;
             }
 
         }

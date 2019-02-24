@@ -662,6 +662,13 @@ template {
   background-color: inherit;
 }
 
+.span-escolha1-a__underline {
+  border-bottom: 10px solid currentColor;
+  display: inline-block;
+  line-height: 0.65;
+  padding: 1px 0px 15px 0px;
+}
+
 @media only screen and (min-width: 900px) {
   .btn-escolha1-a,
 .btn-escolha1-b,
@@ -676,6 +683,13 @@ template {
     text-align: center;
     height: 100%;
     background-color: inherit;
+  }
+
+  .span-escolha1-a__underline {
+    border-bottom: 10px solid currentColor;
+    display: inline-block;
+    line-height: 0.85;
+    padding: 1px 0px 20px 0px;
   }
 }
 .btn-escolha1-a {
