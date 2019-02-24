@@ -69,8 +69,15 @@
 
 .btn-escolha1-a__active {
     background-color: $escolha1a-selected;
-    text-decoration: underline;
+    //text-decoration: underline;
     flex: 1;
+}
+
+.span-escolha1-a__underline {
+    border-bottom: 10px solid currentColor;
+    display: inline-block;
+    line-height: 0.85;
+    padding: 1px 0px 20px 0px;
 }
 
 .btn-escolha1-b {

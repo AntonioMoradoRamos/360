@@ -402,11 +402,13 @@ function addEventOnSubmit(idButton, idForm, theAction) {
 }
 
 function activateDesactivateEscolha1(idButton) {
-    //alert('activateDesactivateEscolha1');
 
-    if (idButton === 'id-btn-escolha1-a') {
-        jQuery('#' + idButton).toggleClass('btn-escolha1-a__active');
+    if (idButton === 'id-btn-escolha1-a' || idButton === 'id-span-escolha1-a') {
+        jQuery('#id-btn-escolha1-a').toggleClass('btn-escolha1-a__active');
+        jQuery('#id-span-escolha1-a').toggleClass('span-escolha1-a__underline');
         jQuery("#id-btn-escolha1-b").removeClass('btn-escolha1-b__active');
+
+        span - escolha1 - a__underline
     }
 
     if (idButton === 'id-btn-escolha1-b') {
