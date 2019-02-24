@@ -574,5 +574,38 @@
     background-color: rgba(211, 215, 220, 0.4);
 }
 
+.div-alinha {
+    margin: 0 auto;
+}
+
+.col-gutter-m1 {
+    content: '';
+    width: 1px;
+    height: 1px;
+    margin-left: 10px;
+}
+
+// Form 1
+.div-form__padding {
+    padding: 35px 35px 35px 35px;
+
+}
+
+.div-form__backgrouncolor {
+    background-color: #A7BECA;
+}
+
+.div-form2__backgrouncolor {
+    background-color: #1C5C65;
+}
+
+.div-form__margin {
+    margin: 0 auto;
+}
+
+.section-texto-laco-h1__margin {
+    margin: 1.5rem 1.5rem 1.5rem 3.5rem;
+}
+
 @include mx-textolaco($gridwidthmobile);
 @include mx-textolaco($gridwidthtabletbig);

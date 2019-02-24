@@ -13,7 +13,7 @@
         @media only screen and (min-width: $gridwidth) {
             .row-escolhas-d {
                 width: 100%;
-                height: 400px;
+                height: 700px;
                 display: flex;
                 flex-direction: row;
             }
@@ -70,6 +70,23 @@
 
     @if($gridwidth==$gridwidthtabletbig) {
         @media only screen and (min-width: $gridwidth) {
+
+            .indicator {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 14px 82px 14px 82px;
+            }
+
+            .footer-indicator__displaynone {
+                display: none;
+            }
+
+            .indicator_position {
+                position: relative;
+                top: -150px
+            }
+
             .footer {
                 display: flex;
                 flex-direction: row;
@@ -165,13 +182,20 @@
 
     @if($gridwidth==$gridwidthtabletbig) {
         @media only screen and (min-width: $gridwidth) {
+
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
             .section-texto-laco-h1 {
                 font-family: "Get-Show";
                 line-height: 40px;
                 font-size: 3rem;
                 text-align: center;
                 position: absolute;
-                padding-left: 200px;
+                padding-left: 25rem;
                 padding-top: 30px;
 
                 color: #373535;
