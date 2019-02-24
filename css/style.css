@@ -654,7 +654,7 @@ template {
 .btn-escolha2-b {
   font-family: "Metrocity-Book";
   border: 0;
-  color: #FFFFFF;
+  color: #FFF;
   line-height: normal;
   font-size: 2rem;
   text-align: center;
@@ -666,7 +666,7 @@ template {
 .span-escolha1-b__underline,
 .span-escolha2-a__underline,
 .span-escolha2-b__underline {
-  border-bottom: 5px solid currentColor;
+  border-bottom: 5px solid #FFF;
   display: inline-block;
   padding: 1px 0px 5px 0px;
 }
@@ -678,7 +678,7 @@ template {
 .btn-escolha2-b {
     font-family: "Metrocity-Book";
     border: 0;
-    color: #FFFFFF;
+    color: #FFF;
     line-height: normal;
     font-size: 6.25rem;
     font-weight: bold;
@@ -691,7 +691,7 @@ template {
 .span-escolha1-b__underline,
 .span-escolha2-a__underline,
 .span-escolha2-b__underline {
-    border-bottom: 10px solid currentColor;
+    border-bottom: 10px solid #FFF;
     display: inline-block;
     line-height: 0.85;
     padding: 1px 0px 20px 0px;

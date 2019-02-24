@@ -10,7 +10,7 @@
             //background-color: $primary;
 
             // Texto
-            color: #FFFFFF;
+            color: $text-secundary;
             line-height: normal;
             font-size: 2rem;
             text-align: center;
@@ -23,7 +23,7 @@
         .span-escolha1-b__underline,
         .span-escolha2-a__underline,
         .span-escolha2-b__underline {
-            border-bottom: 5px solid currentColor;
+            border-bottom: 5px solid $text-secundary;
             display: inline-block;
             padding: 1px 0px 5px 0px;
         }
@@ -40,7 +40,7 @@
                 font-family: $primaryfont;
                 border: 0;
                 // Texto
-                color: #FFFFFF;
+                color: $text-secundary;
                 line-height: normal;
                 font-size: 6.25rem;
                 font-weight: bold;
@@ -54,7 +54,7 @@
             .span-escolha1-b__underline,
             .span-escolha2-a__underline,
             .span-escolha2-b__underline {
-                border-bottom: 10px solid currentColor;
+                border-bottom: 10px solid $text-secundary;
                 display: inline-block;
                 line-height: 0.85;
                 padding: 1px 0px 20px 0px;
