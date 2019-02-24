@@ -47,7 +47,6 @@
 
 .headerEscolha_image {
     background-image: url(../images/logo.png);
-    //background-image: url(../images/ImagemLaco.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -73,12 +72,7 @@
     flex: 1;
 }
 
-.span-escolha1-a__underline {
-    border-bottom: 10px solid currentColor;
-    display: inline-block;
-    line-height: 0.85;
-    padding: 1px 0px 20px 0px;
-}
+
 
 .btn-escolha1-b {
     background-color: $escolha1b-not-selected;

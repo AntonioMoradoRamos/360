@@ -406,14 +406,19 @@ function activateDesactivateEscolha1(idButton) {
     if (idButton === 'id-btn-escolha1-a' || idButton === 'id-span-escolha1-a') {
         jQuery('#id-btn-escolha1-a').toggleClass('btn-escolha1-a__active');
         jQuery('#id-span-escolha1-a').toggleClass('span-escolha1-a__underline');
-        jQuery("#id-btn-escolha1-b").removeClass('btn-escolha1-b__active');
 
-        span - escolha1 - a__underline
+        jQuery("#id-btn-escolha1-b").removeClass('btn-escolha1-b__active');
+        jQuery("#id-span-escolha1-b").removeClass('span-escolha1-b__underline');
     }
 
-    if (idButton === 'id-btn-escolha1-b') {
-        jQuery('#' + idButton).toggleClass('btn-escolha1-b__active');
+    if (idButton === 'id-btn-escolha1-b' || idButton === 'id-span-escolha1-b') {
+        jQuery('#id-btn-escolha1-b').toggleClass('btn-escolha1-b__active');
+        jQuery('#id-span-escolha1-b').toggleClass('span-escolha1-b__underline');
+
         jQuery("#id-btn-escolha1-a").removeClass('btn-escolha1-a__active');
+        jQuery("#id-span-escolha1-a").removeClass('span-escolha1-a__underline');
+
+
     }
 
     // Se existir pelo menos um ativo, então ativar o botão continuar
@@ -480,14 +485,20 @@ function addEventOnClickEscolha1(idButton) {
 function activateDesactivateEscolha2(idButton) {
     //alert(idButton);
 
-    if (idButton === 'id-btn-escolha2-a') {
-        jQuery('#' + idButton).toggleClass('btn-escolha2-a__active');
+    if (idButton === 'id-btn-escolha2-a' || idButton === 'id-span-escolha2-a') {
+        jQuery('#id-btn-escolha2-a').toggleClass('btn-escolha2-a__active');
+        jQuery('#id-span-escolha2-a').toggleClass('span-escolha2-a__underline');
+
         jQuery("#id-btn-escolha2-b").removeClass('btn-escolha2-b__active');
+        jQuery('#id-span-escolha2-b').removeClass('span-escolha2-b__underline');
     }
 
-    if (idButton === 'id-btn-escolha2-b') {
-        jQuery('#' + idButton).toggleClass('btn-escolha2-b__active');
+    if (idButton === 'id-btn-escolha2-b' || idButton === 'id-span-escolha2-b') {
+        jQuery('#id-btn-escolha2-b').toggleClass('btn-escolha2-b__active');
+        jQuery('#id-span-escolha2-b').toggleClass('span-escolha2-b__underline');
+
         jQuery("#id-btn-escolha2-a").removeClass('btn-escolha2-a__active');
+        jQuery('#id-span-escolha2-a').removeClass('span-escolha2-a__underline');
     }
 
     // Se existir pelo menos um ativo, então ativar o botão continuar
