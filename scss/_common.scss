@@ -58,23 +58,9 @@
 
 }
 
-.btn-escolha1-a,
-.btn-escolha1-b,
-.btn-escolha2-a,
-.btn-escolha2-b {
-    font-family: $primaryfont;
-    border: 0;
-    //background-color: $primary;
+@include mx-botoes-escolhas($gridwidthmobile);
+@include mx-botoes-escolhas($gridwidthtabletbig);
 
-    // Texto
-    color: #FFFFFF;
-    line-height: normal;
-    font-size: 2rem;
-    text-align: center;
-    height: 100%;
-    background-color: inherit;
-
-}
 
 .btn-escolha1-a {
     background-color: $escolha1a-not-selected;

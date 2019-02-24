@@ -662,6 +662,22 @@ template {
   background-color: inherit;
 }
 
+@media only screen and (min-width: 900px) {
+  .btn-escolha1-a,
+.btn-escolha1-b,
+.btn-escolha2-a,
+.btn-escolha2-b {
+    font-family: "Metrocity-Book";
+    border: 0;
+    color: #FFFFFF;
+    line-height: normal;
+    font-size: 6.25rem;
+    font-weight: bold;
+    text-align: center;
+    height: 100%;
+    background-color: inherit;
+  }
+}
 .btn-escolha1-a {
   background-color: #A7BECA;
   flex: 1;

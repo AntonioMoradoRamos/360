@@ -1,40 +1,47 @@
-@mixin mx-col-grid-escolhas($gridwidth) {
+@mixin mx-botoes-escolhas($gridwidth) {
     @if($gridwidth==$gridwidthmobile) {
-        .col-4-m {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
 
+        .btn-escolha1-a,
+        .btn-escolha1-b,
+        .btn-escolha2-a,
+        .btn-escolha2-b {
+            font-family: $primaryfont;
+            border: 0;
+            //background-color: $primary;
 
-            width: 33.3333333333%;
-            //float: left;
-            //padding-left: 15px;
-            //padding-right: 15px;
+            // Texto
+            color: #FFFFFF;
+            line-height: normal;
+            font-size: 2rem;
+            text-align: center;
+            height: 100%;
+            background-color: inherit;
+
         }
 
-
-    }
-
-    @if($gridwidth==$gridwidthtablet) {
-        @media only screen and (min-width: $gridwidth) {
-            .col-8-t {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-        }
     }
 
     @if($gridwidth==$gridwidthtabletbig) {
         @media only screen and (min-width: $gridwidth) {
-            .col-12-d {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
+
+            .btn-escolha1-a,
+            .btn-escolha1-b,
+            .btn-escolha2-a,
+            .btn-escolha2-b {
+                font-family: $primaryfont;
+                border: 0;
+                // Texto
+                color: #FFFFFF;
+                line-height: normal;
+                font-size: 6.25rem;
+                font-weight: bold;
+                text-align: center;
+                height: 100%;
+                background-color: inherit;
+
             }
 
         }
     }
-
 
 }
