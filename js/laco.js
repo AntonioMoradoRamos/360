@@ -503,7 +503,7 @@ function activateDesactivateEscolha2(idButton) {
 
     // Se existir pelo menos um ativo, então ativar o botão continuar
     if (jQuery('#id-btn-escolha2-a').hasClass('btn-escolha2-a__active') ||
-        jQuery('#id-btn-escolha2-b').hasClass('btn-escolha2-b__active') || ) {
+        jQuery('#id-btn-escolha2-b').hasClass('btn-escolha2-b__active')) {
         jQuery("#id-btn-go-escolha-2").attr('class', 'btn-continuar__active');
     } else {
         // Se não, desativar o botão continuar
