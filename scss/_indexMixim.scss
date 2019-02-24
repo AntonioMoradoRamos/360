@@ -1,28 +1,3 @@
-@mixin mx-row-escolhas($gridwidth) {
-
-    @if($gridwidth==$gridwidthmobile) {
-        .row-escolhas {
-            width: 100%;
-            height: 272px;
-            display: flex;
-            flex-direction: column
-        }
-    }
-
-    @if($gridwidth==$gridwidthtabletbig) {
-        @media only screen and (min-width: $gridwidth) {
-            .row-escolhas-d {
-                width: 100%;
-                height: 700px;
-                display: flex;
-                flex-direction: row;
-            }
-        }
-    }
-
-}
-
-
 @mixin mx-col-grid($gridwidth) {
     @if($gridwidth==$gridwidthmobile) {
         .col-4-m {
@@ -192,6 +167,7 @@
 }
 
 
+// Index.html
 @mixin mx-section-texto-intro-laco($gridwidth) {
     @if($gridwidth==$gridwidthmobile) {
         .section-texto-intro-laco {
@@ -213,6 +189,33 @@
                 background-position: center;
                 background-size: cover;
                 height: 800px;
+            }
+        }
+    }
+
+}
+
+@mixin mx-col-btn-m__position($gridwidth) {
+    @if($gridwidth==$gridwidthmobile) {
+        .col-btn-m__position {
+            position: absolute;
+            width: 144px;
+            height: 48px;
+            left: 116px;
+            top: 365px;
+        }
+
+    }
+
+    @if($gridwidth==$gridwidthtabletbig) {
+        @media only screen and (min-width: $gridwidth) {
+            .col-btn-m__position {
+                position: absolute;
+                width: 214px;
+                height: 52px;
+                left: 50px;
+                top: 450px;
+
             }
         }
     }

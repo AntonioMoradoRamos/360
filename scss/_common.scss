@@ -295,17 +295,9 @@
     height: 520px;
 }
 
-.section-texto-intro-laco {
-    //background-image: url('../images/imagem_frinds.png');
-    background-image: url('../images/banner-mobile-amigos.png');
-    //background-image: url('../images/ImagemLaco.png');
-    // O slide será desktop
-    //background-image: url('../images/banner-mobile-familia.png'); // 511
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 577px;
-}
+@include mx-section-texto-intro-laco($gridwidthmobile);
+@include mx-section-texto-intro-laco($gridwidthtabletbig);
+
 
 
 .section-texto-intro-h1 {
@@ -546,14 +538,8 @@
     font-size: 15px;
 }
 
-.col-btn-m__position {
-    position: absolute;
-    width: 144px;
-    height: 48px;
-    left: 116px;
-    top: 365px;
-
-}
+@include mx-col-btn-m__position($gridwidthmobile);
+@include mx-col-btn-m__position($gridwidthtabletbig);
 
 @include mx-footer($gridwidthmobile);
 @include mx-footer($gridwidthtabletbig);
@@ -566,9 +552,7 @@
     margin: 4px;
 }
 
-.footer-indicator__active {
-    background-color: rgba(161, 161, 161, 0.6);
-}
+
 
 .footer-indicator__inactive {
     background-color: rgba(211, 215, 220, 0.4);
