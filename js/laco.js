@@ -402,7 +402,7 @@ function addEventOnSubmit(idButton, idForm, theAction) {
 }
 
 function activateDesactivateEscolha1(idButton) {
-
+// Para alterar o estilo do botão relativo à primeira opção
     if (idButton === 'id-btn-escolha1-a' || idButton === 'id-span-escolha1-a') {
         jQuery('#id-btn-escolha1-a').toggleClass('btn-escolha1-a__active');
         jQuery('#id-span-escolha1-a').toggleClass('span-escolha1-a__underline');
@@ -411,6 +411,7 @@ function activateDesactivateEscolha1(idButton) {
         jQuery("#id-span-escolha1-b").removeClass('span-escolha1-b__underline');
     }
 
+    // Para alterar o estilo do botão relativo à segunda opção
     if (idButton === 'id-btn-escolha1-b' || idButton === 'id-span-escolha1-b') {
         jQuery('#id-btn-escolha1-b').toggleClass('btn-escolha1-b__active');
         jQuery('#id-span-escolha1-b').toggleClass('span-escolha1-b__underline');
